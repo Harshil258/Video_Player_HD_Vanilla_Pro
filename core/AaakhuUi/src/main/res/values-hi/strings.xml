@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="z_a">जेड-ए</string>
+    <string name="permission_info">वेनिला वीडियो प्लेयर ऐप को मीडिया तक पहुंचने और खेलने के लिए अनुमति \\ \"%1$s \\\"
+        की आवश्यकता है। इसके बिना, मीडिया एक्सेस और प्लेबैक ने काम किया। ऐप का पूरी तरह से उपयोग करने के लिए, अनुमति
+        प्रदान करें।
+    </string>
+    <string name="permission_settings">वेनिला वीडियो प्लेयर ऐप को मीडिया तक पहुंचने और खेलने के लिए अनुमति \\ \"%1$s
+        \\\" की आवश्यकता है। इसके बिना, मीडिया एक्सेस और प्लेबैक ने काम किया। ऐप का पूरी तरह से उपयोग करने के लिए,
+        सेटिंग्स से अनुमति दें क्योंकि इसे स्थायी रूप से इनकार कर दिया गया था।
+    </string>
+    <string name="play_pause_ff_rewind">प्ले/पॉज़ और फास्ट फॉरवर्ड/रिवाइंड</string>
+    <string name="no">नहीं</string>
+    <string name="system_default">प्रणालीगत चूक</string>
+    <string name="off">बंद</string>
+    <string name="on">पर</string>
+    <string name="play_pause">चालू करे रोके</string>
+    <string name="ff_rewind">तेजी से आगे/रिवाइंड</string>
+    <string name="none">कोई नहीं</string>
+    <string name="auto">ऑटो</string>
+    <string name="enable">सक्षम</string>
+    <string name="yes">हाँ</string>
+    <string name="scan">स्कैन</string>
+    <string name="media_library">मीडिया पुस्तकालय</string>
+    <string name="force_rescan_storage">बल rescan भंडारण</string>
+    <string name="group_videos">फ़ोल्डर द्वारा समूह वीडियो</string>
+    <string name="enter_a_network_url">एक नेटवर्क URL दर्ज करें:</string>
+    <string name="network_stream">नेटवर्क धारा</string>
+    <string name="appearance_name">उपस्थिति</string>
+    <string name="ascending">आरोही</string>
+
+    <string name="about_name">के बारे में</string>
+    <string name="language">भाषा</string>
+    <string name="appearance_description">ऐप को अपनी पसंद के अनुसार समायोजित करें</string>
+    <string name="cancel">रद्द करना</string>
+    <string name="descending">अवरोही</string>
+    <string name="disable">अक्षम करना</string>
+    <string name="done">हो गया</string>
+    <string name="double_tap">डबल टैप इशारा</string>
+    <string name="double_tap_description">डबल टैप जेस्चर एक्शन का चयन करें</string>
+    <string name="error_playing_video">त्रुटि: कर सकते हैं वीडियो वीडियो</string>
+    <string name="fast_seek">तेजी से चाहने वाला</string>
+    <string name="fast_seek_description">सटीक एक के बजाय निकटतम प्रमुख फ्रेम की तलाश करें।</string>
+    <string name="grant_permission">अनुदान अनुमति</string>
+    <string name="duration">अवधि</string>
+    <string name="location">जगह</string>
+    <string name="menu">मेन्यू</string>
+    <string name="navigate_up">नेविगेट करना</string>
+    <string name="no_videos_found">कोई वीडियो नहीं मिले</string>
+    <string name="open_settings">खुली सेटिंग</string>
+    <string name="permission_not_granted">अनुमति नहीं दी गई</string>
+    <string name="permission_request">अनुमति अनुरोध</string>
+    <string name="player_controls_exit">नेविगेट करना</string>
+    <string name="player_controls_next">खिलाड़ी अगला</string>
+    <string name="about_description">संस्करण, क्रेडिट</string>
+    <string name="player_controls_play_pause">प्लेयर प्ले पॉज़</string>
+    <string name="player_controls_previous">खिलाड़ी पिछला</string>
+    <string name="player_controls_progress">खिलाड़ी प्रगति बार</string>
+    <string name="player_description">खिलाड़ी उपस्थिति, प्लेबैक नियंत्रण</string>
+    <string name="player_name">खिलाड़ी</string>
+    <string name="quick_settings">त्वरित सेटिंग</string>
+    <string name="remember_brightness_level">चमक स्तर याद रखें</string>
+    <string name="remember_brightness_level_description">प्लेबैक सत्रों के बीच चमक का स्तर याद रखें</string>
+    <string name="remember_selections">चयनों को याद रखें</string>
+    <string name="remember_selections_description">ऑडियो ट्रैक, सबटाइटल ट्रैक, आदि जैसे प्रत्येक फ़ाइल के लिए चयन याद
+        रखें
+    </string>
+    <string name="resume">फिर शुरू करना</string>
+    <string name="resume_description">चुनें कि क्या उस बिंदु से खेले गए वीडियो को फिर से शुरू करना है जहां आप रुकते
+        हैं
+    </string>
+    <string name="seek_gesture">इशारा करना</string>
+    <string name="seek_gesture_description">आगे या पीछे की ओर की तलाश करने के लिए क्षैतिज रूप से स्वाइप करें</string>
+    <string name="select_audio_track">ऑडियो ट्रैक का चयन करें</string>
+    <string name="select_subtitle_track">उपशीर्षक ट्रैक का चयन करें</string>
+    <string name="settings">समायोजन</string>
+    <string name="ChangeThumbnail">चंगथुम्बनेल</string>
+    <string name="size">आकार</string>
+    <string name="sort">क्रम से लगाना</string>
+    <string name="swipe_gesture">झगड़ा</string>
+    <string name="swipe_gesture_description">चमक और मात्रा को समायोजित करने के लिए लंबवत स्वाइप करें</string>
+    <string name="title">शीर्षक</string>
+    <string name="title_activity_player">वेनिला वीडियो प्लेयर गतिविधि</string>
+    <string name="unknown_error">एक अज्ञात त्रुटि हुई है</string>
+    <string name="playback">प्लेबैक</string>
+    <string name="interface_name">इंटरफेस</string>
+    <string name="a_z">ए-जेड</string>
+    <string name="shortest">कम से कम</string>
+    <string name="longest">सबसे लंबे समय तक</string>
+    <string name="smallest">सबसे छोटा</string>
+    <string name="largest">विशालतम</string>
+    <string name="dark_theme">डार्क थीम</string>
+    <string name="video_zoom">वीडियो ज़ूम</string>
+    <string name="dynamic_theme">गतिशील रंग थीम</string>
+    <string name="dynamic_theme_description">सिस्टम वॉलपेपर से एप्लिकेशन थीम पर रंग लागू करें</string>
+    <string name="controls_lock">ताला नियंत्रण</string>
+    <string name="controls_unlock">अनलॉक नियंत्रण</string>
+    <string name="select_playback_speed">प्लेबैक स्पीड का चयन करें</string>
+    <string name="audio">ऑडियो</string>
+    <string name="preferred_audio_lang">पसंदीदा ऑडियो भाषा</string>
+    <string name="preferred_audio_lang_description">उस ऑडियो ट्रैक की भाषा जिसे आप डिफ़ॉल्ट रूप से उपयोग करना चाहते हैं</string>
+    <string name="subtitle">उपशीर्षक</string>
+    <string name="preferred_subtitle_lang">पसंदीदा उपशीर्षक भाषा</string>
+    <string name="preferred_subtitle_lang_description">उपशीर्षक ट्रैक की भाषा जिसे आप डिफ़ॉल्ट रूप से उपयोग करना चाहते
+        हैं
+    </string>
+    <string name="force_rescan_storage_desc">चेतावनी: एक पूर्ण भंडारण rescan शुरू करने से आपके डिवाइस पर संसाधन उपयोग
+        में वृद्धि हो सकती है
+    </string>
+    <string name="media_library_description">मीडिया पुस्तकालय स्कैन और प्रबंधित करें</string>
+    <string name="scanning_storage">स्कैनिंग स्टोरेज…</string>
+    <string name="manage_folders">फ़ोल्डर प्रबंधित करें</string>
+    <string name="manage_folders_desc">मीडिया लाइब्रेरी में बाहर किए जाने वाले फ़ोल्डरों का चयन करें</string>
+    <string name="video">वीडियो</string>
+    <string name="oldest">सबसे पुराने</string>
+    <string name="date">तारीख</string>
+    <string name="videos">वीडियो</string>
+    <string name="screen_rotation">स्क्रीन को घुमाना</string>
+    <string name="player_screen_orientation">खिलाड़ी स्क्रीन अभिविन्यास</string>
+    <string name="automatic">स्वत: संवेदक)</string>
+    <string name="landscape">परिदृश्य</string>
+    <string name="landscape_reverse">लैंडस्केप रिवर्स</string>
+    <string name="landscape_auto">लैंडस्केप (सेंसर)</string>
+    <string name="portrait">चित्र</string>
+    <string name="video_orientation">वीडियो अभिविन्यास</string>
+    <string name="newest">नवीनतम</string>
+    <string name="default_playback_speed">डिफ़ॉल्ट प्लेबैक गति</string>
+    <string name="decoder">डिकोडर</string>
+    <string name="decoder_desc">डिकोडर प्राथमिकता, प्लेबैक डिकोडर विकल्प</string>
+    <string name="decoder_priority">डिकोडर प्राथमिकता</string>
+    <string name="prefer_app_decoders">ऐप डिकोडर्स पसंद करें</string>
+    <string name="video_software_decoders">सॉफ्टवेयर वीडियो डिकोडर्स</string>
+    <string name="device_decoders_only">केवल डिवाइस डिकोडर्स</string>
+    <string name="play_file">खेलने के लिए वीडियो फ़ाइल खोलें</string>
+    <string name="play_url">खेलने के लिए वीडियो URL दर्ज करें</string>
+    <string name="monospace">एकलस्पेस</string>
+    <string name="default_name">गलती करना</string>
+    <string name="sans_serif">सान्स सेरिफ़</string>
+    <string name="serif">सेरिफ़</string>
+    <string name="subtitle_font">उपशीर्षक फ़ॉन्ट</string>
+    <string name="subtitle_text_bold">बोल्ड उपशीर्षक पाठ</string>
+    <string name="subtitle_text_bold_desc">उपशीर्षक के लिए बोल्ड पाठ का उपयोग करें</string>
+    <string name="subtitle_text_size">उपशीर्षक पाठ आकार</string>
+    <string name="subtitle_desc">उपशीर्षक उपस्थिति, प्लेबैक विकल्प</string>
+    <string name="subtitle_background">उपशीर्षक पृष्ठभूमि</string>
+    <string name="subtitle_background_desc">पाठ को उपशीर्षक करने के लिए पृष्ठभूमि सक्षम करें</string>
+    <string name="video_software_decoders_desc">एप्लिकेशन सॉफ्टवेयर वीडियो डिकोडर्स (प्रायोगिक) का उपयोग करें</string>
+    <string name="controller_timeout">नियंत्रक कालआउट</string>
+    <string name="embedded_styles">एम्बेडेड शैलियों</string>
+    <string name="embedded_styles_desc">उपशीर्षक फ़ाइलों में मौजूद एम्बेडेड शैलियों को लागू करें, जैसे कि गधा और इतने
+        पर
+    </string>
+    <string name="seek_increment">वृद्धि की तलाश करना</string>
+    <string name="seconds">%1$s सेकंड</string>
+    <string name="deleteFromHistoryText">निम्न फ़ाइल को इतिहास से स्थायी रूप से हटा दिया जाएगा</string>
+    <string name="subtitle_text_encoding">उपशीर्षक पाठ एन्कोडिंग</string>
+    <string name="share">शेयर करना</string>
+    <string name="delete">मिटाना</string>
+    <string name="deleteFromHistory">इतिहास से हटाएं</string>
+    <string name="delete_file">निम्न फ़ाइल को स्थायी रूप से हटा दिया जाएगा</string>
+    <string name="prefer_device_decoders">डिवाइस डिकोडर्स पसंद करें</string>
+    <string name="delete_folder">निम्नलिखित फ़ोल्डर में सभी वीडियो फ़ाइलों को स्थायी रूप से हटा दिया जाएगा।</string>
+    <string name="stretch">खींचना</string>
+    <string name="crop">काटना</string>
+    <string name="hundred_percent">100%</string>
+    <string name="best_fit">सबसे अच्छा फिट</string>
+    <string name="autoplay_settings">स्वत: प्ले</string>
+    <string name="autoplay_settings_description">वर्तमान फ़ोल्डर में स्वचालित रूप से अगला वीडियो चलाएं</string>
+    <string name="zoom_gesture_description">वीडियो को ज़ूम करने के लिए चुटकी</string>
+    <string name="zoom_gesture">ज़ूम इशारा</string>
+    <string name="high_contrast_dark_theme">उच्च कंट्रास्ट डार्क थीम</string>
+    <string name="high_contrast_dark_theme_desc">डार्क थीम के लिए शुद्ध काली पृष्ठभूमि का उपयोग करें</string>
+    <string name="audio_desc">ऑडियो प्लेबैक विकल्प</string>
+    <string name="pause_on_headset_disconnect_desc">डिवाइस से हेडसेट डिस्कनेक्ट होने पर प्लेबैक को रोकें</string>
+    <string name="pause_on_headset_disconnect">डिस्कनेक्ट पर रुकें</string>
+    <string name="system_volume_panel">तंत्र मात्रा पैनल</string>
+    <string name="system_volume_panel_desc">हेडसेट के साथ वॉल्यूम को समायोजित करते समय सिस्टम वॉल्यूम पैनल दिखाएं</string>
+    <string name="fields">खेत</string>
+    <string name="system_caption_style">तंत्र कैप्शन शैली</string>
+    <string name="system_caption_style_desc">सिस्टम कैप्शनिंग वरीयताओं को खोलने के लिए क्लिक करें</string>
+    <string name="extension">विस्तार</string>
+    <string name="path">पथ</string>
+    <string name="medium">मध्यम</string>
+    <string name="thumbnail">थंबनेल</string>
+    <string name="compact">सघन</string>
+    <string name="thumbnail_size">थंबनेल का आकार</string>
+    <string name="large">बड़ा</string>
+    <string name="resolution">संकल्प</string>
+    <string name="long_press_gesture_desc">%.1fx गति से खेलने के लिए लंबी प्रेस</string>
+    <string name="long_press_gesture">लम्बी प्रेस इशारा</string>
+    <string name="require_audio_focus">ऑडियो फोकस की आवश्यकता है</string>
+    <string name="fast_playback_speed">%.1fx गति</string>
+    <string name="require_audio_focus_desc">अन्य खिलाड़ियों को रोकें जबकि यह खिलाड़ी वीडियो खेल रहा है, और इसके
+        विपरीत।
+    </string>
+    <string name="folder">फ़ोल्डर</string>
+    <string name="history_video">इतिहास वीडियो</string>
+    <string name="folders">वीडियो</string>
+    <string name="history_videos">फ़ोल्डर</string>
+    <string name="history">इतिहास वीडियो</string>
+    <string name="no_videos">इतिहास</string>
+    <string name="no_folders">कोई वीडियो नहीं</string>
+    <string name="no_history_videos">कोई फ़ोल्डर नहीं</string>
+    <string name="loading">कोई इतिहास वीडियो नहीं</string>
+    <string name="date_added">लोड हो रहा है...</string>
+    <string name="ok">प्रारूप</string>
+    <string name="selected_tracks_count">%1$d/%2$d चयनित</string>
+    <string name="selectall">सभी चुनें</string>
+    <string name="upgrade_to_premium">प्रीमियम पर अपग्रेड करें</string>
+    <string name="pro_mode_description">विज्ञापन-मुक्त देखने का अनुभव करें। बिना रुकावट के सीमलेस स्ट्रीम करें।</string>
+    <string name="upgrade_now">अभी अपग्रेड करें</string>
+    <string name="format">फ़ॉर्मेट</string>
+    <string name="lanugage_description">ऐप की भाषा को ऐसा कुछ करें जो आपको आता है।</string>
+    <string name="unlock_premium">प्रीमियम अनलॉक करें</string>
+    <string name="unlock_premium_description">अपनी वीडियो प्लेबैक को यहां बढ़ाएं।</string>
+    <string name="search">Search</string>
+
+    <string name="onboarding_header">शानदार सुविधाएं</string>
+    <string name="header1">पिक्चर-इन-पिक्चर</string>
+    <string name="header2">ऑनलाइन स्ट्रीम करें</string>
+    <string name="header3">प्रीमियम लें</string>
+
+    <string name="description1">पिक्चर-इन-पिक्चर मोड के साथ अन्य ऐप्स का उपयोग करते समय अपने वीडियो देखते रहें। आपके वीडियो एक छोटी विंडो में रहते हैं जबकि आप अन्य चीजें करते हैं!</string>
+    <string name="description2"> कभी भी वीडियो ऑनलाइन स्ट्रीम करें। ढूंढें और देखें कि आपको क्या पसंद है, आसानी से और जल्दी!</string>
+    <string name="description3">कम लागत में विज्ञापन-मुक्त अनुभव के लिए प्रीमियम पर अपग्रेड करें। अपने वीडियो का आनंद लें बिना किसी विज्ञापन के जो आपको बीच में रोकते हैं!</string>
+
+    <string name="skip">छोड़ें</string>
+    <string name="next">आगे</string>
+    <string name="get_started">चलो शुरू करें</string>
+
+</resources>

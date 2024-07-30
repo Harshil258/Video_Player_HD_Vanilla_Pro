@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "309420049587",
+    "project_id": "video-player-hd---vanilla-pro",
+    "storage_bucket": "video-player-hd---vanilla-pro.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:309420049587:android:caa323ece5d5b604d45cc6",
+        "android_client_info": {
+          "package_name": "com.vanillavideoplayer.hd.videoplayer.pro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHJFgQht_H90nL3ywxI-OIktEurbQcex0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="about_name">Σχετικά με</string>
+    <string name="descending">Φθίνων</string>
+    <string name="cancel">Ματαίωση</string>
+    <string name="disable">Καθιστώ ανίκανο</string>
+    <string name="done">Εγινε</string>
+    <string name="double_tap">Διπλή χειρονομία</string>
+    <string name="double_tap_description">Επιλέξτε Double Πατήστε Δράση χειρονομίας</string>
+    <string name="error_playing_video">Σφάλμα: Μπορεί να παίξει βίντεο</string>
+    <string name="fast_seek">Γρήγορη αναζήτηση</string>
+    <string name="fast_seek_description">Επιδιώξτε στο πλησιέστερο πλαίσιο κλειδιού αντί για ακριβή.</string>
+    <string name="group_videos">Ομαδικά βίντεο ανά φάκελο</string>
+    <string name="duration">Διάρκεια</string>
+    <string name="no_videos_found">δεν βρέθηκαν βίντεο</string>
+    <string name="open_settings">Ανοίξτε τις ρυθμίσεις</string>
+    <string name="permission_info">Η εφαρμογή Player Videa Player Vanilla χρειάζεται \\ \"%1$s \\\" άδεια πρόσβασης
+        και αναπαραγωγής μέσων. Χωρίς αυτό, η πρόσβαση στα μέσα μαζικής ενημέρωσης και η αναπαραγωγή κέρδισαν. Για να
+        χρησιμοποιήσετε πλήρως την εφαρμογή, χορηγήστε την άδεια.
+    </string>
+    <string name="permission_not_granted">Δεν χορηγείται άδεια</string>
+    <string name="player_controls_exit">Περιηγηθείτε</string>
+    <string name="player_controls_next">Επόμενος παίκτης</string>
+    <string name="player_controls_play_pause">Παίξτε Player Play</string>
+    <string name="player_controls_previous">Παίκτης προηγούμενου</string>
+    <string name="player_controls_progress">Μπάρα προόδου του παίκτη</string>
+    <string name="player_description">Εμφάνιση παίκτη, χειριστήρια αναπαραγωγής</string>
+    <string name="player_name">Παίχτης</string>
+    <string name="quick_settings">Γρήγορες ρυθμίσεις</string>
+    <string name="remember_brightness_level">Θυμηθείτε το επίπεδο φωτεινότητας</string>
+    <string name="remember_brightness_level_description">Θυμηθείτε το επίπεδο φωτεινότητας μεταξύ των συνεδριών
+        αναπαραγωγής
+    </string>
+    <string name="remember_selections">Θυμηθείτε τις επιλογές</string>
+    <string name="resume">ΒΙΟΓΡΑΦΙΚΟ</string>
+    <string name="resume_description">Επιλέξτε αν θα συνεχίσετε να παίζετε βίντεο από το σημείο που σταματήσατε</string>
+    <string name="select_audio_track">Επιλέξτε το κομμάτι ήχου</string>
+    <string name="select_subtitle_track">Επιλέξτε το κομμάτι υπότιτλου</string>
+    <string name="settings">Ρυθμίσεις</string>
+    <string name="ChangeThumbnail">Μεταβιβάζω</string>
+    <string name="size">Μέγεθος</string>
+    <string name="sort">Είδος</string>
+    <string name="swipe_gesture">Χειρονομία</string>
+    <string name="swipe_gesture_description">Σύρετε κάθετα για να ρυθμίσετε τη φωτεινότητα και τον όγκο</string>
+    <string name="title">Τίτλος</string>
+    <string name="title_activity_player">Δραστηριότητα αναπαραγωγής βίντεο βανίλιας</string>
+    <string name="unknown_error">Προέκυψε ένα άγνωστο σφάλμα</string>
+    <string name="playback">Αναπαραγωγή</string>
+    <string name="interface_name">Διεπαφή</string>
+    <string name="a_z">Α-Ζ</string>
+    <string name="z_a">Ζ-Α</string>
+    <string name="shortest">Συντομότερος</string>
+    <string name="longest">Μακρύτερος</string>
+    <string name="smallest">Μικρότερος</string>
+    <string name="largest">Μεγαλύτερος</string>
+    <string name="dark_theme">Σκοτεινό θέμα</string>
+    <string name="video_zoom">Μεγέθυνση βίντεο</string>
+    <string name="dynamic_theme">Δυναμικό θέμα χρώματος</string>
+    <string name="dynamic_theme_description">Εφαρμόστε χρώματα από ταπετσαρία συστήματος στο θέμα της εφαρμογής</string>
+    <string name="controls_lock">Χειριστήρια κλειδώματος</string>
+    <string name="controls_unlock">Ξεκλειδώματος ελέγχου</string>
+    <string name="select_playback_speed">Επιλέξτε ταχύτητα αναπαραγωγής</string>
+    <string name="language">Γλώσσα</string>
+    <string name="appearance_description">Ρυθμίστε την εφαρμογή σύμφωνα με τις προτιμήσεις σας</string>
+    <string name="ascending">Ανερχόμενος</string>
+    <string name="about_description">Έκδοση, πιστώσεις</string>
+    <string name="appearance_name">Εμφάνιση</string>
+    <string name="menu">Μενού</string>
+    <string name="grant_permission">Άδεια χορήγησης</string>
+    <string name="navigate_up">Περιηγηθείτε</string>
+    <string name="location">Τοποθεσία</string>
+    <string name="permission_request">Αίτημα άδειας</string>
+    <string name="permission_settings">Η εφαρμογή Player Videa Player Vanilla χρειάζεται \\ \"%1$s \\\" άδεια
+        πρόσβασης και αναπαραγωγής μέσων. Χωρίς αυτό, η πρόσβαση στα μέσα μαζικής ενημέρωσης και η αναπαραγωγή κέρδισαν.
+        Για να χρησιμοποιήσετε πλήρως την εφαρμογή, χορηγήστε την άδεια από τις ρυθμίσεις, αφού αρνήθηκε μόνιμα.
+    </string>
+    <string name="remember_selections_description">Θυμηθείτε τις επιλογές για κάθε αρχείο όπως το Track Audio, το
+        Subtitle Track κ.λπ.
+    </string>
+    <string name="seek_gesture_description">Σύρετε οριζόντια για να προσθέσετε προς τα εμπρός ή προς τα πίσω</string>
+    <string name="seek_gesture">Αναζητήστε χειρονομία</string>
+    <string name="preferred_audio_lang_description">Γλώσσα του κομματιού ήχου που θέλετε να χρησιμοποιήσετε από
+        προεπιλογή
+    </string>
+    <string name="system_default">Προεπιλογή συστήματος</string>
+    <string name="off">Μακριά από</string>
+    <string name="on">Επί</string>
+    <string name="ff_rewind">Γρήγορη προς τα εμπρός/επανένταξη</string>
+    <string name="play_pause_ff_rewind">Παίξτε/παύση και γρήγορη προς τα εμπρός/rewind</string>
+    <string name="auto">Αυτο</string>
+    <string name="scan">Σάρωση</string>
+    <string name="force_rescan_storage">Αποθήκευση rescan force</string>
+    <string name="media_library_description">Σάρωση και διαχείριση της βιβλιοθήκης μέσων ενημέρωσης</string>
+    <string name="scanning_storage">Αποθήκευση σάρωσης…</string>
+    <string name="audio">Ήχος</string>
+    <string name="preferred_audio_lang">Προτιμώμενη γλώσσα ήχου</string>
+    <string name="preferred_subtitle_lang">Προτιμώμενη γλώσσα υπότιτλου</string>
+    <string name="yes">Ναί</string>
+    <string name="media_library">Βιβλιοθήκη μέσων ενημέρωσης</string>
+    <string name="subtitle">Υπότιτλος</string>
+    <string name="preferred_subtitle_lang_description">Γλώσσα του κομματιού υπότιτλου που θέλετε να χρησιμοποιήσετε από
+        προεπιλογή
+    </string>
+    <string name="play_pause">Παίζω/παύση</string>
+    <string name="none">Κανένας</string>
+    <string name="force_rescan_storage_desc">ΠΡΟΣΟΧΗ: Η εκκίνηση ενός πλήρους αποθήκευσης μπορεί να προκαλέσει αυξημένη
+        χρήση πόρων στη συσκευή σας
+    </string>
+    <string name="manage_folders">Διαχείριση φακέλων</string>
+    <string name="enable">επιτρέπω</string>
+    <string name="no">Οχι</string>
+    <string name="manage_folders_desc">Επιλέξτε φακέλους που πρέπει να αποκλειστούν στη βιβλιοθήκη μέσων ενημέρωσης</string>
+    <string name="video">βίντεο</string>
+    <string name="videos">Βίντεο</string>
+    <string name="screen_rotation">Περιστροφή οθόνης</string>
+    <string name="portrait">Πορτρέτο</string>
+    <string name="automatic">Αυτόματο (αισθητήρας)</string>
+    <string name="player_screen_orientation">Προσανατολισμός οθόνης παίκτη</string>
+    <string name="landscape">Τοπίο</string>
+    <string name="landscape_reverse">Αντίστροφα του τοπίου</string>
+    <string name="landscape_auto">Τοπίο (αισθητήρας)</string>
+    <string name="video_orientation">Προσανατολισμός βίντεο</string>
+    <string name="newest">Νεότερος</string>
+    <string name="oldest">Παλαιότερος</string>
+    <string name="date">Ημερομηνία</string>
+    <string name="default_playback_speed">Προεπιλεγμένη ταχύτητα αναπαραγωγής</string>
+    <string name="network_stream">Ροή δικτύου</string>
+    <string name="enter_a_network_url">Εισαγάγετε μια διεύθυνση URL δικτύου:</string>
+    <string name="monospace">Μονοπάθεια</string>
+    <string name="sans_serif">Σανς σέριφ</string>
+    <string name="serif">Ελαφρή γραμμή</string>
+    <string name="subtitle_text_size">Μέγεθος κειμένου υπότιτλου</string>
+    <string name="subtitle_desc">Υπότιτλος εμφάνιση, επιλογές αναπαραγωγής</string>
+    <string name="default_name">Προκαθορισμένο</string>
+    <string name="subtitle_font">Γραμματοσειρά</string>
+    <string name="subtitle_text_bold">Έντονη κείμενο υπότιτλων</string>
+    <string name="subtitle_text_bold_desc">Χρησιμοποιήστε τολμηρό κείμενο για υπότιτλο</string>
+    <string name="subtitle_background">Υπότιτλος φόντο</string>
+    <string name="subtitle_background_desc">Ενεργοποίηση φόντου στο κείμενο υπότιτλων</string>
+    <string name="play_file">Ανοίξτε το αρχείο βίντεο για αναπαραγωγή</string>
+    <string name="play_url">Εισαγάγετε τη διεύθυνση URL βίντεο για να παίξετε</string>
+    <string name="decoder">Αποκρυπτογράφος</string>
+    <string name="video_software_decoders">Αποκωδικοποιητές βίντεο λογισμικού</string>
+    <string name="decoder_desc">Προτεραιότητα αποκωδικοποιητή, επιλογές αποκωδικοποιητή αναπαραγωγής</string>
+    <string name="video_software_decoders_desc">Χρησιμοποιήστε αποκωδικοποιητές βίντεο λογισμικού εφαρμογής
+        (πειραματικά)
+    </string>
+    <string name="prefer_device_decoders">Προτιμήστε τους αποκωδικοποιητές συσκευών</string>
+    <string name="prefer_app_decoders">Προτιμήστε τους αποκωδικοποιητές εφαρμογών</string>
+    <string name="device_decoders_only">Μόνο αποκωδικοποιητές συσκευών</string>
+    <string name="decoder_priority">Προτεραιότητα αποκωδικοποιητή</string>
+    <string name="embedded_styles">Ενσωματωμένα στυλ</string>
+    <string name="embedded_styles_desc">Εφαρμόστε τα ενσωματωμένα στυλ που υπάρχουν σε αρχεία υπότιτλων, όπως κώλο και
+        ούτω καθεξής
+    </string>
+    <string name="controller_timeout">Χρονικό όριο ελεγκτή</string>
+    <string name="seek_increment">Επιδιώκομαι</string>
+    <string name="seconds">%1$s δευτερόλεπτα</string>
+    <string name="deleteFromHistoryText">Το ακόλουθο αρχείο θα διαγραφεί μόνιμα από την ιστορία</string>
+    <string name="subtitle_text_encoding">Κωδικοποίηση κειμένου υπότιτλου</string>
+    <string name="share">Μερίδιο</string>
+    <string name="delete">Διαγράφω</string>
+    <string name="deleteFromHistory">Διαγραφή από την ιστορία</string>
+    <string name="delete_file">Το ακόλουθο αρχείο θα διαγραφεί μόνιμα</string>
+    <string name="delete_folder">Όλα τα αρχεία βίντεο στον παρακάτω φάκελο θα διαγραφούν μόνιμα.</string>
+    <string name="stretch">Τέντωμα</string>
+    <string name="crop">Καλλιέργεια</string>
+    <string name="hundred_percent">100%</string>
+    <string name="best_fit">Ταιριάζει καλύτερα</string>
+    <string name="autoplay_settings">Αυτόματο όριο</string>
+    <string name="autoplay_settings_description">Παίξτε αυτόματα το επόμενο βίντεο στον τρέχοντα φάκελο</string>
+    <string name="zoom_gesture">Χειρονομία</string>
+    <string name="zoom_gesture_description">Πίεση για να μεγεθύνετε το βίντεο</string>
+    <string name="high_contrast_dark_theme">Υψηλής αντίθεσης σκοτεινό θέμα</string>
+    <string name="high_contrast_dark_theme_desc">Χρησιμοποιήστε καθαρό μαύρο φόντο για σκοτεινό θέμα</string>
+    <string name="audio_desc">Επιλογές αναπαραγωγής ήχου</string>
+    <string name="pause_on_headset_disconnect_desc">Παύση αναπαραγωγής όταν αποσυνδέεται το ακουστικό από τη συσκευή</string>
+    <string name="pause_on_headset_disconnect">Παύση κατά την αποσύνδεση</string>
+    <string name="system_volume_panel">Πίνακας όγκου συστήματος</string>
+    <string name="system_volume_panel_desc">Εμφάνιση του πίνακα έντασης συστήματος κατά την ρύθμιση της έντασης με
+        ακουστικά
+    </string>
+    <string name="system_caption_style">Στυλ λεζάντας</string>
+    <string name="system_caption_style_desc">Κάντε κλικ για να ανοίξετε τις προτιμήσεις του συστήματος λεζάνας</string>
+    <string name="fields">Πεδία</string>
+    <string name="medium">Μεσαίο</string>
+    <string name="thumbnail">Ονυξ του αντίχειρος</string>
+    <string name="compact">Συμπαγής</string>
+    <string name="extension">Επέκταση</string>
+    <string name="large">Μεγάλο</string>
+    <string name="path">Μονοπάτι</string>
+    <string name="resolution">Ανάλυση</string>
+    <string name="thumbnail_size">Μέγεθος μικρογραφίας</string>
+    <string name="long_press_gesture_desc">Long Press για να παίξει σε %.1fx ταχύτητα</string>
+    <string name="long_press_gesture">Μεγάλη χειρονομία</string>
+    <string name="fast_playback_speed">%.1fx ταχύτητα</string>
+    <string name="require_audio_focus">Απαιτούν εστίαση ήχου</string>
+    <string name="require_audio_focus_desc">Παύση άλλων παικτών ενώ αυτός ο παίκτης παίζει βίντεο και αντίστροφα.</string>
+    <string name="folder">Ντοσιέ</string>
+    <string name="history_video">Ιστορικό βίντεο</string>
+    <string name="folders">Βίντεο</string>
+    <string name="history_videos">Φακέλων</string>
+    <string name="history">Βίντεο ιστορίας</string>
+    <string name="no_videos">Ιστορία</string>
+    <string name="no_folders">Χωρίς βίντεο</string>
+    <string name="no_history_videos">Χωρίς φακέλους</string>
+    <string name="loading">Χωρίς βίντεο ιστορίας</string>
+    <string name="date_added">Φόρτωση...</string>
+    <string name="ok">Μορφή</string>
+    <string name="selected_tracks_count">%1$d/%2$d Επιλεγμένα</string>
+    <string name="selectall">Επιλογή όλων</string>
+    <string name="upgrade_to_premium">Αναβαθμίστε σε Premium</string>
+    <string name="pro_mode_description">Απολαύστε μια διαφήμισης δωρεάν εμπειρία προβολής. Κάντε stream χωρίς διακοπές.</string>
+    <string name="upgrade_now">Αναβαθμίστε τώρα</string>
+    <string name="format">Μορφή</string>
+    <string name="lanugage_description">Αλλάξτε τη γλώσσα της εφαρμογής σε κάτι που σας ταιριάζει.</string>
+    <string name="unlock_premium">Ξεκλειδώστε το Premium</string>
+    <string name="unlock_premium_description">Ενισχύστε την αναπαραγωγή του βίντεο εδώ.</string>
+    <string name="search">Search</string>
+
+    <string name="onboarding_header">Funciones fantásticas</string>
+    <string name="header1">Imagen en imagen</string>
+    <string name="header2">Transmitir en línea</string>
+    <string name="header3">Hazte Premium</string>
+
+    <string name="description1">Sigue viendo tus videos mientras usas otras aplicaciones con el modo Imagen en imagen. ¡Tus videos permanecen en una ventana pequeña mientras haces otras cosas!</string>
+    <string name="description2">Transmite videos en línea en cualquier momento. ¡Busca y mira lo que quieras, fácil y rápidamente!</string>
+    <string name="description3">Suscríbete a Premium para una experiencia sin publicidad a bajo costo. ¡Disfruta tus videos sin interrupciones de anuncios!</string>
+
+    <string name="skip">Saltar</string>
+    <string name="next">Siguiente</string>
+    <string name="get_started">Comencemos</string>
+
+</resources>

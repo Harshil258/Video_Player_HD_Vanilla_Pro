@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.Theme.VanillaVideoPlayer" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+        <item name="android:statusBarColor">
+            @android:color/transparent
+        </item>
+        <item name="android:navigationBarColor">
+            @android:color/transparent
+        </item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+
+    <style name="RobotoTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="RobotoButtonStyle" parent="android:Widget.Holo.Button">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+</resources>

@@ -1,0 +1,667 @@
+{
+  "Interstitial": [
+    23,
+    63,
+    53,
+    47,
+    26,
+    50,
+    35,
+    2,
+    25,
+    62,
+    24,
+    61,
+    36,
+    4,
+    22,
+    60,
+    3,
+    19,
+    46,
+    59,
+    6,
+    37,
+    18,
+    45,
+    28,
+    54,
+    0,
+    58,
+    29,
+    16,
+    43,
+    27,
+    15,
+    42,
+    57,
+    7,
+    33,
+    34,
+    32,
+    30,
+    38,
+    20,
+    56,
+    14,
+    41,
+    44,
+    13,
+    40
+  ],
+  "iEcpm": [
+    4.5,
+    -1,
+    50,
+    18,
+    25,
+    -1,
+    10,
+    1.2,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    0.3,
+    0.5,
+    2,
+    3,
+    -1,
+    7,
+    15,
+    0.75,
+    -1,
+    21,
+    110,
+    32,
+    48,
+    72,
+    2.077,
+    6.75,
+    3.323,
+    1,
+    -1,
+    1,
+    1,
+    1,
+    50,
+    25,
+    10,
+    1,
+    -1,
+    0.3,
+    0.5,
+    2,
+    3,
+    0.4,
+    7,
+    15,
+    75,
+    -1,
+    -1,
+    60,
+    -1,
+    -1,
+    90,
+    5,
+    -1,
+    0.7,
+    1.5,
+    4,
+    12,
+    20,
+    30,
+    40,
+    100
+  ],
+  "Banner": [
+    37,
+    54,
+    43,
+    15,
+    42,
+    57,
+    31,
+    30,
+    32,
+    38,
+    8,
+    34,
+    33,
+    28,
+    56,
+    1,
+    41,
+    29,
+    44,
+    17,
+    13,
+    40,
+    27,
+    12,
+    39,
+    5,
+    11,
+    10,
+    9
+  ],
+  "bEcpm": [
+    -1,
+    0.6,
+    -1,
+    -1,
+    -1,
+    0.15,
+    -1,
+    -1,
+    1,
+    0.03,
+    0.05,
+    0.1,
+    0.2,
+    0.3,
+    -1,
+    2,
+    -1,
+    0.4,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    0.299,
+    0.97,
+    0.478,
+    1,
+    1,
+    1,
+    1,
+    1,
+    -1,
+    -1,
+    10,
+    1,
+    0.2,
+    0.3,
+    0.5,
+    2,
+    3,
+    0.4,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    5,
+    -1,
+    0.7,
+    1.5,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+  ],
+  "Rewarded": [
+    21,
+    23,
+    63,
+    52,
+    26,
+    51,
+    50,
+    2,
+    35,
+    25,
+    49,
+    62,
+    48,
+    24,
+    61,
+    4,
+    36,
+    22,
+    60,
+    19,
+    46,
+    59,
+    37,
+    6,
+    55,
+    45,
+    18,
+    28,
+    54,
+    0,
+    58,
+    29,
+    43,
+    16,
+    15,
+    42,
+    27,
+    57,
+    7,
+    38,
+    33,
+    34,
+    32,
+    30,
+    20,
+    41,
+    14,
+    40
+  ],
+  "rEcpm": [
+    4.5,
+    -1,
+    50,
+    -1,
+    25,
+    -1,
+    10,
+    1.2,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    0.5,
+    2,
+    3,
+    -1,
+    7,
+    15,
+    0.75,
+    150,
+    21,
+    110,
+    32,
+    48,
+    72,
+    1.922,
+    6.245,
+    3.074,
+    1,
+    -1,
+    1,
+    1,
+    1,
+    50,
+    25,
+    10,
+    1,
+    -1,
+    0.3,
+    0.5,
+    2,
+    3,
+    -1,
+    7,
+    15,
+    -1,
+    35,
+    45,
+    60,
+    70,
+    80,
+    -1,
+    5,
+    8,
+    -1,
+    1.5,
+    4,
+    12,
+    20,
+    30,
+    40,
+    100
+  ],
+  "priority": [],
+  "admob_app_id": "ca-app-pub-6480664593997158~7933713103",
+  "admob_app_open_ad": "ca-app-pub-6480664593997158/6265408212",
+  "collectAnalytics": 4,
+  "privacyPref": 1,
+  "primeBidding": 0,
+  "consentPlatform": 2,
+  "applovin_app_id": "UCIc5ZGtBpQ1CInAFK83XMtqltdWynpJxhuS04r8kPawa6Dr3AGIy5sB5XrEA2s56HeS28712r4eiGa5TG8e5J",
+  "allow_endless": 1,
+  "providers": [
+    {
+      "net": "DTExchange",
+      "label": "04.50",
+      "settings": "{\"inter_Id\":\"2065671\",\"appId\":\"184500\",\"reward_Id\":\"2065690\"}"
+    },
+    {
+      "net": "DTExchange",
+      "label": "00.60",
+      "settings": "{\"banner_Id\":\"2065662\",\"appId\":\"184500\"}"
+    },
+    {
+      "net": "DTExchange",
+      "label": "50.00",
+      "settings": "{\"inter_Id\":\"2065681\",\"appId\":\"184500\",\"reward_Id\":\"2065699\"}"
+    },
+    {
+      "net": "DTExchange",
+      "label": "18.00",
+      "settings": "{\"inter_Id\":\"2065675\",\"appId\":\"184500\"}"
+    },
+    {
+      "net": "DTExchange",
+      "label": "25.00",
+      "settings": "{\"inter_Id\":\"2065677\",\"appId\":\"184500\",\"reward_Id\":\"2065696\"}"
+    },
+    {
+      "net": "DTExchange",
+      "label": "00.15",
+      "settings": "{\"banner_Id\":\"2065658\",\"appId\":\"184500\"}"
+    },
+    {
+      "net": "DTExchange",
+      "label": "10.00",
+      "settings": "{\"inter_Id\":\"2065673\",\"appId\":\"184500\",\"reward_Id\":\"2065692\"}"
+    },
+    {
+      "net": "DTExchange",
+      "label": "01.20",
+      "settings": "{\"inter_Id\":\"2065668\",\"appId\":\"184500\",\"reward_Id\":\"2065687\"}"
+    },
+    {
+      "net": "DTExchange",
+      "label": "01.00",
+      "settings": "{\"banner_Id\":\"2065663\",\"appId\":\"184500\"}"
+    },
+    {
+      "net": "DTExchange",
+      "label": "00.03",
+      "settings": "{\"banner_Id\":\"2065655\",\"appId\":\"184500\"}"
+    },
+    {
+      "net": "DTExchange",
+      "label": "00.05",
+      "settings": "{\"banner_Id\":\"2065656\",\"appId\":\"184500\"}"
+    },
+    {
+      "net": "DTExchange",
+      "label": "00.10",
+      "settings": "{\"banner_Id\":\"2065657\",\"appId\":\"184500\"}"
+    },
+    {
+      "net": "DTExchange",
+      "label": "00.20",
+      "settings": "{\"banner_Id\":\"2065659\",\"appId\":\"184500\"}"
+    },
+    {
+      "net": "DTExchange",
+      "label": "00.30",
+      "settings": "{\"inter_Id\":\"2065665\",\"appId\":\"184500\",\"banner_Id\":\"2065660\"}"
+    },
+    {
+      "net": "DTExchange",
+      "label": "00.50",
+      "settings": "{\"inter_Id\":\"2065666\",\"appId\":\"184500\",\"reward_Id\":\"2065685\"}"
+    },
+    {
+      "net": "DTExchange",
+      "label": "02.00",
+      "settings": "{\"inter_Id\":\"2065669\",\"appId\":\"184500\",\"reward_Id\":\"2065688\",\"banner_Id\":\"2065664\"}"
+    },
+    {
+      "net": "DTExchange",
+      "label": "03.00",
+      "settings": "{\"inter_Id\":\"2065670\",\"appId\":\"184500\",\"reward_Id\":\"2065689\"}"
+    },
+    {
+      "net": "DTExchange",
+      "label": "00.40",
+      "settings": "{\"banner_Id\":\"2065661\",\"appId\":\"184500\"}"
+    },
+    {
+      "net": "DTExchange",
+      "label": "07.00",
+      "settings": "{\"inter_Id\":\"2065672\",\"appId\":\"184500\",\"reward_Id\":\"2065691\"}"
+    },
+    {
+      "net": "DTExchange",
+      "label": "15.00",
+      "settings": "{\"inter_Id\":\"2065674\",\"appId\":\"184500\",\"reward_Id\":\"2065694\"}"
+    },
+    {
+      "net": "DTExchange",
+      "label": "00.75",
+      "settings": "{\"inter_Id\":\"2065667\",\"appId\":\"184500\",\"reward_Id\":\"2065686\"}"
+    },
+    {
+      "net": "DTExchange",
+      "label": "150.00",
+      "settings": "{\"reward_Id\":\"2065752\",\"appId\":\"184500\"}"
+    },
+    {
+      "net": "DTExchange",
+      "label": "21.00",
+      "settings": "{\"inter_Id\":\"2065676\",\"appId\":\"184500\",\"reward_Id\":\"2065695\"}"
+    },
+    {
+      "net": "DTExchange",
+      "label": "110.00",
+      "settings": "{\"inter_Id\":\"2065683\",\"appId\":\"184500\",\"reward_Id\":\"2065701\"}"
+    },
+    {
+      "net": "DTExchange",
+      "label": "32.00",
+      "settings": "{\"inter_Id\":\"2065678\",\"appId\":\"184500\",\"reward_Id\":\"2065697\"}"
+    },
+    {
+      "net": "DTExchange",
+      "label": "48.00",
+      "settings": "{\"inter_Id\":\"2065680\",\"appId\":\"184500\",\"reward_Id\":\"2065698\"}"
+    },
+    {
+      "net": "DTExchange",
+      "label": "72.00",
+      "settings": "{\"inter_Id\":\"2065682\",\"appId\":\"184500\",\"reward_Id\":\"2065700\"}"
+    },
+    {
+      "net": "AdMob",
+      "label": "x1.00",
+      "settings": "{\"inter_AdUnit\":\"ca-app-pub-6480664593997158/6788399814\",\"reward_AdUnit\":\"ca-app-pub-6480664593997158/1470793830\",\"banner_AdUnit\":\"ca-app-pub-6480664593997158/2783875505\"}"
+    },
+    {
+      "net": "AdMob",
+      "label": "x3.25",
+      "settings": "{\"inter_AdUnit\":\"ca-app-pub-6480664593997158/7578489889\",\"reward_AdUnit\":\"ca-app-pub-6480664593997158/5475318145\",\"banner_AdUnit\":\"ca-app-pub-6480664593997158/8891571551\"}"
+    },
+    {
+      "net": "AdMob",
+      "label": "x1.60",
+      "settings": "{\"inter_AdUnit\":\"ca-app-pub-6480664593997158/1368304754\",\"reward_AdUnit\":\"ca-app-pub-6480664593997158/6429059748\",\"banner_AdUnit\":\"ca-app-pub-6480664593997158/2681386421\"}"
+    },
+    {
+      "net": "Bigo",
+      "label": "Bid",
+      "settings": "{\"inter_rtb\":\"10219345-10217657\",\"appId\":\"10219345\",\"reward_rtb\":\"10219345-10313066\",\"banner_rtb\":\"10219345-10271089\"}"
+    },
+    {
+      "net": "Bigo",
+      "label": "NatBid",
+      "settings": "{\"appId\":\"10219345\",\"banner_native_rtb\":\"10219345-10353203\"}"
+    },
+    {
+      "net": "Vungle",
+      "label": "Bid",
+      "settings": "{\"ApplicationID\":\"663b19267911ea06b39203e8\",\"AccountID\":\"5c657afed9e6e60012bab5d9\",\"inter_rtb\":\"I_BID-8804702\",\"mediation\":\"cas\",\"reward_rtb\":\"V_BID-9940404\",\"banner_rtb\":\"B_BID-8069960\"}"
+    },
+    {
+      "net": "InMobi",
+      "label": "Bid",
+      "settings": "{\"inter_rtb\":\"1713131534116\",\"AccountID\":\"54f9486bbc4c42a4af3404023494c3aa\",\"mediation\":\"cas\",\"reward_rtb\":\"1714866087971\",\"banner_rtb\":\"1714527233827\"}"
+    },
+    {
+      "net": "Mintegral",
+      "label": "Bid",
+      "settings": "{\"appId\":\"287405\",\"inter_placement\":\"1505008\",\"apiKey\":\"702a2f322dd9bc99d0e6cdfd9d026115\",\"inter_unit\":\"3335022\",\"mediation\":\"cas\",\"reward_placement\":\"1505010\",\"reward_unit\":\"3335024\",\"banner_placement\":\"1505006\",\"banner_unit\":\"3335020\"}"
+    },
+    {
+      "net": "AppLovin",
+      "label": "50.00",
+      "settings": "{\"inter_zoneID\":\"6c9da28a185a809c\",\"reward_zoneID\":\"892bd49cd724b418\"}"
+    },
+    {
+      "net": "AppLovin",
+      "label": "25.00",
+      "settings": "{\"inter_zoneID\":\"6bb26036770db89d\",\"reward_zoneID\":\"b46609925f4bfbcf\"}"
+    },
+    {
+      "net": "AppLovin",
+      "label": "10.00",
+      "settings": "{\"inter_zoneID\":\"e43eebb7f30a7988\",\"reward_zoneID\":\"e1b69959fda3906d\",\"banner_zoneID\":\"766a3ceefe9831a3\"}"
+    },
+    {
+      "net": "AppLovin",
+      "label": "01.00",
+      "settings": "{\"inter_zoneID\":\"617f40bd8224e777\",\"reward_zoneID\":\"5c8b46dca33216e6\",\"banner_zoneID\":\"493c87fdabf05c94\"}"
+    },
+    {
+      "net": "AppLovin",
+      "label": "00.20",
+      "settings": "{\"banner_zoneID\":\"e4f5a71feca7a38c\"}"
+    },
+    {
+      "net": "AppLovin",
+      "label": "00.30",
+      "settings": "{\"inter_zoneID\":\"da58d444fc242b83\",\"reward_zoneID\":\"47e339610b38d229\",\"banner_zoneID\":\"f0ab4eed0ae5e147\"}"
+    },
+    {
+      "net": "AppLovin",
+      "label": "00.50",
+      "settings": "{\"inter_zoneID\":\"87b3a2fb36ee6202\",\"reward_zoneID\":\"6bc5d1da4a0b9910\",\"banner_zoneID\":\"d15a71a688ed16d1\"}"
+    },
+    {
+      "net": "AppLovin",
+      "label": "02.00",
+      "settings": "{\"inter_zoneID\":\"e9f4b100f7309a96\",\"reward_zoneID\":\"5997573ad53ba3cd\",\"banner_zoneID\":\"de27c2bdb7b99eba\"}"
+    },
+    {
+      "net": "AppLovin",
+      "label": "03.00",
+      "settings": "{\"inter_zoneID\":\"74e016c8721679d2\",\"reward_zoneID\":\"b69b4a5a6c72a943\",\"banner_zoneID\":\"9ab88789d0a33323\"}"
+    },
+    {
+      "net": "AppLovin",
+      "label": "00.40",
+      "settings": "{\"inter_zoneID\":\"9b4d078eb36be77f\",\"banner_zoneID\":\"d152d539689c244a\"}"
+    },
+    {
+      "net": "AppLovin",
+      "label": "07.00",
+      "settings": "{\"inter_zoneID\":\"32c88b06aa7d07c0\",\"reward_zoneID\":\"5ed4032273942a8d\"}"
+    },
+    {
+      "net": "AppLovin",
+      "label": "15.00",
+      "settings": "{\"inter_zoneID\":\"5344b4c8b820bc3b\",\"reward_zoneID\":\"e37a305f447d9e4c\"}"
+    },
+    {
+      "net": "AppLovin",
+      "label": "75.00",
+      "settings": "{\"inter_zoneID\":\"ef678e0dd1c23b84\"}"
+    },
+    {
+      "net": "AppLovin",
+      "label": "35.00",
+      "settings": "{\"reward_zoneID\":\"2de5dd1f80daafe4\"}"
+    },
+    {
+      "net": "AppLovin",
+      "label": "45.00",
+      "settings": "{\"reward_zoneID\":\"e1be09327dfbfed1\"}"
+    },
+    {
+      "net": "AppLovin",
+      "label": "60.00",
+      "settings": "{\"inter_zoneID\":\"ebf8c765f7cfc977\",\"reward_zoneID\":\"182da2e05b8dd8ee\"}"
+    },
+    {
+      "net": "AppLovin",
+      "label": "70.00",
+      "settings": "{\"reward_zoneID\":\"9c381d7995ef3e90\"}"
+    },
+    {
+      "net": "AppLovin",
+      "label": "80.00",
+      "settings": "{\"reward_zoneID\":\"39a81dfbf7d880b1\"}"
+    },
+    {
+      "net": "AppLovin",
+      "label": "90.00",
+      "settings": "{\"inter_zoneID\":\"9290d4e0e03374e1\"}"
+    },
+    {
+      "net": "AppLovin",
+      "label": "05.00",
+      "settings": "{\"inter_zoneID\":\"73a7c1b859fe4590\",\"reward_zoneID\":\"a35be980f84fb735\",\"banner_zoneID\":\"f64cd22e39eb7540\"}"
+    },
+    {
+      "net": "AppLovin",
+      "label": "08.00",
+      "settings": "{\"reward_zoneID\":\"2be0200bcb50223b\"}"
+    },
+    {
+      "net": "AppLovin",
+      "label": "00.70",
+      "settings": "{\"inter_zoneID\":\"acb8b8e0b7f2cf4c\",\"banner_zoneID\":\"8ca996e9e88579a7\"}"
+    },
+    {
+      "net": "AppLovin",
+      "label": "01.50",
+      "settings": "{\"inter_zoneID\":\"9a9cdbb0e13a54f7\",\"reward_zoneID\":\"54e820bdcf4f3b6d\",\"banner_zoneID\":\"f04547ada0d77cff\"}"
+    },
+    {
+      "net": "AppLovin",
+      "label": "04.00",
+      "settings": "{\"inter_zoneID\":\"c63bda994b8986b6\",\"reward_zoneID\":\"7e4be1aba0309fe2\"}"
+    },
+    {
+      "net": "AppLovin",
+      "label": "12.00",
+      "settings": "{\"inter_zoneID\":\"913452e664c71d77\",\"reward_zoneID\":\"043ac173bc8f0ef9\"}"
+    },
+    {
+      "net": "AppLovin",
+      "label": "20.00",
+      "settings": "{\"inter_zoneID\":\"2d988b48dc35f5e8\",\"reward_zoneID\":\"4211dcd8b4db1c30\"}"
+    },
+    {
+      "net": "AppLovin",
+      "label": "30.00",
+      "settings": "{\"inter_zoneID\":\"22e34f6be3bb8eec\",\"reward_zoneID\":\"e96368e8b2065578\"}"
+    },
+    {
+      "net": "AppLovin",
+      "label": "40.00",
+      "settings": "{\"inter_zoneID\":\"af1ff4dd87056293\",\"reward_zoneID\":\"5b8c60a59d136cbd\"}"
+    },
+    {
+      "net": "AppLovin",
+      "label": "100.00",
+      "settings": "{\"inter_zoneID\":\"c728c13701c720dd\",\"reward_zoneID\":\"e4db9bf18cdf572b\"}"
+    }
+  ],
+  "pausedNets": [
+    "Kidoz"
+  ],
+  "trialAdFreeSec": 0,
+  "cancelNetLevel": 1
+}

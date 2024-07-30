@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="player_description">Появление игрока, управление воспроизведением</string>
+    <string name="about_description">Версия, кредиты</string>
+    <string name="appearance_name">Появление</string>
+    <string name="ascending">Восходящий</string>
+    <string name="cancel">Отмена</string>
+    <string name="descending">Нисходящий</string>
+    <string name="disable">Запрещать</string>
+    <string name="done">Сделанный</string>
+    <string name="double_tap">Двойной жест</string>
+    <string name="double_tap_description">Выберите Двойное действие жеста</string>
+    <string name="navigate_up">Перейти вверх</string>
+    <string name="player_controls_next">Игрок следующий</string>
+    <string name="player_controls_exit">Перейти вверх</string>
+    <string name="player_controls_play_pause">Игрок играет в паузу</string>
+    <string name="player_controls_previous">Игрок предыдущий</string>
+    <string name="player_controls_progress">Прогресс игрок</string>
+
+    <string name="about_name">О</string>
+    <string name="language">Язык</string>
+    <string name="appearance_description">Отрегулируйте приложение по своему вкусу</string>
+    <string name="remember_brightness_level_description">Помните уровень яркости между сеансами воспроизведения</string>
+    <string name="resume_description">Выберите, нужно ли возобновить воспроизведение видео с точки зрения, где вы
+        остановились
+    </string>
+    <string name="select_audio_track">Выберите аудио -трек</string>
+    <string name="select_subtitle_track">Выберите трек субтитров</string>
+    <string name="ChangeThumbnail">Чаньетумбнайль</string>
+    <string name="size">Размер</string>
+    <string name="remember_selections">Помните выбор</string>
+    <string name="resume">Резюме</string>
+    <string name="seek_gesture">Искать жест</string>
+    <string name="seek_gesture_description">Проведите горизонтально, чтобы искать вперед или назад</string>
+    <string name="sort">Сортировать</string>
+    <string name="swipe_gesture">Проведите жест</string>
+    <string name="title">Заголовок</string>
+    <string name="unknown_error">Произошла неизвестная ошибка</string>
+    <string name="playback">Воспроизведение</string>
+    <string name="z_a">Z-A</string>
+    <string name="shortest">Самый короткий</string>
+    <string name="longest">Самый длинный</string>
+    <string name="smallest">Наименьший</string>
+    <string name="largest">Крупнейший</string>
+    <string name="dark_theme">Темная тема</string>
+    <string name="video_zoom">Видео Zoom</string>
+    <string name="controls_lock">Управление блокировкой</string>
+    <string name="title_activity_player">Ванильная видеоплеера</string>
+    <string name="controls_unlock">Разблокировать элементы управления</string>
+    <string name="select_playback_speed">Выберите скорость воспроизведения</string>
+    <string name="fast_seek">Быстрый поиск</string>
+    <string name="no_videos_found">Видео не найдено</string>
+    <string name="error_playing_video">Ошибка: может воспроизводить видео</string>
+    <string name="grant_permission">Предоставить разрешение</string>
+    <string name="fast_seek_description">Стремитесь ближайшего ключевого кадра вместо точной.</string>
+    <string name="duration">Продолжительность</string>
+    <string name="menu">Меню</string>
+    <string name="open_settings">Открыть настройки</string>
+    <string name="permission_info">Приложение Vanilla Video Player требует разрешения \\ \"%1$s \\\" для доступа и
+        воспроизведения медиа. Без него доступ к медиа и воспроизведение выигрывает. Чтобы полностью использовать
+        приложение, предоставьте разрешение.
+    </string>
+    <string name="permission_request">Запрос на разрешение</string>
+    <string name="group_videos">Групповые видео по папке</string>
+    <string name="location">Расположение</string>
+    <string name="permission_not_granted">Разрешение не предоставлено</string>
+    <string name="permission_settings">Приложение Vanilla Video Player требует разрешения \\ \"%1$s \\\" для доступа и
+        воспроизведения медиа. Без него доступ к медиа и воспроизведение выигрывает. Чтобы полностью использовать
+        приложение, предоставьте разрешение от настроек, так как в нем было постоянно отказано.
+    </string>
+    <string name="player_name">Игрок</string>
+    <string name="quick_settings">Быстрые настройки</string>
+    <string name="remember_brightness_level">Помните уровень яркости</string>
+    <string name="settings">Настройки</string>
+    <string name="remember_selections_description">Помните выбор для каждого файла, например, аудио -трек, трека
+        субтитров и т. Д.
+    </string>
+    <string name="swipe_gesture_description">Проведите вертикально, чтобы отрегулировать яркость и объем</string>
+    <string name="interface_name">Интерфейс</string>
+    <string name="a_z">A-Z</string>
+    <string name="dynamic_theme">Динамическая цветовая тема</string>
+    <string name="dynamic_theme_description">Применить цвета от системных обоев к теме применения</string>
+    <string name="audio">Аудио</string>
+    <string name="preferred_audio_lang">Предпочтительный аудиозаправляющий язык</string>
+    <string name="preferred_audio_lang_description">Язык аудио трека, который вы хотите использовать по умолчанию</string>
+    <string name="subtitle">Подзаголовок</string>
+    <string name="preferred_subtitle_lang">Предпочтительный язык субтитров</string>
+    <string name="preferred_subtitle_lang_description">Язык трека подзаголовок, который вы хотите использовать по
+        умолчанию
+    </string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="force_rescan_storage_desc">ВНИМАНИЕ: Инициирование полного хранения может вызвать повышенное
+        использование ресурсов на вашем устройстве
+    </string>
+    <string name="manage_folders_desc">Выберите папки, которые должны быть исключены в медиа -библиотеке</string>
+    <string name="system_default">Системные установки по умолчанию</string>
+    <string name="off">Выключенный</string>
+    <string name="on">На</string>
+    <string name="ff_rewind">Перемещаться/перемотка</string>
+    <string name="play_pause">Играть/пауза</string>
+    <string name="play_pause_ff_rewind">Играть/пауза и перемещаться/перемотать</string>
+    <string name="auto">Авто</string>
+    <string name="enable">Давать возможность</string>
+    <string name="none">Никто</string>
+    <string name="scan">Сканирование</string>
+    <string name="force_rescan_storage">Force Rescan Storage</string>
+    <string name="media_library">Медиа библиотека</string>
+    <string name="media_library_description">Сканировать и управлять медиа -библиотекой</string>
+    <string name="scanning_storage">Сканирование хранения…</string>
+    <string name="video">видео</string>
+    <string name="videos">видео</string>
+    <string name="manage_folders">Управлять папками</string>
+    <string name="screen_rotation">Вращение экрана</string>
+    <string name="player_screen_orientation">Ориентация экрана игрока</string>
+    <string name="automatic">Автоматический (датчик)</string>
+    <string name="landscape">Пейзаж</string>
+    <string name="landscape_auto">Ландшафт (датчик)</string>
+    <string name="portrait">Портрет</string>
+    <string name="video_orientation">Видео ориентация</string>
+    <string name="newest">Новейший</string>
+    <string name="oldest">Старейший</string>
+    <string name="date">Дата</string>
+    <string name="enter_a_network_url">Введите URL -адрес сети:</string>
+    <string name="network_stream">Сетевой поток</string>
+    <string name="default_playback_speed">По умолчанию скорость воспроизведения</string>
+    <string name="default_name">По умолчанию</string>
+    <string name="subtitle_text_bold_desc">Используйте жирный текст для субтитра</string>
+    <string name="play_url">Введите видео URL, чтобы играть</string>
+    <string name="play_file">Откройте видеофайл для игры</string>
+    <string name="subtitle_font">Подзаголовок шрифт</string>
+    <string name="subtitle_text_bold">Смелый текст субтитров</string>
+    <string name="subtitle_text_size">Размер текста подзаголовок</string>
+    <string name="subtitle_desc">Внешний вид субтитры, варианты воспроизведения</string>
+    <string name="subtitle_background">Фон субтитров</string>
+    <string name="subtitle_background_desc">Включить фон для текста подзатинка</string>
+    <string name="deleteFromHistory">Удалить из истории</string>
+    <string name="delete_file">Следующий файл будет удален навсегда</string>
+    <string name="high_contrast_dark_theme_desc">Используйте чистый черный фон для темной темы</string>
+    <string name="zoom_gesture_description">Ущипнуть, чтобы увеличить видео</string>
+    <string name="landscape_reverse">Ландшафт обратный</string>
+    <string name="delete_folder">Все видеофайлы в следующей папке будут удалены навсегда.</string>
+    <string name="autoplay_settings_description">Автоматически воспроизводите следующее видео в текущей папке</string>
+    <string name="controller_timeout">Тайм -аут контроллера</string>
+    <string name="pause_on_headset_disconnect_desc">Пауза воспроизведение при отключении гарнитуры от устройства</string>
+    <string name="video_software_decoders">Программные видеородеры</string>
+    <string name="sans_serif">Без засечек</string>
+    <string name="audio_desc">Параметры воспроизведения звука</string>
+    <string name="high_contrast_dark_theme">Высокая контрастная темная тема</string>
+    <string name="autoplay_settings">Автовоспроизведение</string>
+    <string name="seconds">%1$S секунд</string>
+    <string name="pause_on_headset_disconnect">Пауза на разъединении</string>
+    <string name="prefer_app_decoders">Предпочитаю приложения декодеров</string>
+    <string name="delete">Удалить</string>
+    <string name="zoom_gesture">Увеличение жеста</string>
+    <string name="embedded_styles">Встроенные стили</string>
+    <string name="device_decoders_only">Только декодеры устройства</string>
+    <string name="embedded_styles_desc">Примените встроенные стили, которые присутствуют в файлах субтитров, таких как
+        задница и так далее
+    </string>
+    <string name="system_volume_panel_desc">Показать панель объема системы при настройке громкости с гарнитурой на</string>
+    <string name="video_software_decoders_desc">Используйте прикладные программные декодеры (экспериментальные)</string>
+    <string name="hundred_percent">100%</string>
+    <string name="system_volume_panel">Объемная панель системы</string>
+    <string name="prefer_device_decoders">Предпочитаю декодеры устройства</string>
+    <string name="monospace">Монопрос</string>
+    <string name="deleteFromHistoryText">Следующий файл будет постоянно удален из истории</string>
+    <string name="subtitle_text_encoding">Кодирование текста подзаголовок</string>
+    <string name="decoder_desc">Приоритет декодера, варианты декодера воспроизведения</string>
+    <string name="fast_playback_speed">%.1fx скорость</string>
+    <string name="long_press_gesture">Длинный жест прессы</string>
+    <string name="long_press_gesture_desc">Длинная нажавка, чтобы играть на %.1fx speed</string>
+    <string name="best_fit">Наиболее подходящий</string>
+    <string name="serif">Засечка</string>
+    <string name="stretch">Потягиваться</string>
+    <string name="share">Делиться</string>
+    <string name="crop">Обрезать</string>
+    <string name="decoder">Декодер</string>
+    <string name="seek_increment">Искать приращение</string>
+    <string name="decoder_priority">Приоритет декодера</string>
+    <string name="system_caption_style">Стиль подписи системы</string>
+    <string name="system_caption_style_desc">Нажмите, чтобы открыть настройки подписания системы</string>
+    <string name="fields">Поля</string>
+    <string name="extension">Расширение</string>
+    <string name="path">Путь</string>
+    <string name="resolution">Разрешение</string>
+    <string name="thumbnail">Миниатюра</string>
+    <string name="compact">Компакт</string>
+    <string name="medium">Середина</string>
+    <string name="large">Большой</string>
+    <string name="thumbnail_size">Размер миниатюры</string>
+    <string name="require_audio_focus">Требовать аудио фокусировки</string>
+    <string name="require_audio_focus_desc">Сделайте паузу других игроков, пока этот игрок играет в видео, и наоборот.
+    </string>
+    <string name="folder">Папка</string>
+    <string name="history_video">История видео</string>
+    <string name="folders">Видео</string>
+    <string name="history_videos">Папки</string>
+    <string name="history">История видео</string>
+    <string name="no_videos">История</string>
+    <string name="no_folders">Нет видео</string>
+    <string name="no_history_videos">Нет папок</string>
+    <string name="loading">Нет истории истории</string>
+    <string name="date_added">Загрузка ...</string>
+    <string name="ok">Формат</string>
+    <string name="selected_tracks_count">%1$d/%2$d Выбрано</string>
+    <string name="selectall">Выбрать все</string>
+    <string name="upgrade_to_premium">Перейти на Премиум</string>
+    <string name="pro_mode_description">Наслаждайтесь просмотром без рекламы. Потоковое воспроизведение без перерывов.</string>
+    <string name="upgrade_now">Перейти сейчас на Премиум</string>
+    <string name="format">Формат</string>
+    <string name="lanugage_description">Измените язык приложения на то, что вам подходит.</string>
+    <string name="unlock_premium">Разблокировать Премиум</string>
+    <string name="unlock_premium_description">Улучшите здесь воспроизведение видео.</string>
+    <string name="search">Search</string>
+
+    <string name="onboarding_header">Потрясающие возможности</string>
+    <string name="header1">Режим "Картинка в картинке"</string>
+    <string name="header2">Онлайн-трансляция</string>
+    <string name="header3">Перейти на премиум</string>
+
+    <string name="description1">Продолжайте смотреть видео, пользуясь другими приложениями в режиме "Картинка в картинке". Ваши видео остаются в маленьком окне, пока вы занимаетесь другими делами!</string>
+    <string name="description2">Смотрите видео онлайн в любое время. Найдите и смотрите все, что вам нравится, легко и быстро!</string>
+    <string name="description3">Перейдите на премиум, чтобы пользоваться безрекламным опытом по низкой цене. Наслаждайтесь видео без прерываний рекламой!</string>
+
+    <string name="skip">Пропустить</string>
+    <string name="next">Далее</string>
+    <string name="get_started">Начать</string>
+
+</resources>

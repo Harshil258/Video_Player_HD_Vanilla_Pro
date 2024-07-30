@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="permission_not_granted">Toestemming niet verleend</string>
+    <string name="permission_request">Toestemmingsverzoek</string>
+    <string name="language">Taal</string>
+    <string name="appearance_description">Pas de app naar wens aan</string>
+    <string name="ascending">Stijgend</string>
+    <string name="cancel">Annuleren</string>
+    <string name="descending">Aflopend</string>
+    <string name="disable">Uitzetten</string>
+    <string name="done">Klaar</string>
+    <string name="double_tap">Dubbele tapgebaar</string>
+    <string name="double_tap_description">Selecteer Double Tap Gebesture Action</string>
+    <string name="error_playing_video">Fout: kan geen video afspelen</string>
+    <string name="fast_seek">Snel zoeken</string>
+    <string name="fast_seek_description">Probeer het dichtstbijzijnde sleutelframe in plaats van exact.</string>
+    <string name="about_description">Versie, credits</string>
+    <string name="duration">Duur</string>
+
+    <string name="about_name">Over</string>
+    <string name="menu">Menu</string>
+    <string name="appearance_name">Verschijning</string>
+    <string name="navigate_up">Opdrijven</string>
+    <string name="grant_permission">Toestemming geven</string>
+    <string name="group_videos">Groepsvideo\'s per map</string>
+    <string name="location">Plaats</string>
+    <string name="no_videos_found">geen video\'s gevonden</string>
+    <string name="open_settings">Open instellingen</string>
+    <string name="permission_info">De vanille -videospeler -app heeft \\ \"%1$s \\\" toestemming nodig om toegang te
+        krijgen tot en media te spelen. Zonder dit werkt media -toegang en weergave niet. Om de app volledig te
+        gebruiken, verleent u de toestemming.
+    </string>
+    <string name="permission_settings">De vanille -videospeler -app heeft \\ \"%1$s \\\" toestemming nodig om toegang
+        te krijgen tot en media te spelen. Zonder dit werkt media -toegang en weergave niet. Om de app volledig te
+        gebruiken, moet je de toestemming van instellingen toestaan, omdat deze permanent werd geweigerd.
+    </string>
+    <string name="player_controls_exit">Opdrijven</string>
+    <string name="player_controls_next">Speler volgende</string>
+    <string name="player_controls_play_pause">Spelersplay pauze</string>
+    <string name="player_controls_previous">Speler vorige</string>
+    <string name="player_controls_progress">Player Progress Bar</string>
+    <string name="player_description">Player -uiterlijk, afspeelbedieningen</string>
+    <string name="player_name">Speler</string>
+    <string name="quick_settings">Snelle instellingen</string>
+    <string name="autoplay_settings">Automatisch afspelen</string>
+    <string name="autoplay_settings_description">Speel automatisch de volgende video in de huidige map af</string>
+    <string name="remember_brightness_level">Denk aan het helderheidsniveau</string>
+    <string name="remember_brightness_level_description">Denk aan het helderheidsniveau tussen afspeelsessies</string>
+    <string name="remember_selections">Onthoud selecties</string>
+    <string name="remember_selections_description">Onthoud selecties voor elk bestand zoals audiotrack, ondertiteltrack,
+        enz.
+    </string>
+    <string name="resume">Cv</string>
+    <string name="resume_description">Selecteer of ze worden hervat gespeeld video\'s vanaf het punt waarop u bent
+        gestopt
+    </string>
+    <string name="seek_gesture">Zoek gebaar</string>
+    <string name="seek_gesture_description">Swipe horizontaal om vooruit of achteruit te zoeken</string>
+    <string name="select_audio_track">Selecteer audiotrack</string>
+    <string name="select_subtitle_track">Selecteer ondertitelingstrack</string>
+    <string name="settings">Instellingen</string>
+    <string name="ChangeThumbnail">Changethumbnail</string>
+    <string name="size">Maat</string>
+    <string name="sort">Soort</string>
+    <string name="swipe_gesture">Veeggebaar</string>
+    <string name="swipe_gesture_description">Veeg verticaal om de helderheid en het volume aan te passen</string>
+    <string name="title">Titel</string>
+    <string name="title_activity_player">Vanille videospeleractiviteit</string>
+    <string name="unknown_error">Er is een onbekende fout opgetreden</string>
+    <string name="playback">Afspelen</string>
+    <string name="interface_name">Koppel</string>
+    <string name="a_z">A-Z</string>
+    <string name="z_a">Z-A</string>
+    <string name="shortest">Kortste</string>
+    <string name="longest">Langst</string>
+    <string name="smallest">Kleinste</string>
+    <string name="largest">Het grootste</string>
+    <string name="dark_theme">Donker thema</string>
+    <string name="video_zoom">Video zoom</string>
+    <string name="dynamic_theme">Dynamisch kleurenthema</string>
+    <string name="dynamic_theme_description">Breng kleuren van System Wallpaper aan op het applicatiethema</string>
+    <string name="controls_lock">Vergrendelingsbedieningen</string>
+    <string name="controls_unlock">Ontgrendel bedieningselementen</string>
+    <string name="select_playback_speed">Selecteer de afspeelsnelheid</string>
+    <string name="audio">Audio</string>
+    <string name="preferred_audio_lang">Voorkeursaudiotaal</string>
+    <string name="preferred_audio_lang_description">Taal van de audiotrack die u standaard wilt gebruiken</string>
+    <string name="subtitle">Ondertitel</string>
+    <string name="preferred_subtitle_lang">Voorkeursondertitelingstaal</string>
+    <string name="preferred_subtitle_lang_description">Taal van het ondertitelingstrack dat u standaard wilt gebruiken
+    </string>
+    <string name="system_default">Systeemfout</string>
+    <string name="off">Uit</string>
+    <string name="on">Op</string>
+    <string name="play_pause">Speel pauze</string>
+    <string name="ff_rewind">Snel vooruit/terugspoelen</string>
+    <string name="play_pause_ff_rewind">Speel/pauzeren en snel vooruit/terugspoelen</string>
+    <string name="none">Geen</string>
+    <string name="auto">Auto</string>
+    <string name="enable">Inschakelen</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nee</string>
+    <string name="scan">Scannen</string>
+    <string name="media_library">Mediatheek</string>
+    <string name="force_rescan_storage">Force Rescan Storage</string>
+    <string name="force_rescan_storage_desc">Let op: het initiëren van een volledige opslagbekleding kan een verhoogd
+        gebruik van hulpbronnen op uw apparaat veroorzaken
+    </string>
+    <string name="media_library_description">Scan en beheer de mediabibliotheek</string>
+    <string name="scanning_storage">Scannen opslag ...</string>
+    <string name="manage_folders">Beheer mappen</string>
+    <string name="manage_folders_desc">Selecteer mappen die moeten worden uitgesloten in de mediabibliotheek</string>
+    <string name="video">video</string>
+    <string name="videos">videos</string>
+    <string name="screen_rotation">Schermrotatie</string>
+    <string name="player_screen_orientation">De oriëntatie van de spelerscherm</string>
+    <string name="automatic">Automatisch (sensor)</string>
+    <string name="landscape">Landschap</string>
+    <string name="landscape_reverse">Landschaps omgekeerd</string>
+    <string name="landscape_auto">Landschap (sensor)</string>
+    <string name="portrait">Portret</string>
+    <string name="video_orientation">Videooriëntatie</string>
+    <string name="newest">Nieuwste</string>
+    <string name="oldest">Oudste</string>
+    <string name="date">Datum</string>
+    <string name="default_playback_speed">Standaard afspeelsnelheid</string>
+    <string name="enter_a_network_url">Voer een netwerk -URL in:</string>
+    <string name="network_stream">Netwerkstroom</string>
+    <string name="play_file">Open het videobestand om te spelen</string>
+    <string name="play_url">Voer de video -URL in om te spelen</string>
+    <string name="default_name">Standaard</string>
+    <string name="monospace">Monospace</string>
+    <string name="sans_serif">Zonder serif</string>
+    <string name="serif">Serif</string>
+    <string name="subtitle_font">Ondertiteling lettertype</string>
+    <string name="subtitle_text_bold">Vetgedrukte ondertitelingstekst</string>
+    <string name="subtitle_text_bold_desc">Gebruik gewaagde tekst voor ondertitel</string>
+    <string name="subtitle_text_size">Ondertiteling van tekstgrootte</string>
+    <string name="subtitle_desc">Ondertitel uiterlijk, afspeelopties</string>
+    <string name="subtitle_background">Ondertitel achtergrond</string>
+    <string name="subtitle_background_desc">Schakel achtergrond in om tekst te ondertitelen</string>
+    <string name="decoder">Decoder</string>
+    <string name="decoder_desc">Decoderprioriteit, afspeeldecoderopties</string>
+    <string name="video_software_decoders">Softwarevideo -decoders</string>
+    <string name="video_software_decoders_desc">Gebruik Application Software Video Decoders (experimenteel)</string>
+    <string name="decoder_priority">Decoder prioriteit</string>
+    <string name="prefer_device_decoders">Geef de voorkeur aan apparaatdecoders</string>
+    <string name="prefer_app_decoders">Geef de voorkeur aan app -decoders</string>
+    <string name="device_decoders_only">Apparaat decoders alleen</string>
+    <string name="embedded_styles">Ingebedde stijlen</string>
+    <string name="embedded_styles_desc">Pas de ingebedde stijlen toe die aanwezig zijn in ondertitelbestanden, zoals
+        kont enzovoort
+    </string>
+    <string name="controller_timeout">Time -out van de controller</string>
+    <string name="seek_increment">Instructie zoeken</string>
+    <string name="seconds">%1$s seconden</string>
+    <string name="share">Deel</string>
+    <string name="delete">Verwijderen</string>
+    <string name="deleteFromHistory">Verwijderen uit de geschiedenis</string>
+    <string name="delete_file">Het volgende bestand wordt permanent verwijderd</string>
+    <string name="deleteFromHistoryText">Het volgende bestand wordt permanent uit de geschiedenis verwijderd</string>
+    <string name="subtitle_text_encoding">Ondertiteling tekstcodering</string>
+    <string name="delete_folder">Alle videobestanden in de volgende map worden permanent verwijderd.</string>
+    <string name="fast_playback_speed">%.1fx snelheid</string>
+    <string name="long_press_gesture">Lang persgebaar</string>
+    <string name="long_press_gesture_desc">Lange druk om te spelen met %.1fx snelheid</string>
+    <string name="best_fit">Het beste bij</string>
+    <string name="stretch">Rekken</string>
+    <string name="crop">Bijsnijden</string>
+    <string name="hundred_percent">100%</string>
+    <string name="zoom_gesture">Zoom gebaar</string>
+    <string name="zoom_gesture_description">Knijp om de video te zoomen</string>
+    <string name="high_contrast_dark_theme">Hoog contrast donker thema</string>
+    <string name="high_contrast_dark_theme_desc">Gebruik pure zwarte achtergrond voor donker thema</string>
+    <string name="audio_desc">Audio -afspeelopties</string>
+    <string name="pause_on_headset_disconnect">Pauzeer bij loskoppeling</string>
+    <string name="pause_on_headset_disconnect_desc">Pauzeer het afspelen wanneer de headset is losgekoppeld van het
+        apparaat
+    </string>
+    <string name="system_volume_panel">Systeemvolumepaneel</string>
+    <string name="system_volume_panel_desc">Toon het systeemvolumepaneel terwijl het volume aanpast met headset op
+    </string>
+    <string name="system_caption_style">System Bijschriftstijl</string>
+    <string name="system_caption_style_desc">Klik om de voorkeuren van het systeem te openen</string>
+    <string name="fields">Velden</string>
+    <string name="extension">Verlenging</string>
+    <string name="path">Pad</string>
+    <string name="resolution">Oplossing</string>
+    <string name="thumbnail">Miniatuur</string>
+    <string name="compact">Compact</string>
+    <string name="medium">Medium</string>
+    <string name="large">Groot</string>
+    <string name="thumbnail_size">duimnagel grootte</string>
+    <string name="require_audio_focus">Audiofocus nodig</string>
+    <string name="require_audio_focus_desc">Pauzeer andere spelers terwijl deze speler video\'s speelt en vice versa.
+    </string>
+    <string name="folder">Map</string>
+    <string name="history_video">Geschiedenisvideo</string>
+    <string name="folders">Videos</string>
+    <string name="history_videos">Mappen</string>
+    <string name="history">Geschiedenisvideo\'s</string>
+    <string name="no_videos">Geschiedenis</string>
+    <string name="no_folders">Geen video\'s</string>
+    <string name="no_history_videos">Geen mappen</string>
+    <string name="loading">Geen geschiedenisvideo\'s</string>
+    <string name="date_added">Bezig met laden...</string>
+    <string name="ok">Formaat</string>
+    <string name="selected_tracks_count">%1$d/%2$d Geselecteerd</string>
+    <string name="selectall">Alles selecteren</string>
+    <string name="upgrade_to_premium">Upgraden naar Premium</string>
+    <string name="pro_mode_description">Geniet van een advertentievrije kijkervaring. Stream naadloos zonder onderbrekingen.</string>
+    <string name="upgrade_now">Nu upgraden</string>
+    <string name="format">Formaat</string>
+    <string name="lanugage_description">Wijzig de app-taal naar iets dat bij je past.</string>
+    <string name="unlock_premium">Premium ontgrendelen</string>
+    <string name="unlock_premium_description">Versterk hier je videoweergave.</string>
+    <string name="search">Search</string>
+
+    <string name="onboarding_header">Geweldige functies</string>
+    <string name="header1">Picture-in-Picture</string>
+    <string name="header2">Online streamen</string>
+    <string name="header3">Premium nemen</string>
+
+    <string name="description1">Blijf uw video\'s bekijken terwijl u andere apps gebruikt met de Picture-in-Picture-modus. Uw video\'s blijven in een klein venster terwijl u andere dingen doet!</string>
+    <string name="description2">Stream video\'s online op elk gewenst moment. Zoek en bekijk wat u maar wilt, eenvoudig en snel!</string>
+    <string name="description3">Upgrade naar Premium voor een advertentievrije ervaring tegen lage kosten. Geniet van uw video\'s zonder onderbrekingen door advertenties!</string>
+
+    <string name="skip">Overslaan</string>
+    <string name="next">Volgende</string>
+    <string name="get_started">Laten we beginnen</string>
+
+</resources>

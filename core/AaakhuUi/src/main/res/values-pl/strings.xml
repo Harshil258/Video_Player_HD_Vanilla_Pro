@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ChangeThumbnail">Changetumbnail</string>
+    <string name="size">Rozmiar</string>
+    <string name="ascending">Wznoszący się</string>
+    <string name="swipe_gesture">Przesuń gest</string>
+    <string name="swipe_gesture_description">Przesuń pionowo, aby dostosować jasność i objętość</string>
+    <string name="title">Tytuł</string>
+    <string name="interface_name">Interfejs</string>
+    <string name="play_pause">Zagraj/pauza</string>
+    <string name="shortest">Najkrótszy</string>
+    <string name="descending">Schodzenie</string>
+    <string name="no">NIE</string>
+    <string name="videos">filmy</string>
+    <string name="on">NA</string>
+    <string name="ff_rewind">Szybko do przodu/przewijanie</string>
+    <string name="play_pause_ff_rewind">Zagraj/pauza i szybka do przodu/przewijana</string>
+    <string name="none">Nic</string>
+    <string name="autoplay_settings">Automatyczne odtwarzanie</string>
+    <string name="scan">Skanowanie</string>
+    <string name="remember_selections_description">Pamiętaj o wyborach dla każdego pliku, takich jak ścieżka audio, tor
+        itp.
+    </string>
+    <string name="resume">Wznawiać</string>
+    <string name="player_controls_exit">Przejść w górę</string>
+    <string name="player_controls_next">Gracz następny</string>
+    <string name="player_controls_play_pause">Gracz Play Pauza</string>
+    <string name="player_controls_previous">Gracz poprzedni</string>
+    <string name="player_controls_progress">Pasek postępu gracza</string>
+    <string name="player_description">Wygląd gracza, elementy sterujące odtwarzaniem</string>
+    <string name="player_name">Gracz</string>
+    <string name="yes">Tak</string>
+    <string name="smallest">Najmniejsze</string>
+    <string name="off">Wyłączony</string>
+    <string name="menu">Menu</string>
+    <string name="longest">Najdłużej</string>
+    <string name="appearance_name">Wygląd</string>
+    <string name="location">Lokalizacja</string>
+    <string name="a_z">A-Z</string>
+    <string name="cancel">Anulować</string>
+    <string name="enable">Włączać</string>
+    <string name="disable">Wyłączyć</string>
+    <string name="largest">Największa</string>
+    <string name="auto">Automatyczny</string>
+    <string name="sort">Sortować</string>
+    <string name="video">wideo</string>
+    <string name="playback">Odtwarzanie nagranego dźwięku</string>
+    <string name="seek_gesture">Szukaj gestu</string>
+    <string name="seek_gesture_description">Przesuń poziomo, aby szukać naprzód lub do tyłu</string>
+    <string name="select_audio_track">Wybierz ścieżkę audio</string>
+    <string name="select_subtitle_track">Wybierz tor podtytuły</string>
+    <string name="settings">Ustawienia</string>
+    <string name="z_a">Z-A</string>
+
+    <string name="about_name">O</string>
+    <string name="subtitle">Podtytuł</string>
+    <string name="duration">Czas trwania</string>
+    <string name="dynamic_theme_description">Zastosuj kolory z tapety systemowej na motyw aplikacji</string>
+    <string name="controls_lock">Blokada sterowania</string>
+    <string name="controls_unlock">Odblokuj elementy sterujące</string>
+    <string name="select_playback_speed">Wybierz prędkość odtwarzania</string>
+    <string name="audio">Audio</string>
+    <string name="done">Zrobione</string>
+    <string name="deleteFromHistory">Usuń z historii</string>
+    <string name="delete_file">Poniższy plik zostanie usunięty na stałe</string>
+    <string name="about_description">Wersja, kredyty</string>
+    <string name="player_screen_orientation">Orientacja ekranu odtwarzacza</string>
+    <string name="double_tap">Podwójny gest stukania</string>
+    <string name="double_tap_description">Wybierz Działanie podwójnego dotknięcia gestu</string>
+    <string name="oldest">Najstarszy</string>
+    <string name="network_stream">Strumień sieci</string>
+    <string name="play_file">Otwórz plik wideo do odtwarzania</string>
+    <string name="delete_folder">Wszystkie pliki wideo w poniższym folderze zostaną na stałe usunięte.</string>
+    <string name="portrait">Portret</string>
+    <string name="navigate_up">Przejść w górę</string>
+    <string name="no_videos_found">Nie znaleziono filmów</string>
+    <string name="date">Data</string>
+    <string name="newest">Najnowsza</string>
+    <string name="group_videos">Filmy grupowe według folderu</string>
+    <string name="zoom_gesture">Zoom Gest</string>
+    <string name="zoom_gesture_description">Szczyt, aby powiększyć wideo</string>
+    <string name="high_contrast_dark_theme">Motyw Dark High Contrast Dark</string>
+    <string name="automatic">Automatyczny (czujnik)</string>
+    <string name="delete">Usuwać</string>
+    <string name="preferred_audio_lang">Preferowany język audio</string>
+    <string name="preferred_audio_lang_description">Język ścieżki audio, których chcesz użyć domyślnie</string>
+    <string name="preferred_subtitle_lang">Preferowany język napisów</string>
+    <string name="error_playing_video">Błąd: nie może odtwarzać wideo</string>
+    <string name="quick_settings">Szybkie ustawienia</string>
+    <string name="enter_a_network_url">Wprowadź adres URL sieciowego:</string>
+    <string name="autoplay_settings_description">Automatycznie odtwarzaj następny film w bieżącym folderze</string>
+    <string name="remember_brightness_level">Pamiętaj o poziomie jasności</string>
+    <string name="landscape">Krajobraz</string>
+    <string name="dark_theme">ciemny schemat</string>
+    <string name="language">Język</string>
+    <string name="appearance_description">Dostosuj aplikację do swoich upodobań</string>
+    <string name="play_url">Wprowadź adres URL wideo, aby odtwarzać</string>
+    <string name="landscape_reverse">Odwrotność krajobrazu</string>
+    <string name="landscape_auto">Krajobraz (czujnik)</string>
+    <string name="preferred_subtitle_lang_description">Język ścieżki napisów, których domyślnie chcesz użyć</string>
+    <string name="deleteFromHistoryText">Poniższy plik zostanie usunięty na stałe z historii</string>
+    <string name="subtitle_text_encoding">Kodowanie tekstu napisów</string>
+    <string name="video_orientation">Orientacja wideo</string>
+    <string name="default_playback_speed">Domyślna prędkość odtwarzania</string>
+    <string name="force_rescan_storage">Wymień przechowywanie skanowania</string>
+    <string name="video_zoom">Zoom wideo</string>
+    <string name="dynamic_theme">Dynamiczny motyw kolorów</string>
+    <string name="high_contrast_dark_theme_desc">Użyj czystego czarnego tła dla ciemnego motywu</string>
+    <string name="audio_desc">Opcje odtwarzania dźwięku</string>
+    <string name="pause_on_headset_disconnect">Zatrzymaj się na rozłączenie</string>
+    <string name="pause_on_headset_disconnect_desc">Zatrzymaj odtwarzanie, gdy zestaw słuchawkowy jest odłączony od
+        urządzenia
+    </string>
+    <string name="system_volume_panel">Panel głośności systemu</string>
+    <string name="system_volume_panel_desc">Pokaż panel głośności systemu podczas regulacji głośności za pomocą zestawu
+        słuchawkowego
+    </string>
+    <string name="system_caption_style">Styl podpisu systemowego</string>
+    <string name="system_caption_style_desc">Kliknij, aby otworzyć preferencje dotyczące podpisów systemowych</string>
+    <string name="fields">Pola</string>
+    <string name="remember_brightness_level_description">Pamiętaj o poziomie jasności między sesjami odtwarzania
+    </string>
+    <string name="remember_selections">Pamiętaj o wyborach</string>
+    <string name="medium">Średni</string>
+    <string name="resume_description">Wybierz, czy wznowić odtwarzane filmy z punktu, w którym się zatrzymałeś</string>
+    <string name="fast_seek_description">Poszukaj najbliższej ramy kluczowej zamiast dokładnej.</string>
+    <string name="grant_permission">Dać pozwolenie</string>
+    <string name="default_name">Domyślny</string>
+    <string name="monospace">Monospace</string>
+    <string name="sans_serif">Sans Serif</string>
+    <string name="serif">Serif</string>
+    <string name="subtitle_font">Czcionka napisów</string>
+    <string name="subtitle_text_bold">BOLD Tekst napisów</string>
+    <string name="subtitle_text_bold_desc">Użyj odważnego tekstu do napisów</string>
+    <string name="subtitle_text_size">Rozmiar tekstu napisu</string>
+    <string name="subtitle_desc">Wygląd napisów, opcje odtwarzania</string>
+    <string name="subtitle_background">Podtytuł tło</string>
+    <string name="subtitle_background_desc">Włącz tło, aby podtytuły tekst</string>
+    <string name="decoder">Dekoder</string>
+    <string name="decoder_desc">Dekoder priorytet, opcje dekodera odtwarzania</string>
+    <string name="video_software_decoders">Dekodery wideo oprogramowania</string>
+    <string name="video_software_decoders_desc">Użyj dekoderów wideo oprogramowania aplikacyjnego (eksperymentalne)
+    </string>
+    <string name="decoder_priority">Priorytet dekodera</string>
+    <string name="prefer_device_decoders">Wolić dekodery urządzeń</string>
+    <string name="prefer_app_decoders">Wolić dekodery aplikacji</string>
+    <string name="device_decoders_only">Tylko dekodery urządzenia</string>
+    <string name="embedded_styles">Wbudowane style</string>
+    <string name="embedded_styles_desc">Zastosuj wbudowane style, które są obecne w plikach napisów, takich jak tyłek i
+        tak dalej
+    </string>
+    <string name="controller_timeout">Limit czasu kontrolera</string>
+    <string name="seek_increment">Szukać przyrostu</string>
+    <string name="seconds">%1$s sekund</string>
+    <string name="permission_request">Prośba o pozwolenie</string>
+    <string name="open_settings">Otwórz ustawienia</string>
+    <string name="title_activity_player">Aktywność odtwarzacza wideo waniliowego</string>
+    <string name="unknown_error">Wystąpił nieznany błąd</string>
+    <string name="hundred_percent">100%</string>
+    <string name="thumbnail">Miniaturka</string>
+    <string name="compact">Kompaktowy</string>
+    <string name="manage_folders_desc">Wybierz foldery, które mają zostać wykluczone w bibliotece multimedialnej</string>
+    <string name="thumbnail_size">Wielkość miniaturki</string>
+    <string name="screen_rotation">Obrót ekranu</string>
+    <string name="extension">Rozszerzenie</string>
+    <string name="permission_settings">Aplikacja odtwarzacza wideo wanilii potrzebuje \\ \"%1$s \\\" na dostęp i
+        odtwarzanie mediów. Bez tego dostęp do mediów i odtwarzanie nie działały. Aby w pełni korzystać z aplikacji,
+        udziel zgody z ustawień, ponieważ została na stałe odrzucona.
+    </string>
+    <string name="large">Duży</string>
+    <string name="path">Ścieżka</string>
+    <string name="media_library">Biblioteka medialna</string>
+    <string name="fast_seek">Szybkie poszukiwanie</string>
+    <string name="permission_info">Aplikacja odtwarzacza wideo wanilii potrzebuje \\ \"%1$s \\\" na dostęp i
+        odtwarzanie mediów. Bez tego dostęp do mediów i odtwarzanie nie działały. Aby w pełni korzystać z aplikacji,
+        udzielić pozwolenia.
+    </string>
+    <string name="fast_playback_speed">%.1fx prędkość</string>
+    <string name="long_press_gesture">Długi gest prasowy</string>
+    <string name="long_press_gesture_desc">Długa prasa, aby zagrać z prędkością %.1fx</string>
+    <string name="best_fit">Najlepiej dopasowana</string>
+    <string name="stretch">Rozciągać się</string>
+    <string name="permission_not_granted">Zezwolenie nie jest przyznane</string>
+    <string name="resolution">Rezolucja</string>
+    <string name="share">Udział</string>
+    <string name="crop">Przyciąć</string>
+    <string name="force_rescan_storage_desc">Uwaga: inicjowanie pełnej resolu do przechowywania może spowodować
+        zwiększone zużycie zasobów na urządzeniu
+    </string>
+    <string name="media_library_description">Skanuj i zarządzaj biblioteką medialną</string>
+    <string name="scanning_storage">Pamięć skanowania…</string>
+    <string name="manage_folders">Zarządzaj folderami</string>
+    <string name="system_default">Domyślne ustawienie systemowe</string>
+    <string name="require_audio_focus">Wymagaj skupienia dźwięku</string>
+    <string name="require_audio_focus_desc">Zatrzymajcie się z innymi graczami, gdy ten gracz gra filmy i odwrotnie.
+    </string>
+    <string name="folder">Teczka</string>
+    <string name="history_video">Historia wideo</string>
+    <string name="folders">Filmy</string>
+    <string name="history_videos">Lornetka składana</string>
+    <string name="history">Filmy z historii</string>
+    <string name="no_videos">Historia</string>
+    <string name="no_folders">Brak filmów</string>
+    <string name="no_history_videos">Brak folderów</string>
+    <string name="loading">Brak filmów z historii</string>
+    <string name="date_added">Ładowanie...</string>
+    <string name="ok">Format</string>
+    <string name="selected_tracks_count">%1$d/%2$d Wybrano</string>
+    <string name="selectall">Wybierz wszystko</string>
+    <string name="upgrade_to_premium">Przejdź na Premium</string>
+    <string name="pro_mode_description">Ciesz się bezreklamowym doświadczeniem z oglądania. Strumieniuj płynnie bez przerw.</string>
+    <string name="upgrade_now">Przejdź teraz na Premium</string>
+    <string name="format">Format</string>
+    <string name="lanugage_description">Zmień język aplikacji na coś, co cię interesuje.</string>
+    <string name="unlock_premium">Odblokuj Premium</string>
+    <string name="unlock_premium_description">Ulepsz odtwarzanie wideo tutaj.</string>
+    <string name="search">Search</string>
+
+    <string name="onboarding_header">Niesamowite Funkcje</string>
+    <string name="header1">Obraz-w-Obrazie</string>
+    <string name="header2">Transmisja Online</string>
+    <string name="header3">Przejdź na Premium</string>
+
+    <string name="description1">Kontynuuj oglądanie swoich filmów, korzystając z innych aplikacji w trybie Obraz-w-Obrazie. Twoje filmy pozostają w małym oknie, gdy robisz inne rzeczy!</string>
+    <string name="description2">Transmisja filmów online o każdej porze. Znajdź i oglądaj, co tylko chcesz, łatwo i szybko!</string>
+    <string name="description3">Ulepsz do Premium, aby uzyskać doświadczenie bez reklam za niską cenę. Ciesz się swoimi filmami bez żadnych przerw na reklamy!</string>
+
+    <string name="skip">Pomiń</string>
+    <string name="next">Dalej</string>
+    <string name="get_started">Zaczynajmy</string>
+
+</resources>
