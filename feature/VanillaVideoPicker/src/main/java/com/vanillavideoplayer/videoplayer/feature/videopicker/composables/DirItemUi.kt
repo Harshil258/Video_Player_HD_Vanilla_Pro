@@ -20,14 +20,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
-import androidx.compose.ui.layout.layout
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.offset
-import com.vanillavideoplayer.videoplayer.core.model.ApplicationPrefData
 import com.vanillavideoplayer.videoplayer.core.model.FolderData
 import com.vanillavideoplayer.videoplayer.core.ui.R
 import com.vanillavideoplayer.videoplayer.core.ui.preview.LightDarkPrev
@@ -38,7 +34,7 @@ import com.vanillavideoplayer.videoplayer.core.ui.theme.VideoPlayerTheme
 @Composable
 fun DirItemPreview() {
     VideoPlayerTheme {
-        DirItem(folder = FolderData.sample, preferences = ApplicationPrefData())
+        DirItem(folder = FolderData.sample)
     }
 }
 
@@ -47,13 +43,11 @@ fun DirItemPreview() {
 @Composable
 fun DirItem(
     folder: FolderData,
-    preferences: ApplicationPrefData,
     modifier: Modifier = Modifier,
 ) {
 
     ListItem(leadingContent = {
-        val imagePainter: Painter =
-            painterResource(id = com.vanillavideoplayer.videoplayer.feature.videopicker.R.drawable.folder)
+        val imagePainter: Painter = painterResource(id = com.vanillavideoplayer.videoplayer.feature.videopicker.R.drawable.ic_folder)
         Row(
             modifier = Modifier
                 .fillMaxWidth(),
@@ -101,12 +95,4 @@ fun DirItem(
         }
     }, headlineContent = {}, supportingContent = {}, modifier = modifier.wrapContentHeight()
     )
-}
-
-fun Modifier.minusVerticalPadding(vertical: Dp) = layout { measurable, constraints ->
-    val placeable = measurable.measure(constraints.offset(vertical = (-vertical * 2).roundToPx()))
-
-    layout(
-        width = placeable.width, height = placeable.height - (vertical * 2).roundToPx()
-    ) { placeable.place(0, 0 - vertical.roundToPx()) }
 }

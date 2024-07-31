@@ -11,7 +11,7 @@
         android:maxSdkVersion="32" />
 
     <application
-        android:name="com.vanillavideoplayer.hd.videoplayer.pro.VanillaPlayerProApp"
+        android:name="com.vanillavideoplayer.hd.videoplayer.pro.VanillaProApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -24,7 +24,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="s">
         <activity
-            android:name="com.vanillavideoplayer.hd.videoplayer.pro.LauncherActivity"
+            android:name="com.vanillavideoplayer.hd.videoplayer.pro.LauncherScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

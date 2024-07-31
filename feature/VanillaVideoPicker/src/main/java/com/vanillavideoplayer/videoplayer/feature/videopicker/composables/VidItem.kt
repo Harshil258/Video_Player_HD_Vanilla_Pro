@@ -33,6 +33,8 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.surfaceColorAtElevation
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -44,7 +46,6 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
@@ -60,40 +61,38 @@ import com.vanillavideoplayer.videoplayer.core.ui.preview.LightDarkPrev
 import com.vanillavideoplayer.videoplayer.core.ui.theme.VideoPlayerTheme
 import com.vanillavideoplayer.videoplayer.core.ui.theme.color
 import com.vanillavideoplayer.videoplayer.feature.player.PlayerViewModel
+import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import java.text.SimpleDateFormat
-import java.util.Date
-import java.util.Locale
 
 @Composable
 fun VidProgressUi(totalDuration: Int, currentDuration: Int? = 5000) {
-    val progCount = remember { mutableStateOf(0.0f) }
+    val progCount = remember { mutableFloatStateOf(0.0f) }
 
     // Calculate the progress as a percentage
     if (currentDuration != null) {
-        progCount.value = (currentDuration.toFloat() / totalDuration.toFloat()) * 100
+        progCount.floatValue = (currentDuration.toFloat() / totalDuration.toFloat()) * 100
     }
     val progressAnimation by animateFloatAsState(
-        targetValue = progCount.value / 100f,
-        animationSpec = tween(durationMillis = 500, easing = FastOutSlowInEasing)
+        targetValue = progCount.floatValue / 100f,
+        animationSpec = tween(durationMillis = 500, easing = FastOutSlowInEasing), label = ""
     )
     LinearProgressIndicator(
+        progress = { progressAnimation },
         modifier = Modifier.fillMaxWidth(),
-        progress = progressAnimation,
     )
 }
 
 
 @SuppressLint("CoroutineCreationDuringComposition")
-@OptIn(ExperimentalLayoutApi::class)
+@OptIn(ExperimentalLayoutApi::class, DelicateCoroutinesApi::class)
 @Composable
 fun VideoItem(
     vidData: VideoData,
     pref: ApplicationPrefData,
     isSelected: Boolean,
-    md: Modifier = Modifier,
+    modifier: Modifier = Modifier,
     playerViewModel: PlayerViewModel?,
     infoButtonClick: () -> Unit
 ) {
@@ -106,7 +105,6 @@ fun VideoItem(
     var downSidePadding by remember { mutableStateOf(8.dp) }
 
     AnimatedVisibility(visible = pref.showVideoTheme == VideoTheme.THUMBNAIL_MEDIUM) {
-        val context = LocalContext.current
         ListItem(
             colors = ListItemDefaults.colors(
                 containerColor = if (isSelected) selectedItemColor else ListItemDefaults.containerColor
@@ -183,7 +181,7 @@ fun VideoItem(
                             }
                         }
 
-                        var currentDuration by remember { mutableStateOf(0) }
+                        var currentDuration by remember { mutableIntStateOf(0) }
                         GlobalScope.launch(Dispatchers.Main) {
                             currentDuration =
                                 playerViewModel?.getVideoState(vidData.path)?.position?.toInt() ?: 0
@@ -215,14 +213,14 @@ fun VideoItem(
                 }
             },
 
-            modifier = md
+            modifier = modifier
         )
     }
 
     AnimatedVisibility(visible = pref.showVideoTheme == VideoTheme.THUMBNAIL_BIG) {
         Column {
             Box(
-                modifier = md
+                modifier = modifier
                     .clip(MaterialTheme.shapes.small)
                     .aspectRatio(16f / 10f)
                     .padding(start = 10.dp, end = 10.dp, top = 10.dp, bottom = 10.dp)
@@ -274,7 +272,7 @@ fun VideoItem(
                             .background(gradient)
                     )
 
-                    var currentDuration by remember { mutableStateOf(0) }
+                    var currentDuration by remember { mutableIntStateOf(0) }
                     GlobalScope.launch(Dispatchers.Main) {
                         currentDuration =
                             playerViewModel?.getVideoState(vidData.path)?.position?.toInt() ?: 0
@@ -301,7 +299,6 @@ fun VideoItem(
                 Column(
                     modifier = Modifier.align(Alignment.BottomStart),
                 ) {
-                    val desiConf = LocalConfiguration.current
                     Text(
                         text = vidData.displayName,
                         maxLines = 1,
@@ -331,10 +328,6 @@ fun VideoItem(
                             contentColor = Color.White,
                             shape = MaterialTheme.shapes.extraSmall
                         )
-
-                        val dateSDF =
-                            SimpleDateFormat("dd/MM/yyyy hh:mm:ss aa", Locale.getDefault())
-                        val preparedDateString = dateSDF.format(Date(vidData.dateModified * 1000))
                         DetailsChipUi(
                             text = vidData.formattedFileSize,
                             modifier = Modifier.padding(5.dp),
@@ -371,7 +364,7 @@ fun VideoItem(
 
                 if (isSelected) {
                     Box(
-                        modifier = md
+                        modifier = modifier
                             .clip(MaterialTheme.shapes.small)
                             .fillMaxSize()
                             .background(selectedItemColor)
@@ -408,8 +401,6 @@ fun VideoItem(
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
 fun VidItemPrev() {
-    var boolInfoVisible by remember { mutableStateOf(false) }
-
     VideoPlayerTheme {
         Surface {
             VideoItem(

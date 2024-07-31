@@ -10,10 +10,7 @@ import com.vanillavideoplayer.videoplayer.feature.player.VanillaPlayerActivityPr
 
 const val MEDIA_ROUTE_VAL = "media_nav_route"
 
-
-fun Context.startVPActivity(uri: Uri) {
-
-
+fun Context.launchVideoPlayerActivity(uri: Uri) {
     runningActivity?.let {
         adPlacerApplication.interstitialManager.loadAndShowInter(it,object : InterAdCallBack {
         override fun onContinueFlow() {
@@ -25,7 +22,7 @@ fun Context.startVPActivity(uri: Uri) {
             )
             startActivity(intent)
         }
-    })
+        })
     }
 }
 

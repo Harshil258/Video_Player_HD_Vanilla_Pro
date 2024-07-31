@@ -40,7 +40,7 @@ import java.io.File
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-internal fun MediaPickerDirScreen(
+internal fun FolderScreenUi(
     folderPath: String,
     videosStateSealedInter: VideosStateSealedInter,
     preferences: ApplicationPrefData,
@@ -49,7 +49,7 @@ internal fun MediaPickerDirScreen(
     onVideoClick: (Uri) -> Unit,
     onDeleteVideoClick: (List<String>?) -> Unit,
     playerViewModel: PlayerViewModel?,
-    viewModel: MediaPickerDirVM,
+    viewModel: FolderPickerViewModel,
     selectedTracks: List<VideoData>?,
     clearSelectedTracks: () -> Unit?
 ) {
@@ -136,8 +136,8 @@ internal fun MediaPickerDirScreen(
                 onDeleteVideoClick = {
 
                     onDeleteVideoClick(listOf(it))
-                    if (!disableMultiSelect && !(selectedTracks!!.isEmpty())) {
-                        onDeleteVideoClick(selectedTracks.map { it.path })
+                    if (!disableMultiSelect && selectedTracks!!.isNotEmpty()) {
+                        onDeleteVideoClick(selectedTracks.map { videoData ->  videoData.path })
                     }
 
                 },
@@ -155,9 +155,9 @@ internal fun MediaPickerDirScreen(
 
 
 @Composable
-fun MediaPickerDirRoute(
-    viewModel: MediaPickerDirVM = hiltViewModel(),
-    mediaPickerViewModel: MediaPickerDirVM = hiltViewModel(),
+fun FolderScreenRoute(
+    viewModel: FolderPickerViewModel = hiltViewModel(),
+    mediaPickerViewModel: FolderPickerViewModel = hiltViewModel(),
     onVideoClick: (uri: Uri) -> Unit,
     onNavigateUp: () -> Unit,
     playerViewModel: PlayerViewModel?,
@@ -170,7 +170,7 @@ fun MediaPickerDirRoute(
         onResult = {}
     )
 
-    MediaPickerDirScreen(
+    FolderScreenUi(
         folderPath = viewModel.dirPath,
         videosStateSealedInter = vidState,
         preferences = prefs,

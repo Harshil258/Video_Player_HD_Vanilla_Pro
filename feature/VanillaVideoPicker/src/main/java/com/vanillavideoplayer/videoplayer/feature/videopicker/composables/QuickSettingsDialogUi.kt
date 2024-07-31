@@ -3,7 +3,6 @@ package com.vanillavideoplayer.videoplayer.feature.videopicker.composables
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -11,10 +10,8 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.selection.toggleable
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FilterChipDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -26,9 +23,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -40,42 +35,12 @@ import com.vanillavideoplayer.videoplayer.core.ui.R
 import com.vanillavideoplayer.videoplayer.core.ui.composviews.VanillaCancelButton
 import com.vanillavideoplayer.videoplayer.core.ui.composviews.VanillaDoneButton
 import com.vanillavideoplayer.videoplayer.core.ui.composviews.VanillaPlayerDialog
-import com.vanillavideoplayer.videoplayer.core.ui.composviews.VanillaSwitchView
 import com.vanillavideoplayer.videoplayer.core.ui.composviews.horizontalFadingEdge
 import com.vanillavideoplayer.videoplayer.core.ui.designsystem.VanillaIcons
 import com.vanillavideoplayer.videoplayer.feature.videopicker.extensions.name
 
 enum class SelectedChipEnum {
     CHIP_ONE, CHIP_TWO
-}
-
-
-@Composable
-fun DialogPrefSwitch(
-    text: String,
-    isChecked: Boolean,
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier,
-    enabled: Boolean = true,
-) {
-    Row(
-        modifier = modifier
-            .fillMaxWidth()
-            .toggleable(value = isChecked, enabled = enabled, onValueChange = { onClick() })
-            .padding(12.dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.SpaceBetween
-    ) {
-        Text(
-            text = text, maxLines = 1, style = MaterialTheme.typography.titleMedium
-        )
-        VanillaSwitchView(
-            checked = isChecked,
-            onCheckedChange = null,
-            modifier = Modifier.padding(start = 20.dp),
-            enabled = enabled
-        )
-    }
 }
 
 @Preview
@@ -89,8 +54,6 @@ fun QuickSettingsPrevUi() {
     }
 }
 
-
-@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun QuickSettingsDialogUi(
     applicationPrefData: ApplicationPrefData,
@@ -127,8 +90,6 @@ fun QuickSettingsDialogUi(
     })
 }
 
-
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SOSegmentedButton(
     selectedSortByEnum: SortByEnum,
@@ -222,33 +183,3 @@ private fun VidSortOptions(
             onClick = { onOptionSelected(SortByEnum.PATH_SORT) })
     }
 }
-
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun ChipFieldUi(
-    label: String,
-    selected: Boolean,
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier,
-    selectedIcon: ImageVector = VanillaIcons.CheckBox,
-    unselectedIcon: ImageVector = VanillaIcons.CheckBoxOutline,
-) {
-    FilterChip(
-        selected = selected,
-        onClick = onClick,
-        label = { Text(text = label) },
-        leadingIcon = {
-            Icon(
-                imageVector = if (selected) selectedIcon else unselectedIcon,
-                contentDescription = "",
-                modifier = Modifier.size(FilterChipDefaults.IconSize),
-                tint = MaterialTheme.colorScheme.secondary
-            )
-        },
-        modifier = modifier
-    )
-}
-
-
-

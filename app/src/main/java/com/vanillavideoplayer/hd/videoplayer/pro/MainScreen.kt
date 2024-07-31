@@ -43,7 +43,7 @@ import com.harshil258.adplacer.utils.Constants.adPlacerApplication
 import com.harshil258.adplacer.utils.Logger
 import com.harshil258.adplacer.utils.STATUS
 import com.harshil258.adplacer.utils.SharedPrefConfig.Companion.sharedPrefConfig
-import com.vanillavideoplayer.hd.videoplayer.pro.VanillaPlayerProApp.Companion.setAdStatusBasedOnPurchaseOrArgument
+import com.vanillavideoplayer.hd.videoplayer.pro.VanillaProApp.Companion.setAdStatusBasedOnPurchaseOrArgument
 import com.vanillavideoplayer.hd.videoplayer.pro.compose.MAIN_ROUTE_CONST
 import com.vanillavideoplayer.hd.videoplayer.pro.compose.MainScreenUi
 import com.vanillavideoplayer.hd.videoplayer.pro.compose.RatingDialogVideoPro
@@ -53,7 +53,7 @@ import com.vanillavideoplayer.videoplayer.core.ui.theme.VideoPlayerTheme
 import com.vanillavideoplayer.videoplayer.feature.player.PlayerViewModel
 import com.vanillavideoplayer.videoplayer.feature.videopicker.navigation.settingsNavGraph
 import com.vanillavideoplayer.videoplayer.feature.videopicker.screens.VideosStateSealedInter
-import com.vanillavideoplayer.videoplayer.feature.videopicker.screens.media.MediaPickerViewModel
+import com.vanillavideoplayer.videoplayer.feature.videopicker.screens.media.FilePickerViewModel
 import com.vanillavideoplayer.hd.videoplayer.pro.google_iab.BillingConnector
 import com.vanillavideoplayer.hd.videoplayer.pro.google_iab.BillingEventListener
 import com.vanillavideoplayer.hd.videoplayer.pro.google_iab.enums.ProductType
@@ -105,7 +105,7 @@ class MainActivity : ComponentActivity() {
 
     private val viewModel: MainActViewModel by viewModels()
     private val vanillaPlayerViewModel: PlayerViewModel by viewModels()
-    private val mediaPickerViewModel: MediaPickerViewModel by viewModels()
+    private val filePickerViewModel: FilePickerViewModel by viewModels()
 
     private val storagePermissionList = when {
         Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU -> Manifest.permission.READ_MEDIA_VIDEO
@@ -228,7 +228,7 @@ class MainActivity : ComponentActivity() {
                                 MainScreenUi(permissionState = storagePermissionState,
                                     mainNavController = mainNavController,
                                     mediaNavController = mediaNavController,
-                                    mediaPickerViewModel = mediaPickerViewModel,
+                                    filePickerViewModel = filePickerViewModel,
                                     playerViewModel = vanillaPlayerViewModel,
                                     androidViewBannerCache = androidViewBannerCache,
                                     onSettingClick = {
@@ -294,7 +294,7 @@ class MainActivity : ComponentActivity() {
 
     private fun initObserver() {
         lifecycleScope.launch(Dispatchers.Default) {
-            mediaPickerViewModel.recentVideoState.collect { state ->
+            filePickerViewModel.recentVideoState.collect { state ->
                 when (state) {
                     is VideosStateSealedInter.SuccessDataClass -> {
                         val lastPlayedMovies = state.data.filter {

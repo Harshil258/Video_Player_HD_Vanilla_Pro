@@ -34,7 +34,6 @@ import com.vanillavideoplayer.videoplayer.core.ui.designsystem.VanillaIcons
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-
 enum class SettingEnum {
     APPEARANCE, MEDIA_LIB, PLAYER, DECODER_SETTING, UNLOCK_PREMIUM, AUDIO_PREFS, SUBTITLE_DETAILS, ABOUT_US, LANGUAGE
 }

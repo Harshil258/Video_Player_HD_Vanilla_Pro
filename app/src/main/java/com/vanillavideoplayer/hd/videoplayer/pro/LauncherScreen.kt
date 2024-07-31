@@ -7,11 +7,11 @@ import com.vanillavideoplayer.videoplayer.R
 import com.vanillavideoplayer.videoplayer.settings.x.updateLocale
 
 
-class LauncherActivity : AppCompatActivity() {
+class LauncherScreen : AppCompatActivity() {
 
     companion object {
-        lateinit var launcherInstance: LauncherActivity
-        var instance: LauncherActivity? = null
+        lateinit var launcherInstance: LauncherScreen
+        var instance: LauncherScreen? = null
     }
 
     val context by lazy { this }

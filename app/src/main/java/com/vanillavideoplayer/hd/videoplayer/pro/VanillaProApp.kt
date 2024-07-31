@@ -58,7 +58,7 @@ import javax.inject.Inject
 
 
 @HiltAndroidApp
-class VanillaPlayerProApp : Application(), LifecycleObserver, ActivityLifecycleCallbacks, MessagingCallback {
+class VanillaProApp : Application(), LifecycleObserver, ActivityLifecycleCallbacks, MessagingCallback {
 
     @Inject
     lateinit var prefRepo: PrefRepo
@@ -86,7 +86,7 @@ class VanillaPlayerProApp : Application(), LifecycleObserver, ActivityLifecycleC
             prefRepo.playerPref.first()
         }
 
-        vanillaPlayerProApp = this
+        vanillaProApp = this
         vanillaPlayerProAdPlacer = AdPlacerApplication(this)
 
         shouldGoWithoutInternet = true
@@ -113,7 +113,7 @@ class VanillaPlayerProApp : Application(), LifecycleObserver, ActivityLifecycleC
     override fun onActivityPreCreated(activity: Activity, savedInstanceState: Bundle?) {
         super.onActivityPreCreated(activity, savedInstanceState)
         runningActivity = activity
-        if (activity is LauncherActivity) {
+        if (activity is LauncherScreen) {
             isSplashRunning = true
         }
     }
@@ -131,7 +131,7 @@ class VanillaPlayerProApp : Application(), LifecycleObserver, ActivityLifecycleC
     override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
         // activity.getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
         runningActivity = activity
-        if (activity is LauncherActivity) {
+        if (activity is LauncherScreen) {
             isSplashRunning = true
             if (!GlobalUtils().isNetworkAvailable(applicationContext)) {
                 if (shouldGoWithoutInternet) {
@@ -233,7 +233,7 @@ class VanillaPlayerProApp : Application(), LifecycleObserver, ActivityLifecycleC
 
     override fun hideSplashLoader() {
         Handler(Looper.getMainLooper()).postDelayed({
-            if (LauncherActivity.instance != null) {
+            if (LauncherScreen.instance != null) {
                 try {
 //                    LauncherActivity.instance.runOnUiThread(Runnable {
 //                        LauncherActivity.instance.findViewById(
@@ -248,7 +248,7 @@ class VanillaPlayerProApp : Application(), LifecycleObserver, ActivityLifecycleC
     }
 
     override fun showSplashLoader() {
-        if (LauncherActivity.instance != null) {
+        if (LauncherScreen.instance != null) {
             try {
 //                LauncherActivity.instance.runOnUiThread(Runnable {
 //                    LauncherActivity.instance.findViewById(
@@ -289,9 +289,12 @@ class VanillaPlayerProApp : Application(), LifecycleObserver, ActivityLifecycleC
     override fun startingTimerToChangeScreen() {
         Logger.e(TAG, "continueAppFlow    -->  startingTimerToChangeScreen  -->    called")
 
+        sharedPrefConfig.appDetails.adStatus = STATUS.OFF.name
+
         if (sharedPrefConfig.appDetails.adStatus == STATUS.ON.name) {
             setAdStatusBasedOnPurchaseOrArgument()
         }
+
 
 //      TODO : Check this code too
 //      val isDebugMode = BuildConfig.DEBUG
@@ -433,7 +436,7 @@ class VanillaPlayerProApp : Application(), LifecycleObserver, ActivityLifecycleC
 
     companion object {
         var context: Context? = null
-        var vanillaPlayerProApp: VanillaPlayerProApp? = null
+        var vanillaProApp: VanillaProApp? = null
 
 
         fun setAdStatusBasedOnPurchaseOrArgument() {

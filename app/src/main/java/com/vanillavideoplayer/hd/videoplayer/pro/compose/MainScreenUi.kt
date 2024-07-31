@@ -45,7 +45,7 @@ import com.vanillavideoplayer.videoplayer.core.ui.composviews.VanillaPlayerCente
 import com.vanillavideoplayer.videoplayer.core.ui.composviews.VanillaPlayerDialog
 import com.vanillavideoplayer.videoplayer.core.ui.designsystem.VanillaIcons
 import com.vanillavideoplayer.videoplayer.feature.player.PlayerViewModel
-import com.vanillavideoplayer.videoplayer.feature.videopicker.screens.media.MediaPickerViewModel
+import com.vanillavideoplayer.videoplayer.feature.videopicker.screens.media.FilePickerViewModel
 import com.vanillavideoplayer.hd.videoplayer.pro.nav.MEDIA_NAV_ROUTE
 import com.vanillavideoplayer.hd.videoplayer.pro.nav.mediaNavBuilder
 import com.vanillavideoplayer.hd.videoplayer.pro.nav.startVanillaPlayerActivity
@@ -88,7 +88,7 @@ fun MainScreenUi(
     mainNavController: NavHostController,
     mediaNavController: NavHostController,
     playerViewModel: PlayerViewModel,
-    mediaPickerViewModel: MediaPickerViewModel,
+    filePickerViewModel: FilePickerViewModel,
     androidViewBannerCache: MutableMap<Int, BannerView>,
     onSettingClick: () -> Unit
 ) {
@@ -112,7 +112,7 @@ fun MainScreenUi(
                         mainNavController = mainNavController,
                         mediaNavController = mediaNavController,
                         playerViewModel = playerViewModel,
-                        mediaPickerViewModel = mediaPickerViewModel,
+                        filePickerViewModel = filePickerViewModel,
                         androidViewBannerCache = androidViewBannerCache
                     )
                 }

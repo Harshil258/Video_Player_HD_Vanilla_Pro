@@ -67,9 +67,9 @@ import com.vanillavideoplayer.videoplayer.core.ui.designsystem.VanillaIcons
 import com.vanillavideoplayer.videoplayer.feature.player.PlayerViewModel
 import com.vanillavideoplayer.videoplayer.feature.videopicker.screens.FoldersStateSealedInter
 import com.vanillavideoplayer.videoplayer.feature.videopicker.screens.VideosStateSealedInter
-import com.vanillavideoplayer.videoplayer.feature.videopicker.screens.media.MediaPickerViewModel
+import com.vanillavideoplayer.videoplayer.feature.videopicker.screens.media.FilePickerViewModel
 import com.vanillavideoplayer.videoplayer.feature.videopicker.screens.media.ROUND_PROG_INDI_TEST_STRING
-import com.vanillavideoplayer.videoplayer.feature.videopicker.screens.mediaFolder.MediaPickerDirVM
+import com.vanillavideoplayer.videoplayer.feature.videopicker.screens.mediaFolder.FolderPickerViewModel
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -215,15 +215,15 @@ fun CenterInParentCircularProgress() {
 private fun toggleSelection(video: VideoData, viewModel: ViewModel) {
 
     if (video.isSelected) {
-        if (viewModel is MediaPickerViewModel) {
+        if (viewModel is FilePickerViewModel) {
             viewModel.addToSelectedTracks(video)
-        } else if (viewModel is MediaPickerDirVM) {
+        } else if (viewModel is FolderPickerViewModel) {
             viewModel.addToSelectedTracks(video)
         }
     } else {
-        if (viewModel is MediaPickerViewModel) {
+        if (viewModel is FilePickerViewModel) {
             viewModel.removeFromSelectedTracks(video)
-        } else if (viewModel is MediaPickerDirVM) {
+        } else if (viewModel is FolderPickerViewModel) {
             viewModel.removeFromSelectedTracks(video)
         }
     }
@@ -277,9 +277,9 @@ fun VidListFromState(
                 state = state, modifier = Modifier.fillMaxSize()
             ) {
                 if (disableMultiSelect) {
-                    if (viewModel is MediaPickerViewModel) {
+                    if (viewModel is FilePickerViewModel) {
                         viewModel.videoTracks = videosStateSealedInter.data.map { it.copy() }
-                    } else if (viewModel is MediaPickerDirVM) {
+                    } else if (viewModel is FolderPickerViewModel) {
                         viewModel.videoTracks = videosStateSealedInter.data.map { it.copy() }
                     }
                 }
@@ -296,13 +296,13 @@ fun VidListFromState(
 //                    it.nameWithExtension.contains(searchQuery, ignoreCase = true)
 //                }
                 val filteredVideos = when (viewModel) {
-                    is MediaPickerViewModel -> {
+                    is FilePickerViewModel -> {
                         viewModel.videoTracks.filter {
                             it.nameWithExtension.contains(searchQuery, ignoreCase = true)
                         }
                     }
 
-                    is MediaPickerDirVM -> {
+                    is FolderPickerViewModel -> {
                         viewModel.videoTracks.filter {
                             it.nameWithExtension.contains(searchQuery, ignoreCase = true)
                         }
@@ -316,9 +316,7 @@ fun VidListFromState(
                 items(filteredVideos, key = { it.path }) { video ->
                     VideoItem(
                         vidData = video,
-                        isSelected = video.isSelected,
-                        pref = preferences,
-                        md = Modifier.combinedClickable(onClick = {
+                        isSelected = video.isSelected, pref = preferences, modifier = Modifier.combinedClickable(onClick = {
                             if (multiSelect) {
                                 video.isSelected = !video.isSelected
                                 toggleSelection(video, viewModel)
@@ -576,7 +574,6 @@ fun VidListFromState(
 @Composable
 fun DirsListFromState(
     foldersStateSealedInter: FoldersStateSealedInter,
-    preferences: ApplicationPrefData,
     state: LazyListState,
     onFolderClick: (String) -> Unit,
     onDeleteFolderClick: (String) -> Unit,
@@ -596,7 +593,6 @@ fun DirsListFromState(
                 items(foldersStateSealedInter.data, key = { it.path }) {
                     DirItem(
                         folder = it,
-                        preferences = preferences,
                         modifier = Modifier.combinedClickable(onClick = {
                             onFolderClick(it.path)
                         }, onLongClick = {
@@ -645,7 +641,7 @@ fun RecentVidsListFromState(
     onVideoClick: (Uri) -> Unit,
     onDeleteVideoClick: (String) -> Unit,
     playerViewModel: PlayerViewModel?,
-    viewModel: MediaPickerViewModel,
+    viewModel: FilePickerViewModel,
     toggleMultiSelect: () -> Unit,
     disableMultiSelect: Boolean,
 ) {
@@ -674,9 +670,7 @@ fun RecentVidsListFromState(
                 items(videosStateSealedInter.data, key = { it.path }) { video ->
                     VideoItem(
                         vidData = video,
-                        isSelected = video.isSelected,
-                        pref = preferences,
-                        md = Modifier.combinedClickable(onClick = {
+                        isSelected = video.isSelected, pref = preferences, modifier = Modifier.combinedClickable(onClick = {
 
                             if (multiSelect) {
                                 video.isSelected = !video.isSelected

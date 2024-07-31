@@ -1,14 +1,8 @@
 package com.vanillavideoplayer.videoplayer.settings.utils
 
-import android.content.Context
-import android.os.Bundle
 import java.util.Locale
 
 object DesiHelperObj {
-
-
-
-
     fun getAvailableDesis(): List<Pair<String, String>> {
         return try {
             Locale.getAvailableLocales().map {

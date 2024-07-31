@@ -13,9 +13,9 @@ import com.harshil258.adplacer.utils.Constants.adPlacerApplication
 import com.harshil258.adplacer.utils.Constants.runningActivity
 import com.vanillavideoplayer.videoplayer.core.ui.designsystem.NavAnim
 import com.vanillavideoplayer.videoplayer.feature.player.PlayerViewModel
-import com.vanillavideoplayer.videoplayer.feature.videopicker.screens.mediaFolder.MediaPickerDirRoute
+import com.vanillavideoplayer.videoplayer.feature.videopicker.screens.mediaFolder.FolderScreenRoute
 
-fun NavController.navToMPDirScreen(
+fun NavController.navigationToFolderScreen(
     folderId: String, navOptions: NavOptions? = null
 ) {
     runningActivity?.let {
@@ -32,7 +32,7 @@ internal class DirArgs(val folderId: String) {
     constructor(savedStateHandle: SavedStateHandle) : this(Uri.decode(checkNotNull(savedStateHandle[dirIdArg])))
 }
 
-fun NavGraphBuilder.mpDirScreen(
+fun NavGraphBuilder.folderScreen(
     onNavigateUp: () -> Unit,
     onVideoClick: (uri: Uri) -> Unit,
     playerViewModel: PlayerViewModel,
@@ -42,7 +42,7 @@ fun NavGraphBuilder.mpDirScreen(
         arguments = listOf(navArgument(dirIdArg) { type = NavType.StringType }),
         enterTransition = { NavAnim.slideIn },
         popExitTransition = { NavAnim.slideOut }) {
-        MediaPickerDirRoute(
+        FolderScreenRoute(
             onVideoClick = onVideoClick,
             onNavigateUp = onNavigateUp,
             playerViewModel = playerViewModel,

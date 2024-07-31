@@ -1,6 +1,7 @@
 package com.vanillavideoplayer.videoplayer.feature.videopicker.screens.media
 
 import android.net.Uri
+import android.os.Looper
 import android.view.ViewGroup
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -27,7 +28,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.Snackbar
 import androidx.compose.material3.SnackbarDuration
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -74,30 +74,18 @@ import com.vanillavideoplayer.videoplayer.feature.videopicker.composables.QuickS
 import com.vanillavideoplayer.videoplayer.feature.videopicker.composables.RecentVidsListFromState
 import com.vanillavideoplayer.videoplayer.feature.videopicker.composables.TextIcToggleBtn
 import com.vanillavideoplayer.videoplayer.feature.videopicker.composables.VidListFromState
-import com.vanillavideoplayer.videoplayer.feature.videopicker.navigation.startVPActivity
+import com.vanillavideoplayer.videoplayer.feature.videopicker.navigation.launchVideoPlayerActivity
 import com.vanillavideoplayer.videoplayer.feature.videopicker.screens.FoldersStateSealedInter
 import com.vanillavideoplayer.videoplayer.feature.videopicker.screens.VideosStateSealedInter
 import com.vanillavideoplayer.videoplayer.settings.GlobalPrefs
 import com.vanillavideoplayer.videoplayer.settings.screens.appearance.AppearancePreferencesViewModel
+import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
 
-
-@Composable
-fun SnackbarHostState.showSnackbar(message: String) {
-    Snackbar(
-        modifier = Modifier.padding(16.dp),
-        action = {
-            // You can add an action here if needed
-        },
-    ) {
-        Text(text = message)
-    }
-}
-
-@OptIn(ExperimentalFoundationApi::class)
+@OptIn(ExperimentalFoundationApi::class, DelicateCoroutinesApi::class)
 @ExperimentalMaterial3Api
 @Composable
 internal fun MediaPickerUi(
@@ -105,7 +93,7 @@ internal fun MediaPickerUi(
     foldersStateSealedInter: FoldersStateSealedInter,
     historyVideoState: VideosStateSealedInter,
     preferences: ApplicationPrefData,
-    viewModel: MediaPickerViewModel?,
+    viewModel: FilePickerViewModel?,
     onPlayVideo: (uri: Uri) -> Unit = {},
     onFolderClick: (folderPath: String) -> Unit = {},
     onSettingsClick: () -> Unit = {},
@@ -131,7 +119,7 @@ internal fun MediaPickerUi(
     var disableMultiSelect by rememberSaveable { mutableStateOf(true) }
     var itemCount by rememberSaveable { mutableIntStateOf(0) }
     var deleteAction by rememberSaveable { mutableStateOf("") }
-    var lastposition by remember { mutableStateOf(0) }
+    var lastposition by remember { mutableIntStateOf(0) }
     val snackbarHostState = remember { SnackbarHostState() }
 
     val context = LocalContext.current
@@ -212,10 +200,10 @@ internal fun MediaPickerUi(
             if (!disableMultiSelect && selectedTracks!!.isNotEmpty()) {
 
                 IconButton(onClick = {
-                    if (lastposition == 2) {
-                        deleteAction = "historyvideo"
+                    deleteAction = if (lastposition == 2) {
+                        "historyvideo"
                     } else {
-                        deleteAction = "normalvideo"
+                        "normalvideo"
                     }
 
                 }) {
@@ -243,13 +231,13 @@ internal fun MediaPickerUi(
             reverseLayout = false,
             beyondBoundsPageCount = 0,
             key = null,
-        ) {
+        ) { page ->
             val scrollState = rememberScrollState()
 
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .verticalFadingEdge(scrollState, if (it == 0) 15.dp else 20.dp),
+                    .verticalFadingEdge(scrollState, if (page == 0) 15.dp else 20.dp),
                 verticalArrangement = Arrangement.Center
             ) {
                 Row(
@@ -259,12 +247,18 @@ internal fun MediaPickerUi(
                         .align(Alignment.CenterHorizontally),
                     horizontalArrangement = Arrangement.SpaceBetween,
                 ) {
-                    val state = if (it == 0) {
-                        videosStateSealedInter
-                    } else if (it == 1) {
-                        foldersStateSealedInter
-                    } else {
-                        historyVideoState
+                    val state: Any = when (page) {
+                        0 -> {
+                            videosStateSealedInter
+                        }
+
+                        1 -> {
+                            foldersStateSealedInter
+                        }
+
+                        else -> {
+                            historyVideoState
+                        }
                     }
 
                     when (state) {
@@ -275,32 +269,49 @@ internal fun MediaPickerUi(
                                 else -> 0
                             }
 
-                            val message = when {
-                                itemCount == 0 -> if (it == 0) {
-                                    stringResource(id = R.string.no_videos)
-                                } else if (it == 1) {
-                                    stringResource(id = R.string.no_folders)
-                                } else {
-                                    stringResource(id = R.string.no_history_videos)
+                            val message = when (itemCount) {
+                                0 -> when (page) {
+                                    0 -> {
+                                        stringResource(id = R.string.no_videos)
+                                    }
+
+                                    1 -> {
+                                        stringResource(id = R.string.no_folders)
+                                    }
+
+                                    else -> {
+                                        stringResource(id = R.string.no_history_videos)
+                                    }
                                 }
 
-                                itemCount == 1 -> "1 ${
-                                    if (it == 0) {
-                                        stringResource(id = R.string.video)
-                                    } else if (it == 1) {
-                                        stringResource(id = R.string.folder)
-                                    } else {
-                                        stringResource(id = R.string.history_video)
+                                1 -> "1 ${
+                                    when (page) {
+                                        0 -> {
+                                            stringResource(id = R.string.video)
+                                        }
+
+                                        1 -> {
+                                            stringResource(id = R.string.folder)
+                                        }
+
+                                        else -> {
+                                            stringResource(id = R.string.history_video)
+                                        }
                                     }
                                 }"
-
                                 else -> "$itemCount ${
-                                    if (it == 0) {
-                                        stringResource(id = R.string.videos)
-                                    } else if (it == 1) {
-                                        stringResource(id = R.string.folders)
-                                    } else {
-                                        stringResource(id = R.string.history_videos)
+                                    when (page) {
+                                        0 -> {
+                                            stringResource(id = R.string.videos)
+                                        }
+
+                                        1 -> {
+                                            stringResource(id = R.string.folders)
+                                        }
+
+                                        else -> {
+                                            stringResource(id = R.string.history_videos)
+                                        }
                                     }
                                 }"
                             }
@@ -331,7 +342,7 @@ internal fun MediaPickerUi(
                             // Handle other states here, if needed.
                         }
                     }
-                    if (it != 2) {
+                    if (page != 2) {
                         IconButton(onClick = { showSortMenu = true }) {
                             Icon(
                                 imageVector = VanillaIcons.Sort,
@@ -347,86 +358,86 @@ internal fun MediaPickerUi(
                         .weight(1f), contentAlignment = Alignment.Center
                 ) {
                     if (playerViewModel != null) {
-                        if (it == 0) {
+                        when (page) {
+                            0 -> {
+                                lastposition = 0
+                                var showFloatingButton by remember { mutableStateOf(false) }
 
-                            if (it != lastposition) {
-                                disableMultiSelect = true
-                                clearSelectedTracks()
-                            }
-                            lastposition = it
-                            var showFloatingButton by remember { mutableStateOf(false) }
-
-                            LaunchedEffect(scrollState) {
-                                snapshotFlow { videolistState.firstVisibleItemIndex }.collect { firstVisibleItemIndex ->
-                                    showFloatingButton = firstVisibleItemIndex > 0
+                                LaunchedEffect(scrollState) {
+                                    snapshotFlow { videolistState.firstVisibleItemIndex }.collect { firstVisibleItemIndex ->
+                                        showFloatingButton = firstVisibleItemIndex > 0
+                                    }
                                 }
+
+                                VidListFromState(
+                                    videosStateSealedInter = videosStateSealedInter,
+                                    onVideoClick = onPlayVideo, preferences = preferences,
+                                    toggleMultiSelect = {
+                                        disableMultiSelect = false
+                                    },
+                                    onDeleteVideoClick = {
+                                        onDeleteVideoClick(listOf(it))
+                                        if (!disableMultiSelect && !selectedTracks.isNullOrEmpty()) {
+                                            onDeleteVideoClick(selectedTracks.map { videoData -> videoData.path })
+                                        } else {
+                                            GlobalScope.launch {
+                                                snackbarHostState.showSnackbar(
+                                                    "no selected videos!!!",
+                                                    withDismissAction = false,
+                                                    duration = SnackbarDuration.Short
+                                                )
+                                            }
+                                        }
+                                    },
+                                    disableMultiSelect = disableMultiSelect,
+                                    state = videolistState,
+                                    playerViewModel = playerViewModel,
+                                    viewModel = viewModel!!,
+                                )
+
                             }
 
-                            VidListFromState(
-                                videosStateSealedInter = videosStateSealedInter,
-                                onVideoClick = onPlayVideo, preferences = preferences,
-                                toggleMultiSelect = {
-                                    disableMultiSelect = false
-                                },
-                                onDeleteVideoClick = {
-                                    onDeleteVideoClick(listOf(it))
-                                    if (!disableMultiSelect && !selectedTracks.isNullOrEmpty()) {
-                                        onDeleteVideoClick(selectedTracks.map { it.path })
-                                    } else {
-                                        GlobalScope.launch {
-                                            snackbarHostState.showSnackbar(
-                                                "no selected videos!!!",
-                                                withDismissAction = false,
-                                                duration = SnackbarDuration.Short
+                            1 -> {
+                                if (page != lastposition) {
+                                    disableMultiSelect = true
+                                    clearSelectedTracks()
+                                }
+                                lastposition = page
+                                DirsListFromState(
+                                    foldersStateSealedInter = foldersStateSealedInter,
+                                    onFolderClick = onFolderClick,
+                                    state = folderlistState,
+                                    onDeleteFolderClick = onDeleteFolderClick
+                                )
+                            }
+
+                            2 -> {
+                                if (page != lastposition) {
+                                    disableMultiSelect = true
+                                    clearSelectedTracks()
+                                }
+                                lastposition = page
+                                RecentVidsListFromState(
+                                    videosStateSealedInter = historyVideoState,
+                                    onVideoClick = onPlayVideo,
+                                    preferences = preferences,
+                                    toggleMultiSelect = {
+                                        disableMultiSelect = false
+                                    },
+                                    state = historylistState,
+                                    onDeleteVideoClick = {
+                                        GlobalScope.launch(Dispatchers.Main) {
+                                            val videosState = playerViewModel.getVideoState(it)
+                                            playerViewModel.saveLastPlayedState(
+                                                videosState!!.path, 0
                                             )
                                         }
-                                    }
-                                },
-                                disableMultiSelect = disableMultiSelect,
-                                state = videolistState,
-                                playerViewModel = playerViewModel,
-                                viewModel = viewModel!!,
-                            )
-
-                        } else if (it == 1) {
-                            if (it != lastposition) {
-                                disableMultiSelect = true
-                                clearSelectedTracks()
+                                    },
+                                    playerViewModel = playerViewModel,
+                                    viewModel = viewModel!!,
+                                    disableMultiSelect = disableMultiSelect,
+                                )
                             }
-                            lastposition = it
-                            DirsListFromState(
-                                foldersStateSealedInter = foldersStateSealedInter,
-                                preferences = preferences,
-                                onFolderClick = onFolderClick,
-                                state = folderlistState,
-                                onDeleteFolderClick = onDeleteFolderClick
-                            )
-                        } else if (it == 2) {
-                            if (it != lastposition) {
-                                disableMultiSelect = true
-                                clearSelectedTracks()
-                            }
-                            lastposition = it
-                            RecentVidsListFromState(
-                                videosStateSealedInter = historyVideoState,
-                                onVideoClick = onPlayVideo,
-                                preferences = preferences,
-                                toggleMultiSelect = {
-                                    disableMultiSelect = false
-                                },
-                                state = historylistState,
-                                onDeleteVideoClick = {
-                                    GlobalScope.launch(Dispatchers.Main) {
-                                        var videosState = playerViewModel.getVideoState(it)
-                                        playerViewModel.saveLastPlayedState(
-                                            videosState!!.path, 0
-                                        )
-                                    }
-                                },
-                                playerViewModel = playerViewModel,
-                                viewModel = viewModel!!,
-                                disableMultiSelect = disableMultiSelect,
-                            )
                         }
                     }
                 }
@@ -471,7 +482,7 @@ internal fun MediaPickerUi(
                     if (cachedView != null) {
                         (cachedView.parent as? ViewGroup)?.removeView(cachedView)
                         GlobalScope.launch(Dispatchers.Main) {
-                            android.os.Handler().post {
+                            android.os.Handler(Looper.getMainLooper()).post {
                                 val screenPixelDensity = context.resources.displayMetrics.density
                                 val dpValue = cachedView.height / screenPixelDensity
                                 bannerSizeState.value = dpValue.toInt()
@@ -482,7 +493,7 @@ internal fun MediaPickerUi(
                         val myAndroidView = BannerView(context)
                         androidViewBannerCache[0] = myAndroidView
                         GlobalScope.launch(Dispatchers.Main) {
-                            android.os.Handler().post {
+                            android.os.Handler(Looper.getMainLooper()).post {
                                 val screenPixelDensity = context.resources.displayMetrics.density
                                 val dpValue = myAndroidView.height / screenPixelDensity
                                 bannerSizeState.value = dpValue.toInt()
@@ -504,7 +515,7 @@ internal fun MediaPickerUi(
     val selectVideoFileLauncher = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.GetContent(),
         onResult = {
-            it?.let(context::startVPActivity)
+            it?.let(context::launchVideoPlayerActivity)
         })
     Column(
         modifier = Modifier
@@ -545,7 +556,7 @@ internal fun MediaPickerUi(
     if (showUrlDialog) {
         NetworkUrlDialog(
             onDismiss = { showUrlDialog = false },
-            onDone = { context.startVPActivity(Uri.parse(it)) })
+            onDone = { context.launchVideoPlayerActivity(Uri.parse(it)) })
     }
 
 //    if (showMenu) {
@@ -594,7 +605,7 @@ fun MediaPickerRoute(
     onPlayVideo: (uri: Uri) -> Unit,
     onFolderClick: (folderPath: String) -> Unit,
     onSearchClick: () -> Unit,
-    viewModel: MediaPickerViewModel,
+    viewModel: FilePickerViewModel,
     playerViewModel: PlayerViewModel,
     androidViewBannerCache: MutableMap<Int, BannerView>
 ) {

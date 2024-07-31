@@ -21,11 +21,8 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class MediaPickerDirVM @Inject constructor(
-    fetchSortedVidUC: FetchSortedVidUC,
-    savedStateHandle: SavedStateHandle,
-    private val mediaRepo: MediaRepo,
-    private val prefRepo: PrefRepo
+class FolderPickerViewModel @Inject constructor(
+    fetchSortedVidUC: FetchSortedVidUC, savedStateHandle: SavedStateHandle, private val mediaRepo: MediaRepo, prefRepo: PrefRepo
 ) : ViewModel() {
 
     private val dirArgs = DirArgs(savedStateHandle)

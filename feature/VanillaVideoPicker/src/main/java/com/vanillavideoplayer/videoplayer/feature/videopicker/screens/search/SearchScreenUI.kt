@@ -2,6 +2,7 @@ package com.vanillavideoplayer.videoplayer.feature.videopicker.screens.search
 
 import android.content.Intent
 import android.net.Uri
+import android.os.Looper
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
@@ -43,7 +44,6 @@ import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -63,7 +63,7 @@ import com.vanillavideoplayer.videoplayer.feature.videopicker.composables.NoVidF
 import com.vanillavideoplayer.videoplayer.feature.videopicker.composables.OptionsBSheet
 import com.vanillavideoplayer.videoplayer.feature.videopicker.composables.VideoItem
 import com.vanillavideoplayer.videoplayer.feature.videopicker.screens.VideosStateSealedInter
-import com.vanillavideoplayer.videoplayer.feature.videopicker.screens.media.MediaPickerViewModel
+import com.vanillavideoplayer.videoplayer.feature.videopicker.screens.media.FilePickerViewModel
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -75,19 +75,13 @@ import java.util.Locale
 
 const val SEARCH_ROUTE_CONST = "search_route_const"
 
-@Preview(showBackground = true)
 @OptIn(ExperimentalFoundationApi::class, DelicateCoroutinesApi::class)
 @ExperimentalMaterial3Api
 @Composable
-internal fun MediaSearchUi(
+internal fun SearchScreenUi(
     onNavigateUp: () -> Unit = {},
     videosStateSealedInter: VideosStateSealedInter = VideosStateSealedInter.LoadingDataObj,
-    preferences: ApplicationPrefData?,
-    viewModel: MediaPickerViewModel?,
-    onPlayVideo: (uri: Uri) -> Unit = {},
-    playerViewModel: PlayerViewModel?,
-    androidViewBannerCache: MutableMap<Int, BannerView> = mutableMapOf(),
-    clearSelectedTracks: () -> Unit? = {}
+    preferences: ApplicationPrefData?, viewModel: FilePickerViewModel?, onPlayVideo: (uri: Uri) -> Unit = {}, playerViewModel: PlayerViewModel?
 ) {
     val videoListState = rememberLazyListState()
     val bannerSizeState = remember { MutableStateFlow(0) }
@@ -97,7 +91,7 @@ internal fun MediaSearchUi(
     var showMediaActionsFor: VideoData? by rememberSaveable { mutableStateOf(null) }
     val scope = rememberCoroutineScope()
     val bottomSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
-    var context = LocalContext.current
+    val context = LocalContext.current
 
     Column {
         Surface(
@@ -124,11 +118,8 @@ internal fun MediaSearchUi(
                     onValueChange = { searchQuery = it },
                     placeholder = { Text(text = "Search") },
                     modifier = Modifier
-                        .fillMaxWidth()
-                        .focusRequester(focusRequester),
-                    singleLine = true,
-                    colors = TextFieldDefaults.textFieldColors(
-                        containerColor = Color.Transparent,
+                        .fillMaxWidth().focusRequester(focusRequester), singleLine = true, colors = TextFieldDefaults.colors(
+                        focusedContainerColor = Color.Transparent,
                         focusedIndicatorColor = Color.Transparent,
                         unfocusedIndicatorColor = Color.Transparent
                     )
@@ -145,11 +136,11 @@ internal fun MediaSearchUi(
             AndroidView(factory = { context ->
                 val myAndroidView = BannerView(context)
                 GlobalScope.launch(Dispatchers.Main) {
-                    android.os.Handler().post {
+                    android.os.Handler(Looper.getMainLooper()).post {
                         val screenPixelDensity = context.resources.displayMetrics.density
                         val dpValue = myAndroidView.height / screenPixelDensity
                         bannerSizeState.value = dpValue.toInt()
-                        Logger.e("tjstjstj", "MediaSearchUi: dpValue  ${dpValue}")
+                        Logger.e("tjstjstj", "MediaSearchUi: dpValue  $dpValue")
 
                     }
                 }
@@ -186,7 +177,7 @@ internal fun MediaSearchUi(
                                 VideoItem(vidData = video,
                                     isSelected = video.isSelected,
                                     pref = preferences!!,
-                                    md = Modifier.combinedClickable(onClick = {
+                                    modifier = Modifier.combinedClickable(onClick = {
                                         val list: ArrayList<Uri> = ArrayList()
                                         videosStateSealedInter.data.forEach {
                                             list.add(Uri.parse(it.uriString))
@@ -301,11 +292,6 @@ internal fun MediaSearchUi(
                                                     .fillMaxWidth()
                                                     .padding(bottom = 4.dp),
                                             ) {
-                                                val dateSDF = SimpleDateFormat(
-                                                    "dd/MM/yyyy HH:mm:ss aa", Locale.getDefault()
-                                                )
-                                                val complateDateString =
-                                                    dateSDF.format(Date(video.dateModified * 1000))
                                                 Text(
                                                     text = "${stringResource(R.string.size)} : ",
                                                     maxLines = 2,
@@ -369,8 +355,6 @@ internal fun MediaSearchUi(
 
                         }
                     }
-
-                    else -> {}
                 }
                 showMediaActionsFor?.let {
                     OptionsBSheet(
@@ -380,10 +364,10 @@ internal fun MediaSearchUi(
                             text = stringResource(R.string.info),
                             icon = VanillaIcons.Info,
                             onClick = {
-                                if (boolInfoVisible != it.path) {
-                                    boolInfoVisible = it.path
+                                boolInfoVisible = if (boolInfoVisible != it.path) {
+                                    it.path
                                 } else {
-                                    boolInfoVisible = ""
+                                    ""
                                 }
                                 scope.launch { bottomSheetState.hide() }.invokeOnCompletion {
                                     if (!bottomSheetState.isVisible) showMediaActionsFor = null
@@ -419,23 +403,16 @@ internal fun MediaSearchUi(
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MediaSearchRoute(
+fun SearchScreenRoute(
     onNavigateUp: () -> Unit,
     playerViewModel: PlayerViewModel,
     onPlayVideo: (uri: Uri) -> Unit = {},
-    viewModel: MediaPickerViewModel,
-    androidViewBannerCache: MutableMap<Int, BannerView>,
+    viewModel: FilePickerViewModel,
 ) {
     val videosState by viewModel.videosStateSealedInter.collectAsStateWithLifecycle()
     val preferences by viewModel.prefs.collectAsStateWithLifecycle()
 
-    MediaSearchUi(videosStateSealedInter = videosState,
-        onNavigateUp = onNavigateUp,
-        preferences = preferences,
-        onPlayVideo = onPlayVideo,
-        viewModel = viewModel,
-        playerViewModel = playerViewModel,
-        androidViewBannerCache = androidViewBannerCache,
-        clearSelectedTracks = { viewModel.clearSelectedTracks() }
+    SearchScreenUi(
+        onNavigateUp = onNavigateUp, videosStateSealedInter = videosState, preferences = preferences, viewModel = viewModel, onPlayVideo = onPlayVideo, playerViewModel = playerViewModel
     )
 }

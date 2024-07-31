@@ -47,25 +47,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 val languages = mutableStateListOf(
-    LangData("English", ""),
-    LangData("Arabic", "ar"),
-    LangData("German", "de"),
-    LangData("Greek", "el"),
-    LangData("Spanish", "es"),
-    LangData("Persian", "fa"),
-    LangData("French", "fr"),
-    LangData("Hindi", "hi"),
-    LangData("Italian", "it"),
-    LangData("Hebrew", "iw"),
-    LangData("Japanese", "ja"),
-    LangData("Korean", "ko"),
-    LangData("Dutch", "nl"),
-    LangData("Punjabi", "pa"),
-    LangData("Polish", "pl"),
-    LangData("Portuguese", "pt"),
-    LangData("Russian", "ru"),
-    LangData("Turkish", "tr"),
-    LangData("Ukrainian", "uk")
+    LangData("English", ""), LangData("Arabic", "ar"), LangData("German", "de"), LangData("Greek", "el"), LangData("Spanish", "es"), LangData("Persian", "fa"), LangData("French", "fr"), LangData("Hindi", "hi"), LangData("Italian", "it"), LangData("Hebrew", "iw"), LangData("Japanese", "ja"), LangData("Korean", "ko"), LangData("Dutch", "nl"), LangData("Punjabi", "pa"), LangData("Polish", "pl"), LangData("Portuguese", "pt"), LangData("Russian", "ru"), LangData("Turkish", "tr"), LangData("Ukrainian", "uk")
 )
 
 @Preview
@@ -78,7 +60,7 @@ fun LangPrefScreen(
     val context = LocalContext.current
 
     val scrollBehaviour = TopAppBarDefaults.pinnedScrollBehavior()
-    var selectedLanguageCode by remember { mutableStateOf<String>(GlobalPrefs().getLangCode(context!!, "")!!) }
+    var selectedLanguageCode by remember { mutableStateOf(GlobalPrefs().getLangCode(context)) }
     val coroutineScope = rememberCoroutineScope()
 
     Scaffold(modifier = Modifier.nestedScroll(scrollBehaviour.nestedScrollConnection), topBar = {
@@ -139,15 +121,10 @@ fun LanguageList(languages: List<LangData>, selectedLanguageCode: String?, onLan
 fun LanguageItem(language: LangData, selectedLanguageCode: String?, onLanguageClick: (LangData) -> Unit) {
 
     Card(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(8.dp)
-            .clickable { onLanguageClick(language) }, elevation = CardDefaults.cardElevation(if (language.langCode == selectedLanguageCode) 8.dp else 2.dp), colors = CardDefaults.cardColors(if (language.langCode == selectedLanguageCode) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.background)
+        modifier = Modifier.fillMaxWidth().padding(8.dp).clickable { onLanguageClick(language) }, elevation = CardDefaults.cardElevation(if (language.langCode == selectedLanguageCode) 8.dp else 2.dp), colors = CardDefaults.cardColors(if (language.langCode == selectedLanguageCode) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.background)
     ) {
         Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(vertical = 16.dp, horizontal = 16.dp * 1.5F), contentAlignment = Alignment.CenterStart
+            modifier = Modifier.fillMaxSize().padding(vertical = 16.dp, horizontal = 16.dp * 1.5F), contentAlignment = Alignment.CenterStart
         ) {
 
             Text(

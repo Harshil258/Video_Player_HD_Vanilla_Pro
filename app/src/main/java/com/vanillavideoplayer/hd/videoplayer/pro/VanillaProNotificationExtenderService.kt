@@ -22,7 +22,7 @@ import com.harshil258.adplacer.utils.Logger
 import com.onesignal.notifications.IDisplayableMutableNotification
 import com.onesignal.notifications.INotificationReceivedEvent
 import com.onesignal.notifications.INotificationServiceExtension
-import com.vanillavideoplayer.hd.videoplayer.pro.VanillaPlayerProApp.Companion.context
+import com.vanillavideoplayer.hd.videoplayer.pro.VanillaProApp.Companion.context
 import com.vanillavideoplayer.videoplayer.feature.player.VanillaPlayerActivityPro
 import org.json.JSONObject
 

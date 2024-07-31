@@ -22,9 +22,7 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun SegmentedChoosedBtnUi(
-    lbOne: @Composable RowScope.() -> Unit,
-    lbTwo: @Composable RowScope.() -> Unit,
-    md: Modifier = Modifier,
+    lbOne: @Composable RowScope.() -> Unit, lbTwo: @Composable RowScope.() -> Unit, modifier: Modifier = Modifier,
     icOne: @Composable (() -> Unit)? = null,
     icTwo: @Composable (() -> Unit)? = null,
     choosedChip: SelectedChipEnum,
@@ -47,8 +45,7 @@ fun SegmentedChoosedBtnUi(
     )
 
     Row(
-        verticalAlignment = Alignment.CenterVertically,
-        modifier = md
+        verticalAlignment = Alignment.CenterVertically, modifier = modifier
             .selectableGroup()
     ) {
         Row(

@@ -13,12 +13,12 @@ import com.harshil258.adplacer.utils.Constants.runningActivity
 import com.vanillavideoplayer.videoplayer.feature.player.PlayerViewModel
 import com.vanillavideoplayer.videoplayer.feature.player.VanillaPlayerActivityPro
 import com.vanillavideoplayer.videoplayer.feature.videopicker.navigation.mediaPickerUi
-import com.vanillavideoplayer.videoplayer.feature.videopicker.navigation.mpDirScreen
+import com.vanillavideoplayer.videoplayer.feature.videopicker.navigation.folderScreen
 import com.vanillavideoplayer.videoplayer.feature.videopicker.navigation.mpNavigationRoute
-import com.vanillavideoplayer.videoplayer.feature.videopicker.navigation.navToMPDirScreen
+import com.vanillavideoplayer.videoplayer.feature.videopicker.navigation.navigationToFolderScreen
 import com.vanillavideoplayer.videoplayer.feature.videopicker.navigation.navToSearchScreen
 import com.vanillavideoplayer.videoplayer.feature.videopicker.navigation.searchScreen
-import com.vanillavideoplayer.videoplayer.feature.videopicker.screens.media.MediaPickerViewModel
+import com.vanillavideoplayer.videoplayer.feature.videopicker.screens.media.FilePickerViewModel
 import com.vanillavideoplayer.videoplayer.settings.navigation.navigateToSettings
 
 
@@ -27,19 +27,19 @@ fun NavGraphBuilder.mediaNavBuilder(
     mainNavController: NavHostController,
     mediaNavController: NavHostController,
     playerViewModel: PlayerViewModel,
-    mediaPickerViewModel: MediaPickerViewModel,
+    filePickerViewModel: FilePickerViewModel,
     androidViewBannerCache: MutableMap<Int, BannerView>
 ) {
     navigation(startDestination = mpNavigationRoute, route = MEDIA_NAV_ROUTE) {
         mediaPickerUi(
             onPlayVideo = context::startVanillaPlayerActivity,
-            onFolderClick = mediaNavController::navToMPDirScreen,
+            onFolderClick = mediaNavController::navigationToFolderScreen,
             onSearchClick = mediaNavController::navToSearchScreen,
             onSettingsClick = mainNavController::navigateToSettings,
             playerViewModel = playerViewModel,
-            mediaPickerViewModel = mediaPickerViewModel,androidViewBannerCache = androidViewBannerCache,
+            filePickerViewModel = filePickerViewModel,androidViewBannerCache = androidViewBannerCache,
         )
-        mpDirScreen(
+        folderScreen(
             onNavigateUp = mediaNavController::navigateUp,
             onVideoClick = context::startVanillaPlayerActivity,
             playerViewModel = playerViewModel
@@ -47,9 +47,8 @@ fun NavGraphBuilder.mediaNavBuilder(
         searchScreen(
             onNavigateUp = mediaNavController::navigateUp,
             onVideoClick = context::startVanillaPlayerActivity,
-            mediaPickerViewModel = mediaPickerViewModel,
-            playerViewModel = playerViewModel,
-            androidViewBannerCache = androidViewBannerCache,
+            filePickerViewModel = filePickerViewModel,
+            playerViewModel = playerViewModel
         )
     }
 }
