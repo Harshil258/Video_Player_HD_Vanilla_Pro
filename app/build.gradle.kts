@@ -1,6 +1,5 @@
 plugins {
     id("vanillavideoplayer.android.application")
-//    id("vanillavideoplayer.android.application.compose")
     id("vanillavideoplayer.android.hilt")
     id("com.google.gms.google-services")
     alias(libs.plugins.kotlin.android)
