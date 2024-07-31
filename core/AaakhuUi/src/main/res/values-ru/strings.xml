@@ -56,7 +56,7 @@
     <string name="duration">Продолжительность</string>
     <string name="menu">Меню</string>
     <string name="open_settings">Открыть настройки</string>
-    <string name="permission_info">Приложение Vanilla Video Player требует разрешения \\ \"%1$s \\\" для доступа и
+    <string name="permission_info">Приложение Vanilla Player Pro требует разрешения \\ \"%1$s \\\" для доступа и
         воспроизведения медиа. Без него доступ к медиа и воспроизведение выигрывает. Чтобы полностью использовать
         приложение, предоставьте разрешение.
     </string>
@@ -64,7 +64,7 @@
     <string name="group_videos">Групповые видео по папке</string>
     <string name="location">Расположение</string>
     <string name="permission_not_granted">Разрешение не предоставлено</string>
-    <string name="permission_settings">Приложение Vanilla Video Player требует разрешения \\ \"%1$s \\\" для доступа и
+    <string name="permission_settings">Приложение Vanilla Player Pro требует разрешения \\ \"%1$s \\\" для доступа и
         воспроизведения медиа. Без него доступ к медиа и воспроизведение выигрывает. Чтобы полностью использовать
         приложение, предоставьте разрешение от настроек, так как в нем было постоянно отказано.
     </string>

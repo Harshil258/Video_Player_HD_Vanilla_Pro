@@ -25,7 +25,7 @@ import com.harshil258.adplacer.utils.Logger
 import com.harshil258.adplacer.utils.Logger.TAG
 import com.vanillavideoplayer.hd.videoplayer.pro.GlobalPreferences
 import com.vanillavideoplayer.hd.videoplayer.pro.MainActivity
-import com.vanillavideoplayer.videoplayer.R
+import com.vanillavideoplayer.hd.videoplayer.pro.R
 import java.util.concurrent.TimeUnit
 import kotlin.math.max
 import kotlin.math.min
@@ -209,7 +209,7 @@ class MediaStoreBroadcastReceiverPro : BroadcastReceiver() {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             val channelId = "channel_id234"
             val channelName = "Vanilla Playerr"
-            val channelDescription = "Vanilla Video player notification"
+            val channelDescription = "Vanilla player Pro notification"
             val importance = NotificationManager.IMPORTANCE_HIGH
             val channel = NotificationChannel(channelId, channelName, importance)
             channel.description = channelDescription

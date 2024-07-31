@@ -268,7 +268,7 @@ class MainActivity : ComponentActivity() {
                                 } else {
                                     val recipient = "flavourlessdevelopers@gmail.com"
                                     val subject =
-                                        "We Value Your Feedback on Vanilla Video Player - Let's Improve Together!"
+                                        "We Value Your Feedback on Vanilla Player Pro - Let's Improve Together!"
                                     val body = """
                                         Enter all of your feedback here:
                                         ${getDeviceDetails(this@MainActivity)}

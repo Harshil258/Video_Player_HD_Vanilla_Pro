@@ -93,13 +93,13 @@
     <string name="navigate_up">Naviguer</string>
     <string name="no_videos_found">Aucune vidéo trouvée</string>
     <string name="open_settings">Paramètres ouvrir</string>
-    <string name="permission_info">L\'application Vanilla Video Player a besoin de \\ \"%1$s \\\" l\'autorisation
+    <string name="permission_info">L\'application Vanilla Player Pro a besoin de \\ \"%1$s \\\" l\'autorisation
         d\'accéder et de lire les médias. Sans cela, l\'accès aux médias et la lecture n\'ont pas fonctionné. Pour
         utiliser pleinement l\'application, accordez l\'autorisation.
     </string>
     <string name="permission_not_granted">Permission non accordée</string>
     <string name="permission_request">Demande d\'autorisation</string>
-    <string name="permission_settings">L\'application Vanilla Video Player a besoin de \\ \"%1$s \\\" l\'autorisation
+    <string name="permission_settings">L\'application Vanilla Player Pro a besoin de \\ \"%1$s \\\" l\'autorisation
         d\'accéder et de lire les médias. Sans cela, l\'accès aux médias et la lecture n\'ont pas fonctionné. Pour
         utiliser pleinement l\'application, accordez l\'autorisation des paramètres car il a été refusé de façon
         permanente.

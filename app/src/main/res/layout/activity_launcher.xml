@@ -19,8 +19,8 @@
 
 
         <ImageView
-                android:layout_width="@dimen/_150sdp"
-                android:layout_height="@dimen/_150sdp"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_200sdp"
                 android:layout_marginBottom="@dimen/_10sdp"
                 android:adjustViewBounds="true"
                 android:elevation="@dimen/_10sdp"
@@ -35,8 +35,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/_5sdp"
-                android:fontFamily="@font/p_light"
-                android:text="Vanilla Video Player"
+                android:fontFamily="@font/n_regular"
+                android:text="Vanilla Player Pro"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_18sdp" />

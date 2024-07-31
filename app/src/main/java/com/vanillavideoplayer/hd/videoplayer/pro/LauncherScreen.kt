@@ -3,7 +3,6 @@ package com.vanillavideoplayer.hd.videoplayer.pro
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import com.vanillavideoplayer.videoplayer.R
 import com.vanillavideoplayer.videoplayer.settings.x.updateLocale
 
 

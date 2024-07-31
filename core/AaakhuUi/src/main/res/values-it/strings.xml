@@ -49,7 +49,7 @@
     <string name="navigate_up">Navigare</string>
     <string name="no_videos_found">nessun video trovato</string>
     <string name="open_settings">Impostazioni aperte</string>
-    <string name="permission_info">L\'app Vanilla Video Player ha bisogno \\ \"%1$s \\\" autorizzazione per accedere e
+    <string name="permission_info">L\'app Vanilla Player Pro ha bisogno \\ \"%1$s \\\" autorizzazione per accedere e
         riprodurre i media. Senza di essa, l\'accesso ai media e la riproduzione non hanno funzionato. Per utilizzare
         completamente l\'app, concedere l\'autorizzazione.
     </string>
@@ -65,7 +65,7 @@
     </string>
     <string name="subtitle">Sottotitolo</string>
     <string name="permission_request">Richiesta di permesso</string>
-    <string name="permission_settings">L\'app Vanilla Video Player ha bisogno \\ \"%1$s \\\" autorizzazione per
+    <string name="permission_settings">L\'app Vanilla Player Pro ha bisogno \\ \"%1$s \\\" autorizzazione per
         accedere e riprodurre i media. Senza di essa, l\'accesso ai media e la riproduzione non hanno funzionato. Per
         utilizzare completamente l\'app, concedere l\'autorizzazione dalle impostazioni poiché è stata permanentemente
         negata.

@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    namespace = "com.vanillavideoplayer.videoplayer"
+    namespace = "com.vanillavideoplayer.hd.videoplayer.pro"
 /* TODO : Don't Forgot to change the version buddy */
     defaultConfig {
         applicationId = "com.vanillavideoplayer.hd.videoplayer.pro"
@@ -16,9 +16,11 @@ android {
         versionName = "1"
     }
 
+
+
 //    signingConfigs {
 //        create("release") {
-//            storeFile = file("C:\\Users\\zeeld\\Desktop\\Android\\Vanilla Player\\Keys\\Vanilla Video Player.jks")
+//            storeFile = file("C:\\Users\\zeeld\\Desktop\\Android\\Vanilla Player\\Keys\\Vanilla Player Pro.jks")
 //            storePassword = "123456789"
 //            keyAlias = "Key0"
 //            keyPassword = "123456789"

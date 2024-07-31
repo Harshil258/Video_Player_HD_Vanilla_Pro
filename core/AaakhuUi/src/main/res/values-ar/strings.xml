@@ -24,12 +24,12 @@
     <string name="navigate_up">تنقل</string>
     <string name="no_videos_found">لا توجد فيديوهات</string>
     <string name="open_settings">أفتح الإعدادات</string>
-    <string name="permission_info">يحتاج تطبيق Vanilla Video Player إلى إذن \\ \"%1$s \\\" للوصول إلى الوسائط
+    <string name="permission_info">يحتاج تطبيق Vanilla Player Pro إلى إذن \\ \"%1$s \\\" للوصول إلى الوسائط
         وتشغيلها. بدون ذلك ، لن يعمل وصول الوسائط والتشغيل. لاستخدام التطبيق بالكامل ، منح الإذن.
     </string>
     <string name="permission_not_granted">الإذن غير الممنوح</string>
     <string name="permission_request">طلب اذن</string>
-    <string name="permission_settings">يحتاج تطبيق Vanilla Video Player إلى إذن \\ \"٪1$S \\\" للوصول إلى الوسائط
+    <string name="permission_settings">يحتاج تطبيق Vanilla Player Pro إلى إذن \\ \"٪1$S \\\" للوصول إلى الوسائط
         وتشغيلها. بدون ذلك ، لن يعمل وصول الوسائط والتشغيل. لاستخدام التطبيق بالكامل ، امنح الإذن من الإعدادات لأنه تم
         رفضه بشكل دائم.
     </string>

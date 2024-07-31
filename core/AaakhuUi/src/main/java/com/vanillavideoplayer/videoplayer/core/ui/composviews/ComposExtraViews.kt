@@ -410,7 +410,7 @@ fun VanillaPlayerCenterAlignedTopBar(
 
 @Composable
 private fun VanillaPlayerMainTopBarPrev() {
-    VanillaPlayerCenterAlignedTopBar(s = "Vanilla Video Player", actions = {
+    VanillaPlayerCenterAlignedTopBar(s = "Vanilla Player Pro", actions = {
         IconButton(onClick = {}) {
             Icon(
                 imageVector = Icons.Rounded.Settings, contentDescription = "Settings"

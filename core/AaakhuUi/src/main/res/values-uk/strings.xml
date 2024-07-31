@@ -8,7 +8,7 @@
     <string name="appearance_description">Відрегулюйте додаток на свій смак</string>
     <string name="ascending">Висхід</string>
     <string name="double_tap">Подвійний жест</string>
-    <string name="permission_info">Додаток Vanilla Video Player потребує \\ \"%1$s \\\" Дозвіл на доступ та
+    <string name="permission_info">Додаток Vanilla Player Pro потребує \\ \"%1$s \\\" Дозвіл на доступ та
         відтворення медіа. Без цього, доступ до медіа та відтворення виграли роботу. Щоб повністю використовувати
         додаток, надайте дозвіл.
     </string>
@@ -44,7 +44,7 @@
     <string name="permission_request">Запит на дозвіл</string>
     <string name="player_controls_previous">Гравець попередній</string>
     <string name="quick_settings">Швидкі налаштування</string>
-    <string name="permission_settings">Додаток Vanilla Video Player потребує \\ \"%1$s \\\" Дозвіл на доступ та
+    <string name="permission_settings">Додаток Vanilla Player Pro потребує \\ \"%1$s \\\" Дозвіл на доступ та
         відтворення медіа. Без цього, доступ до медіа та відтворення виграли роботу. Щоб повністю використовувати
         додаток, надайте дозвіл з налаштувань, оскільки йому було назавжди відмовлено.
     </string>
