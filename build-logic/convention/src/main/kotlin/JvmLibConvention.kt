@@ -1,4 +1,4 @@
-import com.vanillavideoplayer.videoplayer.configureKotlin
+import com.vanillavideoplayer.hd.videoplayer.pro.configureKotlin
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 

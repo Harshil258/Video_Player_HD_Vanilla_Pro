@@ -23,7 +23,7 @@ import com.onesignal.notifications.IDisplayableMutableNotification
 import com.onesignal.notifications.INotificationReceivedEvent
 import com.onesignal.notifications.INotificationServiceExtension
 import com.vanillavideoplayer.hd.videoplayer.pro.VanillaProApp.Companion.context
-import com.vanillavideoplayer.videoplayer.feature.player.VanillaPlayerActivityPro
+import com.vanillavideoplayer.hd.videoplayer.pro.feature.player.VanillaPlayerActivityPro
 import org.json.JSONObject
 
 class VanillaProNotificationExtenderService() : INotificationServiceExtension {
@@ -114,7 +114,7 @@ class VanillaProNotificationExtenderService() : INotificationServiceExtension {
         val builder = NotificationCompat.Builder(context, CHANNEL_ID).apply {
             setContentTitle(title)
             setContentText(body)
-            setSmallIcon(com.vanillavideoplayer.videoplayer.core.ui.R.drawable.ic_notification)
+            setSmallIcon(com.vanillavideoplayer.hd.videoplayer.pro.core.ui.R.drawable.ic_notification)
             if (bitmap != null) {
                 setStyle(
                     NotificationCompat.BigPictureStyle()

@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.vanillavideoplayer.videoplayer.feature.settings"
+    namespace = "com.vanillavideoplayer.hd.videoplayer.pro.feature.settings"
 }
 
 dependencies {

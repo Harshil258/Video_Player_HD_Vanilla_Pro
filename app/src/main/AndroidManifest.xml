@@ -49,7 +49,7 @@
             android:value="true" />
         <meta-data
             android:name="com.onesignal.NotificationServiceExtension"
-            android:value="com.vanillavideoplayer.videoplayer.VanillaNotificationExtenderService" />
+            android:value="com.vanillavideoplayer.hd.videoplayer.pro.VanillaNotificationExtenderService" />
 
         <meta-data
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"

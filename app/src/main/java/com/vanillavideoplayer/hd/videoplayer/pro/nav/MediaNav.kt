@@ -10,16 +10,16 @@ import com.harshil258.adplacer.adViews.BannerView
 import com.harshil258.adplacer.interfaces.InterAdCallBack
 import com.harshil258.adplacer.utils.Constants.adPlacerApplication
 import com.harshil258.adplacer.utils.Constants.runningActivity
-import com.vanillavideoplayer.videoplayer.feature.player.PlayerViewModel
-import com.vanillavideoplayer.videoplayer.feature.player.VanillaPlayerActivityPro
-import com.vanillavideoplayer.videoplayer.feature.videopicker.navigation.mediaPickerUi
-import com.vanillavideoplayer.videoplayer.feature.videopicker.navigation.folderScreen
-import com.vanillavideoplayer.videoplayer.feature.videopicker.navigation.mpNavigationRoute
-import com.vanillavideoplayer.videoplayer.feature.videopicker.navigation.navigationToFolderScreen
-import com.vanillavideoplayer.videoplayer.feature.videopicker.navigation.navToSearchScreen
-import com.vanillavideoplayer.videoplayer.feature.videopicker.navigation.searchScreen
-import com.vanillavideoplayer.videoplayer.feature.videopicker.screens.media.FilePickerViewModel
-import com.vanillavideoplayer.videoplayer.settings.navigation.navigateToSettings
+import com.vanillavideoplayer.hd.videoplayer.pro.feature.player.PlayerViewModel
+import com.vanillavideoplayer.hd.videoplayer.pro.feature.player.VanillaPlayerActivityPro
+import com.vanillavideoplayer.hd.videoplayer.pro.feature.videopicker.navigation.mediaPickerUi
+import com.vanillavideoplayer.hd.videoplayer.pro.feature.videopicker.navigation.folderScreen
+import com.vanillavideoplayer.hd.videoplayer.pro.feature.videopicker.navigation.mpNavigationRoute
+import com.vanillavideoplayer.hd.videoplayer.pro.feature.videopicker.navigation.navigationToFolderScreen
+import com.vanillavideoplayer.hd.videoplayer.pro.feature.videopicker.navigation.navToSearchScreen
+import com.vanillavideoplayer.hd.videoplayer.pro.feature.videopicker.navigation.searchScreen
+import com.vanillavideoplayer.hd.videoplayer.pro.feature.videopicker.screens.media.FilePickerViewModel
+import com.vanillavideoplayer.hd.videoplayer.pro.settings.navigation.navigateToSettings
 
 
 fun NavGraphBuilder.mediaNavBuilder(

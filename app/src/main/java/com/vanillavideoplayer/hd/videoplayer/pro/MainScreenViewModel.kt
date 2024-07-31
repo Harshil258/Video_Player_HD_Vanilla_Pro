@@ -4,8 +4,8 @@ import android.app.Activity
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.android.play.core.review.ReviewManagerFactory
-import com.vanillavideoplayer.videoplayer.core.data.repo.PrefRepo
-import com.vanillavideoplayer.videoplayer.core.model.ApplicationPrefData
+import com.vanillavideoplayer.hd.videoplayer.pro.core.data.repo.PrefRepo
+import com.vanillavideoplayer.hd.videoplayer.pro.core.model.ApplicationPrefData
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.map

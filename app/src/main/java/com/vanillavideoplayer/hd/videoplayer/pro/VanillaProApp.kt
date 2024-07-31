@@ -48,8 +48,8 @@ import com.harshil258.adplacer.utils.Logger
 import com.harshil258.adplacer.utils.Logger.TAG
 import com.harshil258.adplacer.utils.STATUS
 import com.harshil258.adplacer.utils.SharedPrefConfig.Companion.sharedPrefConfig
-import com.vanillavideoplayer.videoplayer.core.common.commonobj.ApplicationScope
-import com.vanillavideoplayer.videoplayer.core.data.repo.PrefRepo
+import com.vanillavideoplayer.hd.videoplayer.pro.core.common.commonobj.ApplicationScope
+import com.vanillavideoplayer.hd.videoplayer.pro.core.data.repo.PrefRepo
 import dagger.hilt.android.HiltAndroidApp
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.first

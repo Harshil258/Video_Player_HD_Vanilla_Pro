@@ -84,6 +84,6 @@
 -keepattributes *Annotation*
 -dontwarn com.onesignal.**
 
--keep class com.vanillavideoplayer.videoplayer.VanillaNotificationExtenderService {
+-keep class com.vanillavideoplayer.hd.videoplayer.pro.VanillaNotificationExtenderService {
     *;
 }

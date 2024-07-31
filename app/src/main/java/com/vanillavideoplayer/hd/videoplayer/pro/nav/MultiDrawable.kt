@@ -1,4 +1,4 @@
-//package com.vanillavideoplayer.videoplayer.nav
+//package com.vanillavideoplayer.hd.videoplayer.pro.nav
 //
 //import android.graphics.Bitmap
 //import android.graphics.Canvas

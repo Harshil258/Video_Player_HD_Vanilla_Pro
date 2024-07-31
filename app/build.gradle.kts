@@ -16,8 +16,6 @@ android {
         versionName = "1"
     }
 
-
-
 //    signingConfigs {
 //        create("release") {
 //            storeFile = file("C:\\Users\\zeeld\\Desktop\\Android\\Vanilla Player\\Keys\\Vanilla Player Pro.jks")
@@ -101,7 +99,6 @@ dependencies {
     implementation(libs.firebase.inappmessaging.display)
 
     implementation(libs.lottie.v640)
-//    implementation(project(mapOf("path" to ":AdValuModule")))
     implementation("com.onesignal:OneSignal:[5.0.0, 5.99.99]")
 
 
@@ -112,14 +109,7 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.firebase.config.ktx)
 
-//    testImplementation(libs.junit4)
-//    androidTestImplementation(libs.androidx.test.ext)
-//    androidTestImplementation(libs.androidx.test.espresso.core)
-//    androidTestImplementation(libs.androidx.compose.ui.test)
-//    implementation("androidx.compose.ui:ui-test-junit4:1.6.8")
-
     debugImplementation(libs.androidx.compose.ui.tooling)
-//    debugImplementation(libs.androidx.compose.ui.testManifest)
 
     implementation(libs.accompanist.pager)
     implementation(libs.accompanist.pager.indicators)

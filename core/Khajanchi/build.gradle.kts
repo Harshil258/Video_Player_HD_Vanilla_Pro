@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.vanillavideoplayer.videoplayer.core.database"
+    namespace = "com.vanillavideoplayer.hd.videoplayer.pro.core.database"
 
     ksp {
         arg("room.schemaLocation", "$projectDir/schemas")

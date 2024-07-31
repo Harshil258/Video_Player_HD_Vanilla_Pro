@@ -47,13 +47,13 @@ import com.vanillavideoplayer.hd.videoplayer.pro.VanillaProApp.Companion.setAdSt
 import com.vanillavideoplayer.hd.videoplayer.pro.compose.MAIN_ROUTE_CONST
 import com.vanillavideoplayer.hd.videoplayer.pro.compose.MainScreenUi
 import com.vanillavideoplayer.hd.videoplayer.pro.compose.RatingDialogVideoPro
-import com.vanillavideoplayer.videoplayer.core.media.sync.MediaSynchronizerInter
-import com.vanillavideoplayer.videoplayer.core.model.ThemeConfigEnum
-import com.vanillavideoplayer.videoplayer.core.ui.theme.VideoPlayerTheme
-import com.vanillavideoplayer.videoplayer.feature.player.PlayerViewModel
-import com.vanillavideoplayer.videoplayer.feature.videopicker.navigation.settingsNavGraph
-import com.vanillavideoplayer.videoplayer.feature.videopicker.screens.VideosStateSealedInter
-import com.vanillavideoplayer.videoplayer.feature.videopicker.screens.media.FilePickerViewModel
+import com.vanillavideoplayer.hd.videoplayer.pro.core.media.sync.MediaSynchronizerInter
+import com.vanillavideoplayer.hd.videoplayer.pro.core.model.ThemeConfigEnum
+import com.vanillavideoplayer.hd.videoplayer.pro.core.ui.theme.VideoPlayerTheme
+import com.vanillavideoplayer.hd.videoplayer.pro.feature.player.PlayerViewModel
+import com.vanillavideoplayer.hd.videoplayer.pro.feature.videopicker.navigation.settingsNavGraph
+import com.vanillavideoplayer.hd.videoplayer.pro.feature.videopicker.screens.VideosStateSealedInter
+import com.vanillavideoplayer.hd.videoplayer.pro.feature.videopicker.screens.media.FilePickerViewModel
 import com.vanillavideoplayer.hd.videoplayer.pro.google_iab.BillingConnector
 import com.vanillavideoplayer.hd.videoplayer.pro.google_iab.BillingEventListener
 import com.vanillavideoplayer.hd.videoplayer.pro.google_iab.enums.ProductType
@@ -62,11 +62,11 @@ import com.vanillavideoplayer.hd.videoplayer.pro.google_iab.models.ProductInfo
 import com.vanillavideoplayer.hd.videoplayer.pro.google_iab.models.PurchaseInfo
 import com.vanillavideoplayer.hd.videoplayer.pro.notifications.MediaStoreBroadcastReceiverPro
 import com.vanillavideoplayer.hd.videoplayer.pro.notifications.MediaStoreScheduler
-import com.vanillavideoplayer.videoplayer.settings.navigation.langPrefNavRoute
-import com.vanillavideoplayer.videoplayer.settings.navigation.langPrefScreen
-import com.vanillavideoplayer.videoplayer.settings.navigation.navToOnboardingPref
-import com.vanillavideoplayer.videoplayer.settings.navigation.navigateToSettings
-import com.vanillavideoplayer.videoplayer.settings.navigation.onboardingPrefScreen
+import com.vanillavideoplayer.hd.videoplayer.pro.settings.navigation.langPrefNavRoute
+import com.vanillavideoplayer.hd.videoplayer.pro.settings.navigation.langPrefScreen
+import com.vanillavideoplayer.hd.videoplayer.pro.settings.navigation.navToOnboardingPref
+import com.vanillavideoplayer.hd.videoplayer.pro.settings.navigation.navigateToSettings
+import com.vanillavideoplayer.hd.videoplayer.pro.settings.navigation.onboardingPrefScreen
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -261,7 +261,7 @@ class MainActivity : ComponentActivity() {
                                 showDialog.value = false
                             }) { rating ->
                                 if (rating >= 4) {
-//                                    openLinkInBrowser(this@MainActivity, "https://play.google.com/store/apps/details?id=com.vanillavideoplayer.videoplayer")
+//                                    openLinkInBrowser(this@MainActivity, "https://play.google.com/store/apps/details?id=com.vanillavideoplayer.hd.videoplayer.pro")
                                     launchInAppReview(this@MainActivity) {
                                         showDialog.value = false
                                     }

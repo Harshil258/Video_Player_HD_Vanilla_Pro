@@ -3,7 +3,7 @@ package com.vanillavideoplayer.hd.videoplayer.pro
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import com.vanillavideoplayer.videoplayer.settings.x.updateLocale
+import com.vanillavideoplayer.hd.videoplayer.pro.settings.x.updateLocale
 
 
 class LauncherScreen : AppCompatActivity() {

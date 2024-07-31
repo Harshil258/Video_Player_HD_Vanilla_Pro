@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.vanillavideoplayer.videoplayer.core.datastore"
+    namespace = "com.vanillavideoplayer.hd.videoplayer.pro.core.datastore"
 }
 
 dependencies {

@@ -21,10 +21,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.vanillavideoplayer.videoplayer.core.ui.designsystem.VanillaIcons
-import com.vanillavideoplayer.videoplayer.core.ui.preview.LightDarkPrev
-import com.vanillavideoplayer.videoplayer.core.ui.theme.NunitoBold
-import com.vanillavideoplayer.videoplayer.core.ui.theme.VideoPlayerTheme
+import com.vanillavideoplayer.hd.videoplayer.pro.core.ui.designsystem.VanillaIcons
+import com.vanillavideoplayer.hd.videoplayer.pro.core.ui.preview.LightDarkPrev
+import com.vanillavideoplayer.hd.videoplayer.pro.core.ui.theme.NunitoBold
+import com.vanillavideoplayer.hd.videoplayer.pro.core.ui.theme.VideoPlayerTheme
 
 @LightDarkPrev
 @Composable

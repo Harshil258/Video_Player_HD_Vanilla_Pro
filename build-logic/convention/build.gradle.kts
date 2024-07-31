@@ -2,7 +2,7 @@ plugins {
     `kotlin-dsl`
 }
 
-group = "com.vanillavideoplayer.videoplayer.buildlogic"
+group = "com.vanillavideoplayer.hd.videoplayer.pro.buildlogic"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_17

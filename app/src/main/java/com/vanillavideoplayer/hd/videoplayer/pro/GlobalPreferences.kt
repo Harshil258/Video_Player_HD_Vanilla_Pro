@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.vanillavideoplayer.videoplayer.core.model.VideoData
+import com.vanillavideoplayer.hd.videoplayer.pro.core.model.VideoData
 
 class GlobalPreferences {
     private val PREF_NAME = "GlobalAdPrefs"

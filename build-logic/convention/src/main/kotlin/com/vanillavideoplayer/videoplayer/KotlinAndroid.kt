@@ -1,4 +1,4 @@
-package com.vanillavideoplayer.videoplayer
+package com.vanillavideoplayer.hd.videoplayer.pro
 
 import com.android.build.api.dsl.CommonExtension
 import org.gradle.api.JavaVersion

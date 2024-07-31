@@ -6,7 +6,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import com.vanillavideoplayer.videoplayer.core.ui.R
+import com.vanillavideoplayer.hd.videoplayer.pro.core.ui.R
 
 @Composable
 fun RationaleDialogCompos(

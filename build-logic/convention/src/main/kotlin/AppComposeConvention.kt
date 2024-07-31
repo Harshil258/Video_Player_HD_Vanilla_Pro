@@ -1,5 +1,5 @@
 import com.android.build.api.dsl.ApplicationExtension
-import com.vanillavideoplayer.videoplayer.configureAndroidCompose
+import com.vanillavideoplayer.hd.videoplayer.pro.configureAndroidCompose
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.getByType

@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.vanillavideoplayer.videoplayer.feature.player"
+    namespace = "com.vanillavideoplayer.hd.videoplayer.pro.feature.player"
 
     buildFeatures {
         viewBinding = true
