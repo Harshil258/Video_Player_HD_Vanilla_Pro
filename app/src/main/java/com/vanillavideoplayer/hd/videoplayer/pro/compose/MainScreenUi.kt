@@ -158,7 +158,7 @@ private fun HomeScreenBackground(
         Box(
             modifier = Modifier
                 .fillMaxSize()
-                .radialGradientScrim(MaterialTheme.colorScheme.primary.copy(alpha = 0.15f))
+                .radialGradientScrim(MaterialTheme.colorScheme.primary.copy(alpha = 0.10f))
         )
         content()
     }
