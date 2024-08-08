@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -46,6 +47,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
@@ -107,7 +109,6 @@ internal fun MediaPickerUi(
     selectedTracks: List<VideoData>?,
     clearSelectedTracks: () -> Unit?
 ) {
-
     var showSortMenu by rememberSaveable { mutableStateOf(false) }
     val videolistState = rememberLazyListState()
     val folderlistState = rememberLazyListState()
@@ -128,101 +129,101 @@ internal fun MediaPickerUi(
         modifier = Modifier.fillMaxSize()
     )
 
-//    viewModelAppearance::toggleChangeThumbnailSize
-//    var bannerSize12 by remember {  }
-    Column {
 
+    Column {
         val pagerState = rememberPagerState(pageCount = { 3 })
 
-        VanillaPlayerCenterAlignedTopBar(s = if (disableMultiSelect) {
-            stringResource(id = R.string.app_name)
-        } else {
-            stringResource(
-                id = R.string.selected_tracks_count,
-                selectedTracks!!.size,
-                itemCount
-            )
-        }, icon = {
-            IconButton(onClick = {
-                GlobalPrefs().increaseCount(context)
-                if (disableMultiSelect) {
-                    viewModelAppearance.toggleChangeThumbnailSize()
-                } else {
-                    disableMultiSelect = true
-                    clearSelectedTracks()
-                }
-            }) {
-
-                if (disableMultiSelect) {
-                    if (preferences.showVideoTheme == VideoTheme.THUMBNAIL_BIG) {
-                        Icon(
-                            imageVector = VanillaIcons.BigThumbnail,
-                            contentDescription = stringResource(id = R.string.ChangeThumbnail)
-                        )
+        VanillaPlayerCenterAlignedTopBar(
+            s = if (disableMultiSelect) {
+                stringResource(id = R.string.app_name)
+            } else {
+                stringResource(
+                    id = R.string.selected_tracks_count,
+                    selectedTracks!!.size,
+                    itemCount
+                )
+            },
+            icon = {
+                IconButton(onClick = {
+                    GlobalPrefs().increaseCount(context)
+                    if (disableMultiSelect) {
+                        viewModelAppearance.toggleChangeThumbnailSize()
+                    } else {
+                        disableMultiSelect = true
+                        clearSelectedTracks()
+                    }
+                }) {
+                    if (disableMultiSelect) {
+                        if (preferences.showVideoTheme == VideoTheme.THUMBNAIL_BIG) {
+                            Icon(
+                                imageVector = VanillaIcons.BigThumbnail,
+                                contentDescription = stringResource(id = R.string.ChangeThumbnail)
+                            )
+                        } else {
+                            Icon(
+                                imageVector = VanillaIcons.SmallThumbnail,
+                                contentDescription = stringResource(id = R.string.ChangeThumbnail)
+                            )
+                        }
                     } else {
                         Icon(
-                            imageVector = VanillaIcons.SmallThumbnail,
-                            contentDescription = stringResource(id = R.string.ChangeThumbnail)
+                            imageVector = VanillaIcons.ArrowBack,
+                            contentDescription = stringResource(id = R.string.navigate_up)
                         )
                     }
-                } else {
-                    Icon(
-                        imageVector = VanillaIcons.ArrowBack,
-                        contentDescription = stringResource(id = R.string.navigate_up)
-                    )
                 }
-
-            }
-        }, actions = {
-            if (!disableMultiSelect && lastposition == 2) {
-                IconButton(onClick = {
-                    viewModel?.clearSelectedTracks()
-                    when (historyVideoState) {
-                        is VideosStateSealedInter.SuccessDataClass -> {
-                            GlobalScope.launch(Dispatchers.IO) {
-                                historyVideoState.data.forEach {
-                                    it.isSelected = true
-                                    viewModel?.addToSelectedTracks(it)
+            },
+            actions = {
+                if (!disableMultiSelect && lastposition == 2) {
+                    IconButton(onClick = {
+                        viewModel?.clearSelectedTracks()
+                        when (historyVideoState) {
+                            is VideosStateSealedInter.SuccessDataClass -> {
+                                GlobalScope.launch(Dispatchers.IO) {
+                                    historyVideoState.data.forEach {
+                                        it.isSelected = true
+                                        viewModel?.addToSelectedTracks(it)
+                                    }
                                 }
                             }
+
+                            else -> {}
                         }
 
-                        else -> {}
+                    }) {
+                        Icon(
+                            imageVector = VanillaIcons.SelectAll,
+                            contentDescription = stringResource(id = R.string.selectall)
+                        )
+                    }
+                }
+                if (!disableMultiSelect && selectedTracks!!.isNotEmpty()) {
+
+                    IconButton(onClick = {
+                        deleteAction = if (lastposition == 2) {
+                            "historyvideo"
+                        } else {
+                            "normalvideo"
+                        }
+
+                    }) {
+                        Icon(
+                            imageVector = VanillaIcons.Delete,
+                            contentDescription = stringResource(id = R.string.delete)
+                        )
                     }
 
-                }) {
-                    Icon(
-                        imageVector = VanillaIcons.SelectAll,
-                        contentDescription = stringResource(id = R.string.selectall)
-                    )
-                }
-            }
-            if (!disableMultiSelect && selectedTracks!!.isNotEmpty()) {
-
-                IconButton(onClick = {
-                    deleteAction = if (lastposition == 2) {
-                        "historyvideo"
-                    } else {
-                        "normalvideo"
+                } else if (disableMultiSelect) {
+                    IconButton(onClick = onSettingsClick) {
+                        Icon(
+                            imageVector = VanillaIcons.Settings,
+                            contentDescription = stringResource(id = R.string.settings)
+                        )
                     }
-
-                }) {
-                    Icon(
-                        imageVector = VanillaIcons.Delete,
-                        contentDescription = stringResource(id = R.string.delete)
-                    )
                 }
 
-            } else if (disableMultiSelect) {
-                IconButton(onClick = onSettingsClick) {
-                    Icon(
-                        imageVector = VanillaIcons.Settings,
-                        contentDescription = stringResource(id = R.string.settings)
-                    )
-                }
             }
-
-        })
+        )
 
         HorizontalPager(
             state = pagerState,
@@ -299,6 +300,7 @@ internal fun MediaPickerUi(
                                         }
                                     }
                                 }"
+
                                 else -> "$itemCount ${
                                     when (page) {
                                         0 -> {
@@ -355,7 +357,7 @@ internal fun MediaPickerUi(
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
-                        .weight(1f), contentAlignment = Alignment.Center
+                        .weight(1f).background(color = Color.Transparent), contentAlignment = Alignment.Center
                 ) {
                     if (playerViewModel != null) {
                         when (page) {
@@ -476,7 +478,7 @@ internal fun MediaPickerUi(
 
         val cachedView = androidViewBannerCache[0]
         val appDetailModel = sharedPrefConfig.appDetails
-        if(appDetailModel.adStatus == STATUS.ON.name){
+        if (appDetailModel.adStatus == STATUS.ON.name) {
             androidx.compose.animation.AnimatedVisibility(visible = true) {
                 AndroidView(factory = { context ->
                     if (cachedView != null) {

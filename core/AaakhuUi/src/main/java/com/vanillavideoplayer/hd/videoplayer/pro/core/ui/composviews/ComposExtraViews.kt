@@ -338,7 +338,8 @@ fun Modifier.verticalFadingEdge(
 ) = composed(debugInspectorInfo {
     name = "length"
     value = length
-}) {
+})
+{
     val color = edgeColor ?: MaterialTheme.colorScheme.surface
 
     drawWithContent {
@@ -395,14 +396,27 @@ fun VanillaClickablePrefItem(
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun VanillaPlayerCenterAlignedTopBar(
-    s: String, modifier: Modifier = Modifier, icon: @Composable () -> Unit = {}, actions: @Composable RowScope.() -> Unit = {}, barColors: TopAppBarColors = TopAppBarDefaults.centerAlignedTopAppBarColors(), topAppBarScrollBehavior: TopAppBarScrollBehavior? = null
+    s: String,
+    modifier: Modifier = Modifier,
+    icon: @Composable () -> Unit = {},
+    actions: @Composable RowScope.() -> Unit = {},
+    barColors: TopAppBarColors = TopAppBarDefaults.centerAlignedTopAppBarColors(
+        containerColor = Color.Transparent, // Set the background color to transparent
+        scrolledContainerColor = Color.Transparent // Ensure it stays transparent when scrolled
+    ),
+    topAppBarScrollBehavior: TopAppBarScrollBehavior? = null
 ) {
     CenterAlignedTopAppBar(
         title = {
             Text(
                 text = s, fontWeight = FontWeight.Bold
             )
-        }, navigationIcon = icon, actions = actions, colors = barColors, modifier = modifier, scrollBehavior = topAppBarScrollBehavior
+        },
+        navigationIcon = icon,
+        actions = actions,
+        colors = barColors,
+        modifier = modifier,
+        scrollBehavior = topAppBarScrollBehavior
     )
 }
 
@@ -422,14 +436,24 @@ private fun VanillaPlayerMainTopBarPrev() {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun VanillaPlayerTopBar(
-    s: String, modifier: Modifier = Modifier, icon: @Composable () -> Unit = {}, function: @Composable RowScope.() -> Unit = {}, topAppBarColors: TopAppBarColors = TopAppBarDefaults.topAppBarColors(), behavior: TopAppBarScrollBehavior? = null
+    s: String,
+    modifier: Modifier = Modifier,
+    icon: @Composable () -> Unit = {},
+    function: @Composable RowScope.() -> Unit = {},
+    topAppBarColors: TopAppBarColors = TopAppBarDefaults.topAppBarColors(),
+    behavior: TopAppBarScrollBehavior? = null
 ) {
     TopAppBar(
         title = {
             Text(
                 text = s, maxLines = 1, overflow = TextOverflow.Ellipsis
             )
-        }, navigationIcon = icon, actions = function, colors = topAppBarColors, modifier = modifier, scrollBehavior = behavior
+        },
+        navigationIcon = icon,
+        actions = function,
+        colors = topAppBarColors,
+        modifier = modifier,
+        scrollBehavior = behavior
     )
 }
 

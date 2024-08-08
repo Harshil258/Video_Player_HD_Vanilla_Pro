@@ -37,7 +37,8 @@ fun NavGraphBuilder.mediaNavBuilder(
             onSearchClick = mediaNavController::navToSearchScreen,
             onSettingsClick = mainNavController::navigateToSettings,
             playerViewModel = playerViewModel,
-            filePickerViewModel = filePickerViewModel,androidViewBannerCache = androidViewBannerCache,
+            filePickerViewModel = filePickerViewModel,
+            androidViewBannerCache = androidViewBannerCache,
         )
         folderScreen(
             onNavigateUp = mediaNavController::navigateUp,

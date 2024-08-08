@@ -107,12 +107,14 @@ fun VideoItem(
     AnimatedVisibility(visible = pref.showVideoTheme == VideoTheme.THUMBNAIL_MEDIUM) {
         ListItem(
             colors = ListItemDefaults.colors(
-                containerColor = if (isSelected) selectedItemColor else ListItemDefaults.containerColor
-            ), leadingContent = {
+                containerColor = if (isSelected) selectedItemColor else Color.Transparent
+            ),
+
+            leadingContent = {
                 Box(
                     modifier = Modifier
                         .clip(MaterialTheme.shapes.small)
-                        .background(MaterialTheme.colorScheme.surfaceColorAtElevation(1.dp))
+//                        .background(MaterialTheme.colorScheme.surfaceColorAtElevation(1.dp))
                         .width(min(150.dp, LocalConfiguration.current.screenWidthDp.dp * 0.35f))
                         .aspectRatio(16f / 10f)
                 ) {
@@ -213,7 +215,7 @@ fun VideoItem(
                 }
             },
 
-            modifier = modifier
+            modifier = modifier.background(color = Color.Transparent)
         )
     }
 

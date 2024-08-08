@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
@@ -43,6 +44,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalContext
@@ -129,7 +131,7 @@ fun ContentLazyList(
 
     LazyColumn(
         contentPadding = PaddingValues(vertical = 10.dp),
-        modifier = modifier.fillMaxSize(),
+        modifier = modifier.fillMaxSize().background(color = Color.Transparent),
         horizontalAlignment = horizontalAlignment,
         verticalArrangement = verticalArrangement,
         content = content,
@@ -274,7 +276,7 @@ fun VidListFromState(
         } else {
 
             LazyColumn(
-                state = state, modifier = Modifier.fillMaxSize()
+                state = state, modifier = Modifier.fillMaxSize().background(color = Color.Transparent)
             ) {
                 if (disableMultiSelect) {
                     if (viewModel is FilePickerViewModel) {
@@ -316,7 +318,9 @@ fun VidListFromState(
                 items(filteredVideos, key = { it.path }) { video ->
                     VideoItem(
                         vidData = video,
-                        isSelected = video.isSelected, pref = preferences, modifier = Modifier.combinedClickable(onClick = {
+                        isSelected = video.isSelected,
+                        pref = preferences,
+                        modifier = Modifier.combinedClickable(onClick = {
                             if (multiSelect) {
                                 video.isSelected = !video.isSelected
                                 toggleSelection(video, viewModel)
@@ -338,7 +342,7 @@ fun VidListFromState(
                             toggleMultiSelect()
                             video.isSelected = !video.isSelected
                             toggleSelection(video, viewModel)
-                        }),
+                        }).background(color = Color.Transparent),
                         playerViewModel = playerViewModel,
                         infoButtonClick = {
                             if (video.path != boolInfoVisible) {
@@ -355,6 +359,7 @@ fun VidListFromState(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .padding(start = 20.dp, end = 20.dp)
+                                .background(color = Color.Transparent)
                         ) {
                             Column {
                                 Row(
@@ -569,7 +574,6 @@ fun VidListFromState(
 }
 
 
-
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
 fun DirsListFromState(
@@ -589,19 +593,27 @@ fun DirsListFromState(
         is FoldersStateSealedInter.Success -> if (foldersStateSealedInter.data.isEmpty()) {
             NoVidFound()
         } else {
-            ContentLazyList(state = state) {
+            ContentLazyList(
+                state = state,
+                modifier = Modifier.background(color = Color.Transparent) // Set the background to transparent
+            ) {
+
                 items(foldersStateSealedInter.data, key = { it.path }) {
                     DirItem(
                         folder = it,
-                        modifier = Modifier.combinedClickable(onClick = {
-                            onFolderClick(it.path)
-                        }, onLongClick = {
-                            haptic.performHapticFeedback(HapticFeedbackType.LongPress)
-                            showFolderActionsFor = it
-                        })
+                        modifier = Modifier.combinedClickable(
+                            onClick = {
+                                onFolderClick(it.path)
+                            },
+                            onLongClick = {
+                                haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                                showFolderActionsFor = it
+                            }
+                        ).background(color = Color.Transparent) // Set the item background to transparent
                     )
                 }
             }
+
         }
     }
 
@@ -666,31 +678,36 @@ fun RecentVidsListFromState(
         is VideosStateSealedInter.SuccessDataClass -> if (videosStateSealedInter.data.isEmpty()) {
             NoVidFound()
         } else {
-            ContentLazyList(state = state) {
+            ContentLazyList(state = state, modifier = Modifier.background(color = Color.Transparent)) {
                 items(videosStateSealedInter.data, key = { it.path }) { video ->
                     VideoItem(
                         vidData = video,
-                        isSelected = video.isSelected, pref = preferences, modifier = Modifier.combinedClickable(onClick = {
+                        isSelected = video.isSelected,
+                        pref = preferences,
+                        modifier = Modifier.combinedClickable(
+                            onClick = {
 
-                            if (multiSelect) {
-                                video.isSelected = !video.isSelected
-                                toggleSelection(video, viewModel)
-                            } else {
-                                val list: ArrayList<Uri> = ArrayList()
-                                videosStateSealedInter.data.forEach {
-                                    list.add(Uri.parse(it.uriString))
+                                if (multiSelect) {
+                                    video.isSelected = !video.isSelected
+                                    toggleSelection(video, viewModel)
+                                } else {
+                                    val list: ArrayList<Uri> = ArrayList()
+                                    videosStateSealedInter.data.forEach {
+                                        list.add(Uri.parse(it.uriString))
+                                    }
+                                    GlobalScope.launch(Dispatchers.IO) {
+                                        PlaylistKeeper.setPlaylistUris(list)
+                                    }
+                                    onVideoClick(Uri.parse(video.uriString))
                                 }
-                                GlobalScope.launch(Dispatchers.IO) {
-                                    PlaylistKeeper.setPlaylistUris(list)
-                                }
-                                onVideoClick(Uri.parse(video.uriString))
-                            }
 
 
-                        }, onLongClick = {
-                            multiSelect = true
-                            toggleMultiSelect()
-                        }),
+                            },
+                            onLongClick = {
+                                multiSelect = true
+                                toggleMultiSelect()
+                            })
+                            .background(color = Color.Transparent),
                         playerViewModel = playerViewModel,
                         infoButtonClick = {
                             if (video.path != boolInfoVisible) {
@@ -707,7 +724,7 @@ fun RecentVidsListFromState(
                         Box(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .padding(start = 20.dp, end = 20.dp)
+                                .padding(start = 20.dp, end = 20.dp).background(color = Color.Transparent)
                         ) {
                             Column {
                                 Row(
@@ -842,6 +859,7 @@ fun RecentVidsListFromState(
                 }
             }
         }
+
         VideosStateSealedInter.LoadingDataObj -> {
         }
     }

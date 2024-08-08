@@ -59,7 +59,8 @@ internal fun FolderScreenUi(
     var deleteAction by rememberSaveable { mutableStateOf("") }
 
     if (deleteAction == "normalvideo") {
-        DeleteConfirmationDialog(subText = stringResource(id = R.string.delete_file),
+        DeleteConfirmationDialog(
+            subText = stringResource(id = R.string.delete_file),
             onCancel = { deleteAction = "" },
             onConfirm = {
                 onDeleteVideoClick(selectedTracks!!.map { it.uriString })

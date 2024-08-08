@@ -13,7 +13,10 @@ import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
+import androidx.compose.foundation.background
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -25,6 +28,12 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.geometry.center
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.RadialGradientShader
+import androidx.compose.ui.graphics.Shader
+import androidx.compose.ui.graphics.ShaderBrush
 import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
@@ -71,6 +80,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+import kotlin.math.max
 
 
 @AndroidEntryPoint
@@ -211,7 +221,6 @@ class MainActivity : ComponentActivity() {
                     val mainNavController = rememberNavController()
                     val mediaNavController = rememberNavController()
                     val androidViewBannerCache = remember { mutableMapOf<Int, BannerView>() }
-
                     if (!shouldShowLanguageScreen.value) {
                         NavHost(
                             navController = mainNavController, startDestination = MAIN_ROUTE_CONST
@@ -285,12 +294,15 @@ class MainActivity : ComponentActivity() {
                             }
                         }
                     }
+
+
                 }
             }
         }
 
         initObserver()
     }
+
 
     private fun initObserver() {
         lifecycleScope.launch(Dispatchers.Default) {

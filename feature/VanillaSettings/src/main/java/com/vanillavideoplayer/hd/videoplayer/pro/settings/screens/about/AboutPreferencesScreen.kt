@@ -42,8 +42,8 @@ fun AboutPreferencesScreen(
 
 
     Scaffold(modifier = Modifier.nestedScroll(scrollBehaviour.nestedScrollConnection), topBar = {
-        VanillaPlayerTopBar(s = stringResource(id = R.string.about_name),
-            behavior = scrollBehaviour,
+        VanillaPlayerTopBar(
+            stringResource(id = R.string.about_name), behavior = scrollBehaviour,
             icon = {
                 IconButton(onClick = onNavigateUp) {
                     Icon(
