@@ -19,7 +19,6 @@ dependencyResolutionManagement {
         gradlePluginPortal()
         maven { url =  uri("https://jitpack.io") }
         maven { url =  uri("https://maven.google.com") }
-
     }
 }
 
@@ -36,7 +35,5 @@ include(":core:AaakhuUi")
 include(":feature:VanillaMainPlayer")
 include(":feature:VanillaSettings")
 include(":feature:VanillaVideoPicker")
-//include(":AdValuModule")
-//include(":AdPlacer")
 
 

@@ -12,8 +12,8 @@ android {
 /* TODO : Don't Forgot to change the version buddy */
     defaultConfig {
         applicationId = "com.vanillavideoplayer.hd.videoplayer.pro"
-        versionCode = 1
-        versionName = "1"
+        versionCode = 2
+        versionName = "1.0.1"
     }
 
 //    signingConfigs {

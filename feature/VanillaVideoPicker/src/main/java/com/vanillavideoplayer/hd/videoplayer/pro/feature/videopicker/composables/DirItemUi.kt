@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.sizeIn
 import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.material3.Divider
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.ListItemDefaults
 import androidx.compose.material3.MaterialTheme
@@ -117,4 +118,7 @@ fun DirItem(
         modifier = modifier
             .background(Color.Transparent) // Ensure transparency
     )
+
+    Divider(thickness = 1.dp, modifier = Modifier.padding(start = 15.dp, end = 15.dp))
+
 }

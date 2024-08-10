@@ -22,6 +22,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Divider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
@@ -150,7 +151,7 @@ fun VideoItem(
             headlineContent = {
                 Text(
                     text = vidData.displayName,
-                    maxLines = 2,
+                    maxLines = 1,
                     style = MaterialTheme.typography.titleMedium,
                     overflow = TextOverflow.Ellipsis
                 )
@@ -215,8 +216,10 @@ fun VideoItem(
                 }
             },
 
-            modifier = modifier.background(color = Color.Transparent)
+            modifier = modifier.background(color = Color.Transparent).padding(bottom = 3.dp, top = 2.dp)
         )
+
+        Divider(thickness = 1.dp, modifier = Modifier.padding(start = 15.dp, end = 15.dp))
     }
 
     AnimatedVisibility(visible = pref.showVideoTheme == VideoTheme.THUMBNAIL_BIG) {
