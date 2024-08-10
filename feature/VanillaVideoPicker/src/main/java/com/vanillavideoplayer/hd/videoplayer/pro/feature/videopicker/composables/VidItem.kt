@@ -158,8 +158,6 @@ fun VideoItem(
             },
 
             supportingContent = {
-
-
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -169,7 +167,6 @@ fun VideoItem(
                     Column(
                         modifier = Modifier
                             .weight(1f) // Adjust weight to distribute space
-                            .padding(end = downSidePadding)
                     ) {
                         FlowRow(
                             modifier = Modifier.fillMaxWidth(),
