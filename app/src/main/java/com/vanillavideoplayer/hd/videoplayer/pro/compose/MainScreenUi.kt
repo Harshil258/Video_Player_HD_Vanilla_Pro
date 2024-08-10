@@ -19,7 +19,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.only
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawing
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -46,8 +45,6 @@ import androidx.compose.ui.graphics.TileMode
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
@@ -159,7 +156,7 @@ fun MainScreenUi(
 private fun HomeScreenBackground(modifier: Modifier = Modifier, content: @Composable BoxScope.() -> Unit) {
     BoxWithConstraints(
         modifier = modifier
-            .background(Color(0xFFD0E4FF))
+            .background(MaterialTheme.colorScheme.background)
             .fillMaxSize()
     ) {
         var width = maxWidth
@@ -174,31 +171,6 @@ private fun HomeScreenBackground(modifier: Modifier = Modifier, content: @Compos
                 )
         )
         content()
-    }
-}
-
-
-@PreviewLightDark
-@Composable
-fun RadialGradientPreview() {
-
-    BoxWithConstraints(
-        modifier = Modifier
-            .background(MaterialTheme.colorScheme.background)
-            .fillMaxSize()
-    ) {
-        var width = maxWidth
-        var height = maxHeight
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(Color.Black)
-                .radialGradientScrim(
-                    color = Color(0xFF0083E9),
-                    center = calculateRadialGradientCenter(with(LocalDensity.current) { width.toPx() },
-                        with(LocalDensity.current) { -(height / (0.40.dp)) }), radius = width - 50.dp
-                )
-        )
     }
 }
 
